@@ -168,7 +168,20 @@ def open_bootloader(timeout=15.0, assume_yes=False):
             if d:
                 break
         else:
-            sys.exit("device never reappeared as the bootloader")
+            sys.exit(
+                "\nDevice never reappeared as the bootloader.\n\n"
+                "IMPORTANT: the mark at 0x7D000 has already been written and the device\n"
+                "has already reset, so it is most likely sitting in DFU right now even\n"
+                "though this machine cannot see it.\n\n"
+                "Try, in order:\n"
+                "  1. re-run this command - it will pick up a bootloader that is already\n"
+                "     present and skip the enter step entirely;\n"
+                "  2. unplug, replug, wait a few seconds, re-run;\n"
+                "  3. a different USB port, directly on the machine rather than a hub;\n"
+                "  4. grant Input Monitoring to your terminal and re-run;\n"
+                "  5. the vendor Update.exe on a Windows machine. It speaks the same\n"
+                "     protocol and is in this repo under 'Firmware update AQIRYS...'.\n"
+                "     That is the fallback if macOS will not enumerate the bootloader.\n")
     h = hid.device()
     h.open_path(d["path"])
     print(f"bootloader open (VID 0x{BOOT_VID:04X} PID 0x{BOOT_PID:04X})")
