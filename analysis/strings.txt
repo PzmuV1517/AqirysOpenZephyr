@@ -1,0 +1,961 @@
+# AQIRYS Zephyr 2 firmware strings
+# image base 0x000287A0, 125030 bytes, 956 strings
+# filter: >=5 printable chars containing a >=3-letter run
+# columns: <load address>  <file offset>  <string>
+
+0x00028EE8  0x000748  reset error = %x
+0x00028F2C  0x00078C  Rf mode  =  %x,
+0x00028F44  0x0007A4  flash7E000 mac addr:
+0x00028F68  0x0007C8  force_pair_en ========%x
+0x00028F88  0x0007E8  ble address set:
+0x00028FA4  0x000804  flash7E100 SumAddr:
+0x00028FF8  0x000858  OLED_Init 0
+0x0002900C  0x00086C  Mouse reset_reason************************ %x 
+0x00029044  0x0008A4  Key_CurrentStatus = %x
+0x00029064  0x0008C4  system power on RF_MODE = %x
+0x00029084  0x0008E4  enter_dut_fcc_mode 
+0x0002916C  0x0009CC  LHpGLH
+0x000291C4  0x000A24  f_usb_ena================= %x,%x,%x,%x,%x,
+0x00029204  0x000A64  RF_MODE 24G================= %x,%x,%x,%x,%x,
+0x00029244  0x000AA4  system_mode0  RF_MODE %x, %x, %x
+0x00029268  0x000AC8  enter_BLE_normal_app_mode RF_MODE================%x
+0x000292AC  0x000B0C  Stack_Integrity_Check STACK_BASE_UNUSED fail!
+0x000292E4  0x000B44  Stack_Integrity_Check STACK_BASE_SVC fail!
+0x0002931C  0x000B7C  Stack_Integrity_Check STACK_BASE_FIQ fail!
+0x00029354  0x000BB4  Stack_Integrity_Check STACK_BASE_IRQ fail!
+0x00029489  0x000CE9    qeqp
+0x000294AF  0x000D0F    qeqp
+0x000294F1  0x000D51   (qnqp
+0x00029529  0x000D89   (qnqp
+0x000295FF  0x000E5F  wGwgH
+0x00029613  0x000E73   `qea
+0x0002968B  0x000EEB   7qpq
+0x00029780  0x000FE0  AQIRYS Zephyr 2
+0x00029790  0x000FF0  AQIRYS Zephyr
+0x000297A4  0x001004  limit
+0x000297AC  0x00100C  no limit
+0x000297D0  0x001030  adv_data--------
+0x000297E7  0x001047  `BK-BLE
+0x000297F8  0x001058  %s more_svc:%d
+0x0002980C  0x00106C  disc_mode  =%x,
+0x00029820  0x001080  appm_create_advertising direct
+0x00029844  0x0010A4  peeraddr2:
+0x00029850  0x0010B0  appm_create_advertising nonderect 
+0x00029878  0x0010D8  appm_delete_advertising 
+0x00029894  0x0010F4  adv_state:%x
+0x000298AC  0x00110C  intv_min:%d ,%d
+0x000298C0  0x001120  con_latency:%d 
+0x000298D4  0x001134  time_out:%d 
+0x00029905  0x001165  xlFU( 
+0x00029CE4  0x001544  wr ble--1 addr :
+0x00029CF8  0x001558  wr ble--2 addr :
+0x00029D10  0x001570  NVDS_TAG_BLE_ADDRESS0:
+0x00029D28  0x001588  NVDS_TAG_BLE_ADDRESS1:
+0x00029D44  0x0015A4  ble addr:
+0x00029D54  0x0015B4  save co_default_bdaddr :
+0x00029D78  0x0015D8  not NVDS_TAG_PEER%d_IRK
+0x00029DD8  0x001638  appm disconn..................
+0x00029DFC  0x00165C  app_env.adv_state = %x 
+0x00029E28  0x001688  app_sec_env.key_index = %x 
+0x00029E48  0x0016A8  update ble addr:
+0x00029E5C  0x0016BC  sys_flag = %x
+0x00029E6C  0x0016CC  peer addr type0 = %x
+0x00029E84  0x0016E4  bond0  =  %x
+0x00029E94  0x0016F4  peer addr type1 is PUBLIC_ADDR=%x
+0x00029EB8  0x001718  bond1  =  %x
+0x0002A2B9  0x001B19   lIxq
+0x0002A30C  0x001B6C  key press before cpu reset = %d,%d
+0x0002A338  0x001B98  %s : RF_MODE**********Simu_RF_MODE[%x to %x]
+0x0002A36C  0x001BCC  force_pair_en 4========%x
+0x0002A390  0x001BF0  bonded0===========%x, bonded1========%x
+0x0002A3BC  0x001C1C   An error has occurred during access to the NVDS_TAG_RF_MODE 
+0x0002A3FC  0x001C5C  force pair mode : %d 
+0x0002A414  0x001C74  %s RF_MODE[%d]
+0x0002A450  0x001CB0  app adv timer run.... %d
+0x0002A47C  0x001CDC  BLE_PAIR OLED_Init 1
+0x0002A535  0x001D95  MjF(phF
+0x0002A7A8  0x002008  start reconnect advertising = %d 
+0x0002A7E4  0x002044  start nondir advertising = %d 
+0x0002A808  0x002068  BLE_PAIR BLE_RECONNECTED OLED_Init 2
+0x0002A838  0x002098  write error  NVDS_TAG_PERIPH_BONDED0= %x
+0x0002A868  0x0020C8  app_bond_status_initial  bonded0=%x, bonded1========%x
+0x0002A8A8  0x002108  %s ble_pairing_successed_cfm=[%d]
+0x0002A8D0  0x002130  APP_PARAM_UPDATE_REQ_IND-2 start update param....
+0x0002A904  0x002164  pair successed ,start led on....
+0x0002A930  0x002190  ble lost pkt sum:%d 
+0x0002A950  0x0021B0  ble lost pkt accumulate free
+0x0002A97C  0x0021DC  try high rate............%d ,%d
+0x0002A9B8  0x002218  ble_alert_led_stop
+0x0002ABB7  0x002417  cpG~H<!
+0x0002ABC5  0x002425  cpGzH
+0x0002AC38  0x002498  pxaOkL
+0x0002AC47  0x0024A7  C0xiN
+0x0002AE9B  0x0026FB  pqIfp
+0x0002AED1  0x002731  pdIfp
+0x0002AFA3  0x002803  pQHRJ
+0x0002AFC5  0x002825  pMJML
+0x0002B032  0x002892  pGUpdate_OLED Batt_vol=%d
+0x0002B06C  0x0028CC  set_Update_OLED--f_bat_low 1
+0x0002B08C  0x0028EC  set_Update_OLED--f_bat_low 2
+0x0002B0B8  0x002918  f_bat_ll_low _ process ..
+0x0002B3A9  0x002C09  apGzH
+0x0002B3CF  0x002C2F  poM(x
+0x0002B4B7  0x002D17  pCq$H
+0x0002B4FB  0x002D5B  xbyrN
+0x0002B5A0  0x002E00  app_env.adv_state...= %d
+0x0002B5BC  0x002E1C  disconnect start 
+0x0002B5D0  0x002E30  appm  need stop adv...
+0x0002B5F0  0x002E50  WDT_REG0X0 = %x
+0x0002B604  0x002E64  reg30=%x
+0x0002B610  0x002E70   /reg31=%x
+0x0002B61C  0x002E7C   /reg33=%x
+0x0002B628  0x002E88   /reg35=%x
+0x0002B63C  0x002E9C  reg03=%x
+0x0002B648  0x002EA8   /reg04=%x
+0x0002B658  0x002EB8   /reg10=%x
+0x0002B66C  0x002ECC  gpio int1
+0x0002B688  0x002EE8  adv start =%d
+0x0002B69C  0x002EFC  KEY_piaring_cnt :[ %x  to  %x ] %x
+0x0002B844  0x0030A4  %rP 0pay
+0x0002BA9D  0x0032FD  xQq~I
+0x0002BAC0  0x003320  long_press..[Rmode %d -> Smode %d] 
+0x0002BAF4  0x003354  %s,RF_MODE:%x
+0x0002BB1C  0x00337C  key free LongPress
+0x0002BB3C  0x00339C  force_pair_en 5========%x
+0x0002BB5C  0x0033BC  short_press..[Rmode %d -> Smode %d] 
+0x0002BB88  0x0033E8  Disconnected by mouse...
+0x0002BBA8  0x003408  short press time=%d
+0x0002BBC0  0x003420  time_Simu_mode = %d,%d 
+0x0002BBDC  0x00343C  *****sw_num = %d 
+0x0002BBF4  0x003454  Entry pair mode---RFMODE :[ %x  to  %x ]
+0x0002BC58  0x0034B8  tx_failed_cnt =%d,%d,Utc_Poll=%d,%d
+0x0002BCB5  0x003515  bPb,!
+0x0002BCBB  0x00351B  ccL!x
+0x0002BCFD  0x00355D  i1CUN
+0x0002BD3B  0x00359B  `UaIH
+0x0002BE01  0x003661  !AppGp
+0x0002BE0D  0x00366D  4%pax+
+0x0002BE88  0x0036E8  This is the function key wakeup,start cpu reset...
+0x0002BEC0  0x003720  free= %d 
+0x0002BECC  0x00372C  key wakeup timeout, need key wakeconfig
+0x0002BEFD  0x00375D  pd!AppG
+0x0002BF17  0x003777  !$"ApB
+0x0002BF4F  0x0037AF  pAp2!
+0x0002BF7B  0x0037DB  pAp2!
+0x0002C074  0x0038D4  RivieraWaves SAS
+0x0002C088  0x0038E8  RW-BLE-1.0
+0x0002C1AC  0x003A0C  JxWIW
+0x0002C1BC  0x003A1C  JxSIS
+0x0002C2C0  0x003B20  fee1_only_read
+0x0002C2D4  0x003B34  fee4->param->ntf_cfg = %x
+0x0002C2F0  0x003B50  fee5->param->ind_cfg = %x
+0x0002C310  0x003B70  %s,status:%x
+0x0002C328  0x003B88  FEE2 conidx:%d,length:%d,param->value = 0x 
+0x0002C35C  0x003BBC  fee3_writer:
+0x0002C3E1  0x003C41  #avct
+0x0002C3F7  0x003C57  rEtCr
+0x0002C4D9  0x003D39  pixAp
+0x0002C4E9  0x003D49  qiyAq
+0x0002C519  0x003D79  pixAp
+0x0002C529  0x003D89  qiyAq
+0x0002C55B  0x003DBB  phxPp2x"p2x
+0x0002C587  0x003DE7  pixAp
+0x0002C6D6  0x003F36   x(p(Hnp
+0x0002C727  0x003F87  2PI(pnp
+0x0002C731  0x003F91  x(qnq(
+0x0002C790  0x003FF0  %s conidx =d%
+0x0002C7A4  0x004004  update para  APP_HID_WAIT_REP---------------
+0x0002C7D8  0x004038  hid :ke_msg_free
+0x0002C7EC  0x00404C  kb len= %d
+0x0002C7FC  0x00405C  media len= %d
+0x0002C80C  0x00406C  user len= %d
+0x0002C81C  0x00407C  power len= %d
+0x0002C82C  0x00408C  idle len= %d
+0x0002C850  0x0040B0  hogpd ready ...3
+0x0002C8E0  0x004140  AJBIBH
+0x0002C94D  0x0041AD  ppG%J&I
+0x0002CAEF  0x00434F  !Apd!
+0x0002CB50  0x0043B0  app_oad_add_oads
+0x0002CB68  0x0043C8  app_oad_add_oads d = %x,s = %x
+0x0002CB98  0x0043F8  msgid = 0x%04x,destid = 0x%x,srcid = 0x%x
+0x0002CE51  0x0046B1  IgIIdI
+0x0002CFCC  0x00482C  app_sec_init().   bonded0=%x, bonded1========%x
+0x0002D004  0x004864  not NVDS_TAG_IRK = %x
+0x0002D01C  0x00487C  get NVDS_TAG_IRK ok= %x
+0x0002D048  0x0048A8  gapc_bond_req_ind request:%d :%s
+0x0002D070  0x0048D0  auth:GAP_AUTH_REQ_NO_MITM_BOND
+0x0002D094  0x0048F4  app_sec_env.key_index = %d 
+0x0002D0BC  0x00491C  save ltk
+0x0002D0D0  0x004930  GAPC_IRK_EXCH.....
+0x0002D0EC  0x00494C  GAPC_CSRK_EXCH.............
+0x0002D114  0x004974  gapc_bond_ind info:%d,%s
+0x0002D134  0x004994  PAIRING_SUCCEED  bonded0=%x, bonded1========%x
+0x0002D174  0x0049D4  force_pair_en2 ========%x
+0x0002D190  0x0049F0  GAPC_IRK_EXCH xxxxxxxxxxxxxxxxxxxxxxxxxx
+0x0002D1BC  0x004A1C  save_no NVDS_TAG_IRK
+0x0002D1D4  0x004A34  save ok NVDS_TAG_IRK
+0x0002D1EC  0x004A4C  not NVDS_TAG_PEER%d_IRK
+0x0002D208  0x004A68  irk.key = 
+0x0002D214  0x004A74  addr.type = %x
+0x0002D228  0x004A88  addr.addr = 
+0x0002D374  0x004BD4  force_pair_en3 ========%x
+0x0002D3A8  0x004C08  keyindex=%d
+0x0002D3B8  0x004C18  gapc_encrypt_req_ind_handler ltk-----------------------------
+0x0002D400  0x004C60  encrypt_req_ind121
+0x0002D420  0x004C80  hogpd ready ...2
+0x0002D440  0x004CA0  APP_PARAM_UPDATE_REQ_IN-1  need update param after encryp 
+0x0002D488  0x004CE8  encrypt_ind auth:%d
+0x0002D8B0  0x005110  %s app_env.adv_actv_idx = %x   
+0x0002D8D4  0x005134  %s app_env.adv_state = %x   
+0x0002D8F4  0x005154  %s prf_task_id:%x,prf_task_nb:%x,start_hdl:%x
+0x0002D924  0x005184  %s operation:%x,status:%x
+0x0002D95C  0x0051BC  GAPM_STOP_ACTIVITY
+0x0002D97C  0x0051DC  ble_need_activity_advertising 
+0x0002D9A4  0x005204  GAPM_CREATE_ADV_ACTIVITY
+0x0002D9C0  0x005220  GAPM_START_ACTIVITY
+0x0002D9D8  0x005238  GAPM_SET_SCAN_RSP_DATA
+0x0002D9FC  0x00525C  GAPM_RESOLV_ADDR CMP STATUS = %x
+0x0002DA20  0x005280  appm_disconnect(1)_________1    
+0x0002DA44  0x0052A4  %s req = %d
+0x0002DA58  0x0052B8  hogpd ready ...1
+0x0002DE64  0x0056C4  addr = 
+0x0002DE74  0x0056D4  irk = 
+0x0002DE80  0x0056E0  %s con_interval = %d
+0x0002DEA4  0x005704  conidx:%d 
+0x0002DEB4  0x005714  conhdl:%d 
+0x0002DEC7  0x005727  ?con_interval:%d ,%f
+0x0002DEE0  0x005740  con_latency: %d 
+0x0002DEF4  0x005754  sup_to:%d 
+0x0002DF04  0x005764  peer_addr_type:%d 
+0x0002DF1C  0x00577C  peer_addr:0x
+0x0002DF3C  0x00579C  save peer_addr_type = %x, RF_MODE = %x
+0x0002DF78  0x0057D8  app security require ...
+0x0002DFA4  0x005804  hogpd NOT ready ...0
+0x0002DFE8  0x005848  %s conidx=%d
+0x0002DFF8  0x005858  intv_min:%d ,intv_max =%d
+0x0002E014  0x005874  con_latency:%d 
+0x0002E028  0x005888  time_out:%d 
+0x0002E038  0x005898  appm_start_advertising(3)_________3   
+0x0002E064  0x0058C4  %s operation = %x,status =%x
+0x0002E090  0x0058F0  BLE_RECONNECTED  state =x%,ble_conn_interval=%x
+0x0002E0C4  0x005924  APP_PARAM_UPDATE_REQ_IND-3  ble_update_param_failed_cnt++ =%x
+0x0002E104  0x005964  ble_app_hogpd_report_ready not ready...
+0x0002E130  0x005990  ble_update_param_failed_cnt >=3  %x
+0x0002E158  0x0059B8  GAPC_UPDATE_PARAMS fail !  %d
+0x0002E178  0x0059D8  GAPC_UPDATE_PARAMS ok ! ======================%d
+0x0002E1AC  0x005A0C  GAPC_DISCONNECT = 0x%x
+0x0002E1C8  0x005A28  restart advertising
+0x0002E1E0  0x005A40  gapc security req fail !
+0x0002E1FC  0x005A5C  gapc security req ok !
+0x0002E218  0x005A78  gapc bond fail !
+0x0002E22C  0x005A8C  gapc bond ok !
+0x0002E49E  0x005CFE  d"5pdH
+0x0002E5C8  0x005E28  gapc encrypt start fail !
+0x0002E5E4  0x005E44  gapc encrypt start ok !
+0x0002E600  0x005E60  gapc_disconnect_ind_handler,reason=%x
+0x0002E640  0x005EA0  need stop advertising.....
+0x0002E660  0x005EC0  ble need update address..................................
+0x0002E69C  0x005EFC  disconnected by slave...
+0x0002E6C0  0x005F20  pair failed  
+0x0002E700  0x005F60  %s app_env.rand_cnt = %x   
+0x0002E720  0x005F80  loc_irk[0]:
+0x0002E72C  0x005F8C  loc_irk[8]:
+0x0002E738  0x005F98  %s msgid = %x
+0x0002E748  0x005FA8  ble_update_param_val = %d
+0x0002E764  0x005FC4  con_interval = %d
+0x0002E778  0x005FD8  con_latency  = %d
+0x0002E78C  0x005FEC  sup_to       = %d
+0x0002E7C0  0x006020  APP_PARAM_UPDATE_REQ_IND--4  ios update param = %d
+0x0002E80C  0x00606C  APP_PARAM_UPDATE_REQ_IND--8  update param.... = %d
+0x0002E848  0x0060A8  con_interval is ok! =======================%d
+0x0002E880  0x0060E0  ind->mtu = %d,seq = %d
+0x0002E8A0  0x006100  ble_update_param_failed_cnt<2.............%d 
+0x0002E8D0  0x006130  ble_update_param  HOST_IOS.............%d 
+0x0002EC84  0x0064E4  ble_update_param_failed_cnt<3.............%d 
+0x0002ECB4  0x006514  ble_update_param_failed_cnt<4.............%d 
+0x0002ECE4  0x006544  ble_update_param_failed_cnt<8.............%d 
+0x0002ED24  0x006584  app_ancs_req_handler msgid=%d,%d 
+0x0002ED58  0x0065B8  force_ble_sleep....1 app_ble_period >= 25
+0x0002ED98  0x0065F8  key sleep
+0x0002EDAC  0x00660C  force_ble_sleep....2 f_bat_ll_low
+0x0002EDE0  0x006640  Success_led_2second 1=  %x,
+0x0002EE04  0x006664  set_Update_OLED--Success_led_2second 
+0x0002F0EE  0x00694E   xvIHp
+0x0002F14C  0x0069AC  force_ble_sleep....3  Time_Entry_Sdeep =0
+0x0002F194  0x0069F4  param update falied, need update param.............
+0x0002F1D8  0x006A38  set_Update_OLED--app_connected_successed
+0x0002F214  0x006A74  reset ble address 
+0x0002F230  0x006A90  app_sec_env.key_index = %x 
+0x0002F254  0x006AB4  app_env.adv_state.... %d 
+0x0002F274  0x006AD4  there was no bonded .... %d 
+0x0002F29C  0x006AFC  force_ble_sleep....4 adv_timeout
+0x0002F2D4  0x006B34  force_ble_sleep....5 reconnect_timeout
+0x0002F423  0x006C83  !ApK!A
+0x0002F4FF  0x006D5F  yay y
+0x0002F6B4  0x006F14  %s ,status = 0x%x
+0x0002F6C8  0x006F28  CategoryIDOther 
+0x0002F6DC  0x006F3C  CategoryIDIncomingCall 
+0x0002F6F8  0x006F58  CategoryIDMissedCall 
+0x0002F710  0x006F70  CategoryIDVoicemail 
+0x0002F728  0x006F88  CategoryIDSocial 
+0x0002F73C  0x006F9C  CategoryIDSchedule 
+0x0002F754  0x006FB4  CategoryIDEmail 
+0x0002F768  0x006FC8  CategoryIDNews 
+0x0002F77C  0x006FDC  CategoryIDHealthAndFitness 
+0x0002F79C  0x006FFC  CategoryIDBusinessAndFinance 
+0x0002F7BC  0x00701C  CategoryIDLocation 
+0x0002F7D4  0x007034  CategoryIDEntertainment 
+0x0002F7F0  0x007050  Reserved CategoryID
+0x0002F81C  0x00707C  Reserved_EventID_values
+0x0002F838  0x007098  add one new incoming call
+0x0002F854  0x0070B4  Modified one new incoming call
+0x0002F878  0x0070D8  Removed one new incoming call
+0x0002FB41  0x0073A1  `TNVM
+0x0002FB69  0x0073C9  p(xfL
+0x0002FB8B  0x0073EB   (pjH#x
+0x0002FCA8  0x007508  STEP14 Send OK:
+0x0002FCBC  0x00751C  STEP14 ReSend:
+0x0002FCE0  0x007540  RPT_STEP-13L:
+0x0002FCF0  0x007550  RPT_STEP-13S:
+0x0002FD18  0x007578  RPT_STEP-9L:
+0x0002FD28  0x007588  RPT_STEP-9S:
+0x0002FD3C  0x00759C  SEND_ACK57 ok  RF24_STEP=%d,%d,%d
+0x0002FD64  0x0075C4  ch_frequency 10=%x
+0x0002FD7C  0x0075DC  retr_time 57 ACK %x
+0x0002FDA8  0x007608  RF24_STEP 5 7:
+0x0002FDD1  0x007631  M)tjt
+0x0003003D  0x00789D  pyJnH
+0x00030130  0x007990  P0_Add %x,%x,%x,
+0x00030160  0x0079C0  RF24_piar id_code:
+0x00030188  0x0079E8  LightUp_Mode_Led============== %x,%x,%x,%x,%x,
+0x000301D8  0x007A38  NO DONGLE %x,%x,%x,
+0x0003022C  0x007A8C  RETR fail:
+0x00030393  0x007BF3  q{yCq
+0x00030554  0x007DB4  :Lcx"x
+0x00030648  0x007EA8  FLASH_wr_Global:
+0x0003065C  0x007EBC  address&0x3ff = %x
+0x00030678  0x007ED8  FLASH_RD_Global:
+0x00030694  0x007EF4  Global_DATA:
+0x000306A8  0x007F08  write id_code:
+0x000306BC  0x007F1C  read id_code:
+0x000306CC  0x007F2C  FLASH_RD_Profile:
+0x000306E4  0x007F44  SensorSet:
+0x000306F0  0x007F50  LightSet:
+0x00030B04  0x008364  ButtonSet:
+0x00030B10  0x008370  FLASH_WR_Profile:
+0x00030B30  0x008390  FLASH_WR_Macro  macro_id =%x,page =%x,offset =%x
+0x00030B64  0x0083C4  flash_erase: FLASHADDR_BACKUP
+0x00030B84  0x0083E4  backup:
+0x00030B8C  0x0083EC  flash_erase: FLASHADDR_MACRO
+0x00030BAC  0x00840C  restore:
+0x00030BB8  0x008418  Flashmem_buff:
+0x00030BC8  0x008428  flash_wp_ALL: 
+0x00030BDC  0x00843C  FLASH_RD_Macro  macro_id = %x,Flash_Macro_Addr = %x
+0x00030C18  0x008478  read macro:
+0x00030C24  0x008484  Default_Profile:
+0x00030C38  0x008498  Polling0:
+0x00030C44  0x0084A4  Sensor:
+0x00030D5E  0x0085BE  MPT]l~
+0x00030FF0  0x008850  Light:
+0x00031024  0x008884  _read9_GM_macro  report_id =%x,macro_index=%x
+0x00031068  0x0088C8  _saveC_GM_ProfileMax:
+0x00031080  0x0088E0  Current_Profile=%x, %x, MaxProfile=%x, %x
+0x000310AC  0x00890C  RD Profile:
+0x000310B8  0x008918  WR Profile:
+0x000310C8  0x008928  %s read_data= %x, Polling=%x
+0x000310E8  0x008948  %s Profile= %x, rgb_disp_type=%x
+0x000314ED  0x008D4D  pnHd$
+0x0003150D  0x008D6D  pfHd"
+0x0003152B  0x008D8B  pAp_II{
+0x000316B9  0x008F19  !ApLI
+0x000319AC  0x00920C  DxTTI
+0x00031B05  0x009365  pGpuH
+0x00031C24  0x009484  RB +MB  f_k_pair------------  f_hld=%x f_k_pair=%d
+0x00031C70  0x0094D0  RB +MB  f_k_pair------------  RF_MODE=%x
+0x00031CE8  0x009548  _func_RFmode_Keying ==0 !
+0x00031FED  0x00984D  pEHEI
+0x00032071  0x0098D1  pHpSH
+0x00032144  0x0099A4  tmp_stage = %x,dpi_on_flag = %x,tmp_left =%x
+0x00032184  0x0099E4  DPI_Stage = %x,Current_Profile = %x,Update_Profile =%x
+0x000321DC  0x009A3C  macro_index:
+0x00032214  0x009A74  GUN Macro
+0x0003243F  0x009C9F  paHbIbJ
+0x000324AF  0x009D0F  pJNKJe~
+0x00032570  0x009DD0  _func_RFmode_Keying ==1 !
+0x000329FC  0x00A25C  %s, Simu_RF_MODE=%x,Mode_Indicator_BIT=%x
+0x00032A28  0x00A288  usb to 24 mode 
+0x00032A68  0x00A2C8  %s, Ind_Led_STEP=%d
+0x00032AA0  0x00A300  alert led stopping
+0x00032AB8  0x00A318  Success_led_2second---Led_Mode
+0x00032ADC  0x00A33C  set_Update_OLED--Success_led_2second 
+0x00032BF7  0x00A457  phH,p
+0x00032C64  0x00A4C4  tN0xtOuL
+0x00032D34  0x00A594  Dpi_Indicat_process= %x
+0x00032D70  0x00A5D0  set_Update_OLED--Set_Loop_process 
+0x00032DA0  0x00A600  set_Update_OLED--Flash_Linking_process 
+0x00032DCC  0x00A62C  set_Update_OLED--Flash_Ind_Fast_process0 
+0x00032E00  0x00A660  set_Update_OLED--Flash_Ind_Fast_process1 
+0x00032E54  0x00A6B4  Led_OLED ==5 !
+0x00032E68  0x00A6C8  Led_OLED ==changing !
+0x00032E80  0x00A6E0  pGpGpGpGpGLI
+0x00032E97  0x00A6F7  ppGKH
+0x000330EF  0x00A94F  IBxJs
+0x000331FB  0x00AA5B  C)pyI
+0x00033269  0x00AAC9  pQII~
+0x0003344F  0x00ACAF  }Bpbh
+0x00033455  0x00ACB5  p@xPpah
+0x000335FC  0x00AE5C  xHah1"
+0x00033628  0x00AE88  nHmI/"
+0x00033781  0x00AFE1  Hah8"
+0x000337E8  0x00B048  _GM04_sensit get
+0x000337FC  0x00B05C  _GM06_polling get
+0x00033814  0x00B074  _GM07_rfpower get
+0x00033828  0x00B088  _GM08_button get
+0x00033840  0x00B0A0  _GM09_macro get
+0x00033850  0x00B0B0  _GM0b_Version get
+0x00033864  0x00B0C4  _GM0c_Profile get
+0x00033878  0x00B0D8  Set_Report_Data
+0x0003388C  0x00B0EC  N0N0 report_id =%x
+0x000338B4  0x00B114  macro report_id =%x,macro_index=%x
+0x000338DC  0x00B13C  Profile report_id =%x,Update_Profile=%x,%x
+0x0003390C  0x00B16C  _GM04_sensit set
+0x00033924  0x00B184  _GM05_LightSet set
+0x0003393C  0x00B19C  _GM06_polling set
+0x00033950  0x00B1B0  _GM07_rfpower set
+0x00033964  0x00B1C4  _GM08_button set
+0x000339C6  0x00B226  {LzI@4~"z
+0x00033A88  0x00B2E8  mLnJ'xnHnI
+0x00033AA4  0x00B304  Dciqs iH
+0x00033AB5  0x00B315  peHGz
+0x00033AFF  0x00B35F  &>pArVI
+0x00033B98  0x00B3F8  _GM09_macro
+0x00033BA4  0x00B404  chksum = %x
+0x00033BB8  0x00B418  macro_type set:
+0x00033BC8  0x00B428  app_macro_param.Macro_Chksum = %x
+0x00033BF8  0x00B458  _GM0c_Profile M:
+0x00033C0C  0x00B46C  _GM0c_Profile F
+0x00033C1C  0x00B47C  _GM0c_Profile N:
+0x00033C30  0x00B490  upgrade 
+0x00033C6C  0x00B4CC  RPT_STEP1  report_id =%x,Update_Profile=%x
+0x00033C9C  0x00B4FC  RPT_STEP1  report_id =%x,macro_index=%x
+0x00033CCC  0x00B52C  RPT_STEP2  report_id =%x,macropro_index=%x
+0x00033F7C  0x00B7DC  wr_reg_chk  ii=%d,reg=%x,value=%x,%x,system_clk=%x
+0x00034014  0x00B874  time_sensor_invalid=0
+0x00034030  0x00B890  delta_none =%x
+0x0003405A  0x00B8BA  !psL$
+0x00034075  0x00B8D5  pjJmM
+0x00034244  0x00BAA4  single_wave 123============== %x,%x,%x,%x,%x,
+0x00034278  0x00BAD8  mode_normal 123============== %x,%x,%x,%x,%x,
+0x00034A09  0x00C269  !HC!IeL
+0x00034A3C  0x00C29C  Disconnected by mouse...
+0x00034A68  0x00C2C8  OLED_Init 3
+0x00034AA8  0x00C308  (Time_Entry_Sdeep ==0)  %x,%x
+0x00034AC8  0x00C328  entry force 24g sleep 1 
+0x00034B20  0x00C380  in sleep_status =%d,%d
+0x00034B44  0x00C3A4  enter 24g idle_status 
+0x00034B60  0x00C3C0  cpu_reset()  MODE_Switch
+0x00034B80  0x00C3E0  USNDP_status------usb insert   %x
+0x00034FCC  0x00C82C  sleep_status 24G===========%d,%d
+0x00034FF0  0x00C850  enter sleep_status
+0x00035004  0x00C864  wake form sleep_status
+0x00035030  0x00C890  wakeup Key_Mot_Activ  USB===================%d,%d
+0x00035074  0x00C8D4  SLEEP wakeup KEY_PAIR
+0x00035090  0x00C8F0  SLEEP wakeup RECONN
+0x000350B4  0x00C914  SLEEP wakeup id_code
+0x000350D4  0x00C934  24G reconnecting =%x 
+0x000350F0  0x00C950  f_reconnect_24G = OK 
+0x0003510C  0x00C96C  f_reconnect_24G  overtime 
+0x00035130  0x00C990  Time_24G_Piaring = 0 
+0x00035158  0x00C9B8   mode_sw to RF_24G_MODE
+0x00035174  0x00C9D4  mode_sw to RF_BLE_MODE1
+0x000351A0  0x00CA00  Detect_FULL_IN ==FULL !
+0x000351BC  0x00CA1C  Detect_FULL_IN ==CHANRGing !
+0x00035614  0x00CE74  INSERT USNDP_status------charging   %x
+0x00035644  0x00CEA4  INSERT USNDP_status------usb insert   %x
+0x0003567C  0x00CEDC  usb_chk ----IN-------------- %x,%x,%x,%x
+0x000356D8  0x00CF38  usb_chk ----PULL OUT-------------- %x,%x,%x,%x
+0x00035754  0x00CFB4  f_usb_isConnected=1  %x,%x,%x,%x
+0x00035778  0x00CFD8  f_usb_isConnected fail  %x,%x,%x,%x
+0x00035947  0x00D1A7  HBpIx
+0x00035C14  0x00D474  app_env.adv_state...= %d
+0x00035C30  0x00D490  disconnect start 
+0x00035C4C  0x00D4AC  appm  need stop adv...
+0x00035CDC  0x00D53C  UL pUH
+0x00035E78  0x00D6D8  RF24_STEP id:
+0x00035E94  0x00D6F4  fn24main  RF_MODE USB %x, %x, %x
+0x00035EBA  0x00D71A  FMFO*x9xF
+0x00035FDC  0x00D83C  system_mode usb24 RF_MODE %x, %x
+0x0003606D  0x00D8CD  !YaJIdF
+0x0003607F  0x00D8DF  qLq\aR
+0x000361D5  0x00DA35  CPapG
+0x000361EB  0x00DA4B  CAapG|
+0x00036455  0x00DCB5   8alH
+0x000365BC  0x00DE1C  get_scan_Rvalue 2============== %x,%x,%x,%x,%x,
+0x000365F4  0x00DE54  rgb_24g_test_cal:=%x
+0x0003662C  0x00DE8C  TEST_SINGLE_WAVE ch==%d, mode=%x, mode=cal_data%x
+0x00036660  0x00DEC0  TEST_RF_DATA...
+0x0003667C  0x00DEDC  TEST_CD...
+0x00036690  0x00DEF0  flag_revice...
+0x000366A8  0x00DF08  Key_CurrentStatus:=%x
+0x000366C0  0x00DF20  RB press...
+0x000366D0  0x00DF30  LB press...SW mode
+0x000366E8  0x00DF48  TEST_SINGLE_WAVE:=%x
+0x00036700  0x00DF60  TEST_RF_DATA:=%x
+0x00036714  0x00DF74  TEST_CD
+0x00036720  0x00DF80  MB press...SW channel
+0x000367F4  0x00E054  =pQH!
+0x0003683B  0x00E09B  pEHEI
+0x000368FC  0x00E15C  switch ch==%d, mode=%x
+0x00036918  0x00E178  TEST_SINGLE_WAVE ch==%d, mode=%x
+0x0003695C  0x00E1BC  DPILOOP SURE: --:=%x
+0x00036974  0x00E1D4  B4: CAL_DATA++:=%x
+0x0003698C  0x00E1EC  B5: CAL_DATA--:=%x
+0x00036BA7  0x00E407    avHvI
+0x00036BC3  0x00E423  coH?!
+0x00036BD9  0x00E439  amImH@1
+0x00036BE6  0x00E446  jIkKfJ
+0x00036C3D  0x00E49D  aTH@0
+0x00036C7B  0x00E4DB  0AaHI@J
+0x00036C89  0x00E4E9  !AapGEHEI
+0x00036CBB  0x00E51B  ppG1H
+0x00036CCD  0x00E52D  !AapG,H
+0x00036DC9  0x00E629  aTI~ @1
+0x000370C9  0x00E929  s  HtpG
+0x000370D9  0x00E939   HtpG
+0x000370E7  0x00E947   HtpG
+0x000370F3  0x00E953  t@ HtpG
+0x0003712F  0x00E98F  !!rar
+0x00037237  0x00EA97  GUHDp
+0x00037301  0x00EB61  pWx#J%
+0x00037337  0x00EB97  x(phF
+0x000373B0  0x00EC10  set report rd:
+0x00037634  0x00EE94  usb set report:
+0x0003764C  0x00EEAC  _USB_macro0:
+0x00037660  0x00EEC0  _USB_macro1:
+0x00037670  0x00EED0  _USB_macro2:
+0x00037680  0x00EEE0  _USB_macro:
+0x000376B4  0x00EF14  BIT(0) f_usb_suspend =1------------
+0x000376E0  0x00EF40  BIT(1) f_usb_suspend =0------------
+0x00037718  0x00EF78  BIT(2)bus reset ------------f_usb_isConnected ==%d
+0x000379C9  0x00F229  Cir`y"y
+0x00037AA7  0x00F307  yRIHpPH
+0x00037BF8  0x00F458  ep%d RX Buf=0x%.8x
+0x00037C10  0x00F470  Can't malloc RX Buf
+0x00037C28  0x00F488  ep%d TX Buf=0x%.8x
+0x00037C40  0x00F4A0  Can't malloc TX Buf
+0x00037C5C  0x00F4BC  endp=%.2x
+0x00037C68  0x00F4C8  rxp=%.2x
+0x00037C74  0x00F4D4  txp=%.2x
+0x00037C80  0x00F4E0  maxp=%.2x
+0x00037C8C  0x00F4EC  csr0=%.2x
+0x00037C98  0x00F4F8  csr02=%.2x
+0x00037CA8  0x00F508  rxcsr1=%.2x
+0x00037CB8  0x00F518  rxcsr2=%.2x
+0x00037CC8  0x00F528  rxie1=%.2x
+0x00037CD8  0x00F538  rxie2=%.2x
+0x00037CE8  0x00F548  txie1=%.2x
+0x00037CF8  0x00F558  txie2=%.2x
+0x00037D18  0x00F578  pcfg=0x%.8x
+0x00037D28  0x00F588  CLEAR_FEATURE rcp=%x
+0x00037D54  0x00F5B4  f_usb_remote_wakeup =========0 clear %x,%x,%x,%x
+0x00037F9B  0x00F7FB  ptO9x
+0x00038180  0x00F9E0  f_usb_remote_wakeup ========1 set  %x,%x,%x,%x
+0x000381C8  0x00FA28  get configuration = %d
+0x000381E4  0x00FA44  f_usb_isConnected ========1   %x,%x,%x,%x
+0x00038248  0x00FAA8  usb_suspend =1-----usb_frame_stop_cnt =%d
+0x00038278  0x00FAD8  usb_suspend_wakeup
+0x000383FC  0x00FC5C  `xjOjI
+0x0003846B  0x00FCCB  p!yeJ
+0x000385B8  0x00FE18  set idle! %x,%x
+0x000385CC  0x00FE2C  Get_idle_length %x,%x
+0x000385E8  0x00FE48  HID_RQT_Get_Report:
+0x00038610  0x00FE70  HID_RQT_Set_Report:
+0x00038634  0x00FE94  HID_RQT_Set_Protocol:
+0x00038654  0x00FEB4  HID_RQT_Get_Protocol:
+0x00038817  0x010077  HBpIx
+0x0003898B  0x0101EB  pCHeN
+0x000389FE  0x01025E  +x%N2xWO9xZ
+0x00038B28  0x010388  USB sleep_wakeup  f_usb_suspend=%x, f_usb_idle=%x,%x
+0x00038B74  0x0103D4  enter sleep........%x,%x,%x,%x,%x
+0x00038B9C  0x0103FC  exist sleep........%x,%x,%x,%x,%x
+0x00038FC4  0x010824  test-zzl usb soft pull out then insert in
+0x00038FF4  0x010854  %s,USB_In =%x
+0x00039008  0x010868  USBDN=:%x
+0x00039014  0x010874  USNDP_status=:%x,USB_OTG_CFG=:%x,%x
+0x0003903C  0x01089C  %s,Get_MODE_Switch=:%x
+0x00039060  0x0108C0  USNDP_status------charging   %x
+0x00039084  0x0108E4  USNDP_status------usb insert  %x
+0x000390B0  0x010910  usb mode..................
+0x00039100  0x010960  usb_init  wait_usb_time=%x, %x
+0x00039124  0x010984  wait_usb_time=%d, USB_OTG_CFG=%d,Get_USBDN=%x
+0x00039160  0x0109C0  usb_mode_check  RF_MODE USB %x, %x, %x
+0x000393EB  0x010C4B  akHvI
+0x000395D4  0x010E34  flash_mid=%x
+0x000399AF  0x01120F  'flash = 0x%x
+0x000399C0  0x011220  flash_write_some_data
+0x000399D8  0x011238  back flash_read:
+0x000399EC  0x01124C  flash_erase: 
+0x000399FC  0x01125C  memcpy:
+0x00039A04  0x011264  flash_write:
+0x00039A14  0x011274  flash_wp_ALL: 
+0x00039A28  0x011288  flash_wp_256k: 
+0x00039A38  0x011298  flash_read: 
+0x00039A4C  0x0112AC  flash_write: 
+0x00039A5C  0x0112BC  flash_test
+0x00039A70  0x0112D0  r_temp1: 
+0x00039B75  0x0113D5  CBa#H
+0x00039BFD  0x01145D  CAapGpG
+0x00039C45  0x0114A5   pGA!I
+0x00039C7F  0x0114DF  CAcpG
+0x00039D67  0x0115C7  Mhb kN
+0x00039DD5  0x011635  C`b`jhb k
+0x00039FA3  0x011803  Caaai
+0x00039FAB  0x01180B  Caa`i
+0x0003A028  0x011888  addPMU_Reg0x5 = 0x%x
+0x0003A044  0x0118A4  value_kcal_result=%x
+0x0003A091  0x0118F1  Hha`a
+0x0003A0A9  0x011909  Hhb`b
+0x0003A0C1  0x011921  Hhc`c
+0x0003A0DB  0x01193B  Hpc`g
+0x0003A14B  0x0119AB  bAb% 
+0x0003A1D7  0x011A37  C`b`jhb
+0x0003A293  0x011AF3  I  HcHc
+0x0003A2DF  0x011B3F  HHaHa
+0x0003A438  0x011C98  vHG`ai
+0x0003A443  0x011CA3  Caa`i
+0x0003A4F3  0x011D53  "&+05:@EKQW]cipv|
+0x0003A52C  0x011D8C  cal_data============================ %x
+0x0003A5CC  0x011E2C  read xvr_reg0x12:0x%x
+0x0003A5E4  0x011E44  cal value:0x%x
+0x0003A5F8  0x011E58  value_kcal_resulte:0x%x
+0x0003A6A9  0x011F09  cCj@$
+0x0003A6AF  0x011F0F  CCbCjKb
+0x0003A707  0x011F67  cAj8"
+0x0003A70D  0x011F6D  CAbAj
+0x0003A723  0x011F83  cBjJb
+0x0003A7B1  0x012011  cRI %
+0x0003A973  0x0121D3  H@xpG
+0x0003AD10  0x012570  spi_waitbusying
+0x0003AD30  0x012590  write complete
+0x0003AD44  0x0125A4  read complete
+0x0003AD58  0x0125B8  spi_rbuf[%d]=%x
+0x0003AD70  0x0125D0  SPI_CTRL 1 slave = %x
+0x0003AD88  0x0125E8  spi len=%x:
+0x0003AE65  0x0126C5  aAk@"
+0x0003AF03  0x012763  aNh.CN`
+0x0003B00B  0x01286B  CHbJj
+0x0003B015  0x012875  CJbJj@
+0x0003B01D  0x01287D  CJbHjxb 
+0x0003B029  0x012889  CHbHj
+0x0003B033  0x012893  CHbJj
+0x0003B03D  0x01289D  CJbHjxb+
+0x0003B049  0x0128A9  CHbHj
+0x0003B053  0x0128B3  CHbHjR
+0x0003B05B  0x0128BB  CHbHjxb
+0x0003B07D  0x0128DD  CHbJj
+0x0003B087  0x0128E7  CJbHj
+0x0003B091  0x0128F1  CHbHjxb
+0x0003B27A  0x012ADA  36reset reason=%x,%x
+0x0003B294  0x012AF4  reset 0 err
+0x0003B2A8  0x012B08  wdt reset
+0x0003B2B4  0x012B14  reset 1 err
+0x0003B2C4  0x012B24  force all reset
+0x0003B2E0  0x012B40  force digital reset
+0x0003B2F8  0x012B58  reset 3 err
+0x0003B308  0x012B68  deep sleep reset
+0x0003B31C  0x012B7C  power on reset
+0x0003B330  0x012B90  set reset reason=%x
+0x0003B3CD  0x012C2D  aLh,CL`
+0x0003B6DC  0x012F3C  referance_voltage=%d
+0x0003B727  0x012F87  `fIA`B!
+0x0003B7BC  0x01301C  BIHxB
+0x0003B818  0x013078   :PTI
+0x0003B838  0x013098  !Lfi%I&
+0x0003B87B  0x0130DB   (pfa
+0x0003BB1A  0x01337A   :PTI
+0x0003BB3A  0x01339A  qHFiB 
+0x0003BBB9  0x013419  5(pe hpt 
+0x0003BBC9  0x013429  p*qw"jqr"
+0x0003BD34  0x013594  sys MAC:%02x:%02x:%02x:%02x:%02x:%02x
+0x0003BD77  0x0135D7    pKHFa
+0x0003BDFD  0x01365D  iai*H
+0x0003C145  0x0139A5  H@hpG
+0x0003C1C2  0x013A22  ZapGp
+0x0003C55F  0x013DBF  pBxJp
+0x0003C6B1  0x013F11  `pGSH
+0x0003C6BF  0x013F1F  apGPI
+0x0003C6C5  0x013F25  `pGNH
+0x0003C6F2  0x013F52  GK!`GNahZB
+0x0003C763  0x013FC3  xHCax@
+0x0003CAFD  0x01435D  !NCHI2
+0x0003D0F0  0x014950  %d dpi   
+0x0003D0FC  0x01495C  %d dpi  
+0x0003D10C  0x01496C  %d dpi 
+0x0003D114  0x014974  %d dpi
+0x0003D1A8  0x014A08  Link OK! 
+0x0003D1B4  0x014A14  CHRG     
+0x0003D1C0  0x014A20  Pair OK! 
+0x0003D1CC  0x014A2C  Conn OK! 
+0x0003D1D8  0x014A38  ReLink OK
+0x0003D1E4  0x014A44  CHRG   
+0x0003D1EC  0x014A4C  ReLinking
+0x0003D1F8  0x014A58  Pairing  
+0x0003D204  0x014A64  Linking  
+0x0003D210  0x014A70  BAT FULL
+0x0003D21C  0x014A7C  Charging
+0x0003D22C  0x014A8C  BAT OVER!
+0x0003D23C  0x014A9C  BAT LOW! 
+0x0003D668  0x014EC8  OLED_Clear---------------
+0x0003D6F8  0x014F58  DPI        
+0x0003D78E  0x014FEE  YuR}@
+0x0003D87C  0x0150DC  YuR}@
+0x0003DCD4  0x015534  %s irq_stat(%x) 
+0x0003DCE8  0x015548  err:%x 
+0x0003E071  0x0158D1  `> ECm
+0x0003E093  0x0158F3  CLHB`
+0x0003E144  0x0159A4  h4tl_init-1 ok
+0x0003E158  0x0159B8  hci_init ok
+0x0003E168  0x0159C8  rwble_hl_init ok
+0x0003E17C  0x0159DC  rwble_init ok
+0x0003E18C  0x0159EC  aes_init ok
+0x0003E19C  0x0159FC  rwip_driver_init ok
+0x0003E1B4  0x015A14  appm_init ok
+0x0003E44C  0x015CAC  RC32K-Cali.Start
+0x0003E460  0x015CC0  RC32K-Cali.Compl
+0x0003E474  0x015CD4  RC32K-Cali.End
+0x0003E523  0x015D83  HjFH`
+0x0003E659  0x015EB9  xUIiD
+0x0003E6B6  0x015F16  >HkhhD
+0x0003E6C3  0x015F23  G:HjFhD
+0x0003E7B7  0x016017  pJyBp
+0x0003EB91  0x0163F1  qJyBq
+0x0003EB9B  0x0163FB   pGCx
+0x0003EBB3  0x016413  qByJq
+0x0003EBC4  0x016424  prf_register_atthdl2gatt,svc->shdl=%x,%x
+0x0003EBF0  0x016450  ~~~~~~~~~dest=%x,~~~~~~~~~src=%x,%x
+0x0003EEA4  0x016704  !!!!!!init_type=%x
+0x0003EEBC  0x01671C  prf_add_profile
+0x0003EED0  0x016730  prf_env.prf[%x].id=%x
+0x0003EEE8  0x016748  prf_env.prf[%x].task=%x
+0x0003EF04  0x016764  prf_add_profile status=%x
+0x0003EFEA  0x01684A  pGpG(H
+0x0003F0F2  0x016952  (q`xhqbx
+0x0003F225  0x016A85    qhx
+0x0003F465  0x016CC5  Hp0pGp
+0x0003F84F  0x0170AF  pixAp
+0x0003F890  0x0170F0  %s,conidx:%d
+0x0003F8A4  0x017104  %s,conidx:%d,offset:%d,len:%x
+0x0003F8CC  0x01712C  %s conidx:%d,handle:%d,att_idx:%d
+0x0003F8F0  0x017150  read FEE1_USER_DESC
+0x0003F908  0x017168  USER_DESC:%s
+0x0003FCC8  0x017528  bass_env->batt_lvl[0] = %d 
+0x000403E3  0x017C43  pixAp
+0x00040424  0x017C84  %s,conidx:%d
+0x0004043C  0x017C9C  %s conidx:%d,handle:%d,att_idx:%d
+0x000407C4  0x018024  ay yjF
+0x0004086C  0x0180CC  create_db status = %x
+0x00040894  0x0180F4  BBBBwait for reset!!!
+0x000408AC  0x01810C  noti  = 0x%x
+0x000408BC  0x01811C  KE_MSG_ALLOC_DYN GATTC_SEND_EVT_CMD  == NULL 
+0x000408EC  0x01814C  rxHdr.ver = %x 
+0x00040900  0x018160  rxHdr.len = %x 
+0x00040914  0x018174  rxHdr.uid = %x 
+0x00040928  0x018188  rxHdr.rom_ver = %x 
+0x00040940  0x0181A0  app part upgrade
+0x00040958  0x0181B8  ImgHdr.rom_ver = %x 
+0x00040970  0x0181D0  ImgHdr.uid = %x 
+0x00040BE8  0x018448  <HpGImgHdr.ver = %x 
+0x00040C00  0x018460  oadBlkTot = %x 
+0x00040C14  0x018474  SSSSapp and stack upgrade
+0x00040C40  0x0184A0  oadImgBlockWrite: UNKNOWN UID
+0x00040C60  0x0184C0  uid = %x
+0x00040C6C  0x0184CC  blkNum = %x ,oadBlkNum %x,oadBlkTot %x,ver %x 
+0x00040CA0  0x018500  ImgHdr.ver = %x, ver = %x
+0x00040CBC  0x01851C  last block 
+0x00040CCC  0x01852C  update down!
+0x00040FA8  0x018808  oads_ffc1_upd_req_handler 
+0x00040FC8  0x018828  oads_env == null
+0x00040FE0  0x018840  OADS_BUSY
+0x00040FEC  0x01884C  Read c1 val
+0x00040FFC  0x01885C  Img Identify
+0x0004100C  0x01886C  Img Block
+0x00041018  0x018878  oads OADS_BUSY 
+0x00041BDB  0x01943B  piFDp
+0x00041C54  0x0194B4  %s error status: %d
+0x00041E5B  0x0196BB  pixAp
+0x00042255  0x019AB5  pah`1
+0x000423BB  0x019C1B  ystart= 0x%x,end= 0x%x
+0x000423D8  0x019C38  ancsc %s
+0x000423E2  0x019C42   operation =0x%x,status = 0x%x,seq_num = 0x%x
+0x00042414  0x019C74  a3=%x,status=%x
+0x00042838  0x01A098  #C&CaF
+0x00042A69  0x01A2C9  `IhA`
+0x00042B3F  0x01A39F  $FNGI
+0x00043068  0x01A8C8  0123456789abcdef
+0x0004307C  0x01A8DC  0123456789ABCDEF
+0x000433E4  0x01AC44  appm_add_svc
+0x000433F1  0x01AC51  appm_update_param
+0x00043403  0x01AC63  app_ble_addr_tabl_init
+0x0004341A  0x01AC7A  app_ble_address_update
+0x00043431  0x01AC91  app_ble_to_ble_mode
+0x00043445  0x01ACA5  switch_rf_mode_loop
+0x00043459  0x01ACB9  app_24_to_ble_reset
+0x0004346D  0x01ACCD  app_24_to_ble_force_pair_reset
+0x0004348C  0x01ACEC  app_user_ke_timer_stop
+0x000434A3  0x01AD03  app_bond_status_initial
+0x000434BB  0x01AD1B  appm_get_peer_type
+0x000434CE  0x01AD2E  app_start_led
+0x000434DC  0x01AD3C  app_ble_pair_successed
+0x000434F3  0x01AD53  ble_alert_led_start
+0x000435F0  0x01AE50  set_Update_OLED
+0x00043600  0x01AE60  set_force_sleep
+0x00043610  0x01AE70  force_24g_sleep
+0x00043620  0x01AE80  force_ble_sleep
+0x00043630  0x01AE90  app_mutli_link_change
+0x000436C0  0x01AF20  fee4_val_upd_rsp_handler
+0x000436D9  0x01AF39  fee5_val_upd_rsp_handler
+0x000436F2  0x01AF52  app_fee0_msg_dflt_handler
+0x00043816  0x01B076  app_hid_add_hids
+0x00043827  0x01B087  app_hid_enable_prf
+0x0004383A  0x01B09A  hogpd_ctnl_pt_ind_handler
+0x00043854  0x01B0B4  hogpd_ntf_cfg_ind_handler
+0x0004386E  0x01B0CE  hogpd_proto_mode_req_ind_handler
+0x0004388F  0x01B0EF  hogpd_enable_rsp_handler
+0x000438A8  0x01B108  app_hid_mouse_timeout_timer_handler
+0x0004394C  0x01B1AC  app_oads_msg_dflt_handler
+0x00043966  0x01B1C6  app_ffc1_writer_req_handler
+0x00043982  0x01B1E2  app_ffc2_writer_req_handler
+0x0004399E  0x01B1FE  app_ffc1_ntf_req
+0x000439AF  0x01B20F  app_ffc2_ntf_req
+0x000439C0  0x01B220  oads_ffc1_upd_rsp_handler
+0x000439DA  0x01B23A  oads_ffc2_upd_rsp_handler
+0x00043A20  0x01B280  app_sec_send_security_req
+0x00043A3A  0x01B29A  gapc_bond_req_ind_handler
+0x00043A54  0x01B2B4  gapc_encrypt_req_ind_handler
+0x00043BA0  0x01B400  gapm_activity_created_ind_handler
+0x00043BC2  0x01B422  gapm_activity_stopped_ind_handler
+0x00043BE4  0x01B444  gapm_profile_added_ind_handler
+0x00043C03  0x01B463  gapm_cmp_evt_handler
+0x00043C18  0x01B478  gapc_get_dev_info_req_ind_handler
+0x00043C3A  0x01B49A  gapc_set_dev_info_req_ind_handler
+0x00043C5C  0x01B4BC  appm_gapm_resolv_dev_addr
+0x00043C76  0x01B4D6  gapc_connection_req_ind_handler
+0x00043C96  0x01B4F6  gapc_param_update_req_ind_handler
+0x00043CB8  0x01B518  gapc_cmp_evt_handler
+0x00043CCD  0x01B52D  gapm_gen_rand_nb_ind_handler
+0x00043CEA  0x01B54A  gapc_param_updated_ind_handler
+0x00043D09  0x01B569  gattc_mtu_changed_ind_handler
+0x00043D27  0x01B587  app_update_conn_param_req_ind_handler
+0x00043D4D  0x01B5AD  app_connected_successed_handler
+0x00043D6D  0x01B5CD  app_mtu_exchange_req_handler
+0x00043D8A  0x01B5EA  app_mouse_adv_timeout_handler
+0x00043DA8  0x01B608  app_reconnect_advertising_timeout_handler
+0x00043DD2  0x01B632  app_enable_ntf_handler
+0x00043DE9  0x01B649  app_start_pwm_timer_handler
+0x00043E05  0x01B665  app_send_batt_handler
+0x00043E1B  0x01B67B  app_send_data_timer_handler
+0x00043E37  0x01B697  rtc_timer_handler
+0x00043E49  0x01B6A9  rtc_timer_start
+0x00043E94  0x01B6F4  app_ancsc_init
+0x00043EA3  0x01B703  app_ancs_add_ancsc
+0x00043EB6  0x01B716  app_ancsc_msg_dflt_handler
+0x00043ED1  0x01B731  app_ancsc_enable_rsp_handler
+0x00043EEE  0x01B74E  app_ancsc_enable_ntf_rsp_handler
+0x00043F0F  0x01B76F  app_ancsc_enable_data_ntf_rsp_handler
+0x00043F35  0x01B795  app_ancsc_data_ntf_handler
+0x00043F50  0x01B7B0  app_ancsc_get_incomingcall_number
+0x00043F72  0x01B7D2  app_ancsc_delete_call
+0x00043F88  0x01B7E8  app_ancsc_get_Socialmsg
+0x00044040  0x01B8A0  nvds_Polling_read
+0x00044052  0x01B8B2  nvds_Polling_write
+0x00044065  0x01B8C5  profile_mem_init
+0x00044099  0x01B8F9  !Set_Simu_Mode_Led_BIT
+0x000440B0  0x01B910  Set_SIMU_mode_LightUp_Led
+0x000440CA  0x01B92A  set_USB_led_flash
+0x000440DC  0x01B93C  set_pairing_led_flash
+0x000440F2  0x01B952  set_bonded_led_flash
+0x00044107  0x01B967  set_dpi
+0x0004410F  0x01B96F  sensor_pwdn
+0x0004411B  0x01B97B  sensor_init
+0x0004413D  0x01B99D  CtK M
+0x00044157  0x01B9B7  a1bdm
+0x00044167  0x01B9C7  mpn`o
+0x00044312  0x01BB72  -Kapplication_test_mode
+0x0004432A  0x01BB8A  application_cal_data_mode
+0x00044655  0x01BEB5  get_usb_insert_status
+0x0004466B  0x01BECB  Get_MODE_Switch_status
+0x00044682  0x01BEE2  app_usb_upgrade_start
+0x000446AB  0x01BF0B  kmod_calibration_2M
+0x000446BF  0x01BF1F  uart2_isr
+0x000446C9  0x01BF29  0123456789ABCDEF
+0x0004473B  0x01BF9B  >QIE>
+0x00044747  0x01BFA7  BaQIF
+0x0004474D  0x01BFAD  !AEK1
+0x00044759  0x01BFB9  'EEE9
+0x0004475F  0x01BFBF  <JII0
+0x0004476B  0x01BFCB  6III6
+0x0004479B  0x01BFFB  2IYQ>
+0x000447AD  0x01C00D  >AAA"
+0x000447C5  0x01C025  >AIIz
+0x000447F5  0x01C055  >AAA>
+0x0004480D  0x01C06D  FIII1
+0x00044837  0x01C097  aQIEC
+0x00044861  0x01C0C1   TTTx
+0x0004486D  0x01C0CD  8DDD 
+0x000448B5  0x01C115  8DDD8
+0x000448CD  0x01C12D  HTTT 
+0x000448F7  0x01C157  DdTLD
+0x000455E2  0x01CE42  DDDDDDDDDD
+0x00045F44  0x01D7A4  ppppppp
+0x00045F5D  0x01D7BD  ppppppp
+0x000461A2  0x01DA02  <<rwble_isr
+0x00046324  0x01DB84  fee0s_fee5_val_upd_req_handler
+0x00046343  0x01DBA3  gattc_att_info_req_ind_handler
+0x00046362  0x01DBC2  gattc_write_req_ind_handler
+0x0004637E  0x01DBDE  gattc_read_req_ind_handler
+0x00046399  0x01DBF9  gattc_cmp_evt_handler
+0x000464E4  0x01DD44  fcc0s_fcc2_val_upd_req_handler
+0x00046503  0x01DD63  gattc_att_info_req_ind_handler
+0x00046522  0x01DD82  gattc_write_req_ind_handler
+0x0004653E  0x01DD9E  gattc_read_req_ind_handler
+0x00046559  0x01DDB9  gattc_cmp_evt_handler
+0x000465C8  0x01DE28  oad_updating_user_section_begin
+0x000465E8  0x01DE48  oadImgIdentifyWrite
+0x000465FC  0x01DE5C  oadImgIdentifyReq
+0x00046640  0x01DEA0  oads_enable_req_handler
+0x00046658  0x01DEB8  oads_ffc2_upd_req_handler
+0x00046672  0x01DED2  gattc_cmp_evt_handler
+0x00046790  0x01DFF0  hogpd_report_upd_req_handler
+0x000467AD  0x01E00D  hogpd_proto_mode_cfm_handler
+0x00046830  0x01E090  ancsc_enable_req_handler
+0x00046849  0x01E0A9  gattc_sdp_svc_ind_handler
+0x00046863  0x01E0C3  gattc_cmp_evt_handler
+0x00046879  0x01E0D9  ancsc_msg_default_handler
+0x00046894  0x01E0F4   An error has occurred during access to the NVDS_TAG_BLE_ADDRESS0 
+0x000468DC  0x01E13C   An error has occurred during access to the NVDS_TAG_BLE_ADDRESS1 
+0x00046924  0x01E184  there is a serious lost pkt occur,need execute cpu reset!!!!!!!!
+0x00046968  0x01E1C8  hogpd_report_req_ind_handler operation = %x,type = %x,idx = %x
+0x000469AC  0x01E20C  GAPC_PAIRING_SUCCEED
+0x000469C4  0x01E224  GAPC_PAIRING_FAILED
+0x000469D8  0x01E238  GAPC_OOB_EXCH
+0x000469E8  0x01E248  GAPC_NC_EXCH
+0x000469F8  0x01E258  GAPC_IRK_EXCH
+0x00046A08  0x01E268  GAPC_CSRK_EXCH
+0x00046A18  0x01E278  GAPC_LTK_EXCH
+0x00046A28  0x01E288  GAPC_TK_EXCH
+0x00046A38  0x01E298  GAPC_PAIRING_RSP
+0x00046A4C  0x01E2AC  GAPC_PAIRING_REQ
+0x00046A60  0x01E2C0  GAPC_REPEATED_ATTEMPT
+0x00046A78  0x01E2D8  APP_PARAM_UPDATE_REQ_IND--9 hid not ready,   app_update_conn_param_.............%d,%d 
+0x00046AD4  0x01E334  APP_PARAM_UPDATE_REQ_IND--5  hid ready, update param...............
+0x00046B1C  0x01E37C  APP_PARAM_UPDATE_REQ_IND--7   re connected update param...............
+0x00046B68  0x01E3C8  APP_PARAM_UPDATE_REQ_IND--6  hid not ready,     gapc_param_updated_ind........
+0x00046BBC  0x01E41C  breath:%d,app_hid_env.state=%d,send_key_en=%d,tx_buff_count =%d 
+0x00046C00  0x01E460  Polling = %x,Flashmem_buff[_offset_Polling] = %x,Flashmem_buff[_offset_Polling +1] = %x
+0x00046C5C  0x01E4BC  fWorkModeInit  RF24_STEP=%x, f_reconnect_24G=%x, Key_CurrentStatus=%x
+0x00046F3C  0x01E79C  txevm -g 1
+0x00046F49  0x01E7A9  ble dut
+0x00046F53  0x01E7B3  enter ble dut
+0x00046F63  0x01E7C3  exit ble dut
+0x00046F72  0x01E7D2  reboot
+0x00046F7B  0x01E7DB  uartdwld

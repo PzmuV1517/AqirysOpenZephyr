@@ -1,0 +1,1127 @@
+addr	name	size	callers	callees	strings
+0000626c	rom_0626C	1	FUN_0003dfd2;rwip_driver_init		
+0000692c	rom_0692C	1	rwip_driver_init		
+000069c4	rom_069C4	1	FUN_0003e04e		
+000069dc	rom_069DC	1	FUN_0003e304		
+00006a88	rom_06A88	1	rwip_driver_init		
+00006ab4	rom_06AB4	1	FUN_0003dfd2		
+00006af0	rom_06AF0	1	FUN_0003e304		
+00006b14	rom_06B14	1	FUN_0003dd8e		
+00006b28	rom_06B28	1	FUN_0003dd1c;FUN_0003dd72		
+00006b5a	rom_06B5A	1	FUN_0003dd56		
+00006bce	rom_06BCE	1	FUN_0003e03e		
+00006bf8	rom_06BF8	1	rwip_driver_init		
+00006d2c	rom_06D2C	1	FUN_0003ef48;FUN_00041160		
+00006df6	rom_06DF6	1	FUN_0003efc6;FUN_0003f370;FUN_0003f9a0;FUN_0003fa7a;FUN_0003fbda;FUN_0004008a;FUN_00040528;FUN_00041160;FUN_00041540;FUN_00041efc		
+00006ef4	rom_06EF4	1	FUN_00029464;FUN_00029490;FUN_000294f8;FUN_00029530;FUN_000295aa;FUN_0002bf04;FUN_0002bf30;FUN_0002bf5c;FUN_0002bf88;FUN_0002c046;FUN_0002c124;FUN_0002c158;FUN_0002ca56;FUN_0002cad2;FUN_0002cafe;FUN_0002d53c;FUN_0002da7e;FUN_0002f438;FUN_0002f5d4;FUN_0003e7d2;FUN_0003e854;FUN_0003e888;FUN_0003e8c2;FUN_0003e902;FUN_0003eb28;FUN_0003f3cc;FUN_0003f418;FUN_0003fb24;FUN_0003fbda;FUN_0003fd6e;FUN_0003fdd4;FUN_000400e2;FUN_00040768;FUN_0004169a;FUN_00041798;FUN_0004186c;FUN_00041922;FUN_00041f62;FUN_000420ee;FUN_00042132;adv_data;app_ancs_add_ancsc;app_ancsc_delete_call;app_hid_enable_prf;app_oad_add_oads;app_sec_send_security_req;appm_create_advertising;appm_delete_advertising;appm_update_param;gattc_att_info_req_ind_handler;gattc_att_info_req_ind_handler_2;hogpd_ctnl_pt_ind_handler;hogpd_proto_mode_cfm_handler;hogpd_report_upd_req_handler;oadImgIdentifyReq;prf_register_atthdl2gatt;update		
+00006f26	rom_06F26	1	APP_PARAM_UPDATE_REQ_IN;FUN_00029464;FUN_00029490;FUN_000294f8;FUN_00029530;FUN_000295aa;FUN_0002bf04;FUN_0002bf30;FUN_0002bf5c;FUN_0002bf88;FUN_0002c046;FUN_0002c124;FUN_0002c158;FUN_0002ca56;FUN_0002cad2;FUN_0002cafe;FUN_0002cda6;FUN_0002d53c;FUN_0002da7e;FUN_0002f438;FUN_0002f5d4;FUN_0003e7d2;FUN_0003e854;FUN_0003e888;FUN_0003e8c2;FUN_0003e902;FUN_0003eb28;FUN_0003f3cc;FUN_0003f418;FUN_0003fb24;FUN_0003fbda;FUN_0003fd3a;FUN_0003fd6e;FUN_0003fdd4;FUN_000400e2;FUN_00040768;FUN_00040d28;FUN_0004169a;FUN_00041798;FUN_0004186c;FUN_00041922;FUN_00041f62;FUN_000420ee;FUN_00042132;adv_data;app_ancs_add_ancsc;app_ancsc_delete_call;app_hid_enable_prf;app_oad_add_oads;app_sec_send_security_req;appm_create_advertising;appm_delete_advertising;appm_update_param;gattc_att_info_req_ind_handler;gattc_att_info_req_ind_handler_2;hogpd_ctnl_pt_ind_handler;hogpd_proto_mode_cfm_handler;hogpd_report_upd_req_handler;oadImgIdentifyReq;prf_register_atthdl2gatt;update		
+00006f58	rom_06F58	1	gpio		
+00006f80	rom_06F80	1	update		
+00007108	rom_07108	1	FUN_00029530;FUN_0003ec6a		
+00007180	rom_07180	1	FUN_00029530;FUN_0002d53c;FUN_0003ef48;FUN_0003f9a0;FUN_0003fbda;FUN_0003fd6e;FUN_00041160;FUN_00041922;FUN_000420ee;FUN_00042132;hogpd_proto_mode_cfm_handler;hogpd_report_upd_req_handler		
+000071ea	rom_071EA	1	Disconnected;FUN_00028c66;FUN_0002b18e;FUN_0002b8a2;FUN_0002bd62;FUN_0003300e;FUN_0003fd6e;FUN_00041922;FUN_00042132;app_env;app_mutli_link_change;disconnect;f_usb_isConnected;force_ble_sleep;gpio;hogpd_proto_mode_cfm_handler;hogpd_report_upd_req_handler		
+00007212	rom_07212	1	FUN_0003ec6a		
+00007342	rom_07342	1	APP_PARAM_UPDATE_REQ_IN;APP_PARAM_UPDATE_REQ_IND;APP_PARAM_UPDATE_REQ_IND_2;APP_PARAM_UPDATE_REQ_IND_3;BLE_PAIR;FUN_0002d53c;Success_led_2second_2;app_start_led;ble_alert_led_start;ble_update_param_failed_cnt;force_ble_sleep;force_ble_sleep_2;set_Update_OLED_3		
+000073d4	rom_073D4	1	APP_PARAM_UPDATE_REQ_IN;BLE_PAIR;Success_led_2second_2;app_sec_send_security_req;app_user_ke_timer_stop;ble_alert_led_stop;force_ble_sleep		
+00007434	rom_07434	1	gpio		
+000074a0	rom_074A0	1	FUN_0003dc3c		
+00007806	rom_07806	1	FUN_0003dc3c		
+0000c1ca	rom_0C1CA	1	FUN_0003dc3c		
+00011550	rom_11550	1	app_ble_address_update;force_pair_en		
+0001169a	rom_1169A	1	FUN_0003dc3c		
+0001477c	rom_1477C	1	FUN_0003dfd2;rwip_driver_init		
+00015c36	rom_15C36	1	FUN_0003dfd2;rwip_driver_init		
+00015c40	rom_15C40	1	FUN_0003dd00		
+00015f90	rom_15F90	1	FUN_0003dfd2;rwip_driver_init		
+00016216	rom_16216	1	FUN_0003dd3a		
+00016508	rom_16508	1	FUN_0003dfd2;rwip_driver_init		
+00016930	rom_16930	1	FUN_0003dfd2;rwip_driver_init		
+0001695e	rom_1695E	1	FUN_0003e1ec		
+00016bce	rom_16BCE	1	FUN_0003dfd2;rwip_driver_init		
+00016cac	rom_16CAC	1	FUN_0003dfd2;rwip_driver_init		
+00016d94	rom_16D94	1	FUN_0003dd56		
+000179a0	rom_179A0	1	FUN_0003ef48		
+000179c6	rom_179C6	1			
+00017a12	rom_17A12	1	FUN_0003efc6		
+00017a26	rom_17A26	1			
+00018038	rom_18038	1	FUN_0003e1ec		
+0001804c	rom_1804C	1	FUN_0003c6ce;FUN_0003dc3c;FUN_0003e0bc;FUN_0003e268;FUN_0003e304;RC32K_2		
+00018074	rom_18074	1	FUN_0003dd8e;FUN_0003e04e;FUN_0003e304		
+0001809e	rom_1809E	1	FUN_0003dd72;FUN_0003e0bc;FUN_0003e1ec		
+0001855c	rom_1855C	1	hogpd_report_upd_req_handler		
+000185a6	rom_185A6	1			
+0001efcc	rom_1EFCC	1	FUN_0003e9f8		
+0001f06a	rom_1F06A	1	FUN_0003ef48;FUN_0003f9a0;FUN_00041160		
+0001f16a	rom_1F16A	1			
+0001f296	rom_1F296	1			
+0001f3d4	rom_1F3D4	1	FUN_00041160		
+0001f3f6	rom_1F3F6	1	FUN_00041160		
+0001f61c	rom_1F61C	1	FUN_0003f9a0		
+00024f08	rom_24F08	1	FUN_0003dfd2;rwip_driver_init		
+00024f24	rom_24F24	1	FUN_00032fe6;FUN_0003b6f6;FUN_0003b932;FUN_0003c21e;FUN_0003c2e6;FUN_0003c338;FUN_0003c39c;FUN_0003c57a;FUN_0003c6ce;FUN_0003c75a;FUN_0003e04e;FUN_0003e432;FUN_000405ae;FUN_00042c70;kmod_calibration_2M;referance_voltage;rgb_24g_test_cal;value_kcal_result		
+00024f78	rom_24F78	1			
+00024f8a	rom_24F8A	1	FUN_0003dc3c;enter_BLE_normal_app_mode		
+00024f9c	rom_24F9C	1	Default_Profile;FLASH_RD_Macro;FLASH_RD_Profile;FLASH_WR_Profile;FLASH_wr_Global;FUN_00029392;FUN_000294f8;FUN_00029764;FUN_00029988;FUN_00029a42;FUN_0002c124;FUN_0002c158;FUN_0002d53c;FUN_0002da7e;FUN_0002f92a;FUN_000333f0;FUN_000358b6;FUN_00037004;FUN_00037078;FUN_0003870a;FUN_0003a244;FUN_0003b882;FUN_0003ba6e;FUN_0003bd90;FUN_0003bde6;FUN_0003d63a;FUN_0003d7ee;FUN_0003d8da;FUN_0003d96e;FUN_0003da42;FUN_0003dd56;FUN_0003e732;FUN_0003e8c2;FUN_0003e902;FUN_0003eb28;FUN_0003f3cc;FUN_0003f418;FUN_0003f9a0;FUN_000400e2;FUN_00040568;FUN_00041160;FUN_0004169a;FUN_00041922;FUN_00041f62;HID_RQT_Get_Protocol;RPT_STEP;_USB_macro2;app_ble_addr_tabl_init;appm_create_advertising;flash_erase;flash_read;flash_write_some_data;force_pair_en;limit;loc_irk;read;save;tx_failed_cnt;update		
+00024fec	rom_24FEC	1	Default_Profile;FLASH_RD_Global;FLASH_WR_Profile;FLASH_wr_Global;FUN_00028b00;FUN_00029530;FUN_0002b3ac;FUN_0002b4de;FUN_0002bd62;FUN_0002c0dc;FUN_0002c378;FUN_0002d53c;FUN_0002f92a;FUN_0002ff18;FUN_000312de;FUN_00031334;FUN_00031406;FUN_0003143c;FUN_00032f16;FUN_000332be;FUN_000333f0;FUN_000358b6;FUN_000371ac;FUN_00037a94;FUN_0003870a;FUN_00039526;FUN_0003aba4;FUN_0003aca4;FUN_0003b760;FUN_0003b904;FUN_0003d63a;FUN_0003d7ee;FUN_0003d8da;FUN_0003d96e;FUN_0003da42;Set_Report_Data;_USB_macro2;exist;f_reconnect_24G;f_usb_isConnected;system_mode		
+00025002	rom_25002	1	FUN_0003bb38;FUN_0003e516;FUN_0003e5f0		
+0002501c	rom_2501C	1	FUN_000425ea		
+00025024	rom_25024	1	FUN_00028c66;FUN_0003943c;FUN_0003948a;FUN_00039526;FUN_0003dfd2		
+00025038	rom_25038	1	FUN_00028c66;FUN_0003943c;FUN_0003948a;FUN_00039526;FUN_0003dfd2		
+0002504c	rom_2504C	1	FUN_00028c66;FUN_0003943c;FUN_0003948a;FUN_00039526;FUN_0003dfd2;enter_BLE_normal_app_mode		
+0002505c	rom_2505C	1	FUN_00028c66;FUN_0003943c;FUN_0003948a;FUN_00039526;FUN_0003dfd2;enter_BLE_normal_app_mode		
+00025078	rom_25078	1	FUN_0002d53c;FUN_0002f4da;FUN_00030094;FUN_000319c0;FUN_00031b3e;FUN_0003300e;FUN_000333f0;FUN_00033a7e;FUN_00036a12;FUN_0003af2c;FUN_0003afa2;FUN_0003b7d4;FUN_0003bad6;FUN_0003c8dc;FUN_0003db3a;FUN_00041922;Set_Report_Data;_saveC_GM_ProfileMax;adv_state;app_start_led;rgb_24g_test_cal;single_wave		
+000287a0	_vector_table	4			
+000287e0	thunk_FUN_000289f0	4			
+000287e4	thunk_FUN_000289f8	4			
+000287e8	thunk_FUN_00028a00	4			
+000287ec	thunk_FUN_00028a08	4			
+000287f0	thunk_FUN_00028ac0	4			
+000287f4	thunk_FUN_00028aa0	4			
+000287f8	thunk_FUN_00028a10	4			
+00028824	Reset_Handler	352		FUN_00028980;FUN_000289a8	
+00028980	FUN_00028980	40	Reset_Handler		
+000289a8	FUN_000289a8	36	Reset_Handler		
+000289f0	FUN_000289f0	4			
+000289f8	FUN_000289f8	4			
+00028a00	FUN_00028a00	4			
+00028a08	FUN_00028a08	4			
+00028a10	FUN_00028a10	4			
+00028aa0	FUN_00028aa0	16		FUN_0003c0a8	
+00028ac0	FUN_00028ac0	16		FUN_0003c008	
+00028b00	FUN_00028b00	54	TEST_SINGLE_WAVE_2;enter_BLE_normal_app_mode	rom_24FEC	
+00028b36	force_pair_en	268	enter_BLE_normal_app_mode	FUN_00029ed8;FUN_0003948a;FUN_0003e552;FUN_0003e5f0;Get_MODE_Switch_status;app_ble_addr_tabl_init;app_bond_status_initial;dbg_printf;dbg_printf_2;force;rom_11550;rom_24F9C;sys_flag	Rf mode  =  %x,
+ | flash7E000 mac addr: | force_pair_en ========%x
+ | ble address set: | flash7E100 SumAddr:
+00028c48	FUN_00028c48	6	FUN_0003b932;FUN_0003bb38;cal_data;rwip_driver_init		
+00028c4e	FUN_00028c4e	24	enter_BLE_normal_app_mode	FUN_00032686;FUN_0003b932;FUN_0003bde6;FUN_0003e03e	
+00028c66	FUN_00028c66	242	enter_BLE_normal_app_mode	BLE_PAIR;Default_Profile;FLASH_WR_Profile;FLASH_wr_Global;FUN_0002aa5c;FUN_0002f31c;FUN_00032886;FUN_0003ae82;FUN_0003af2c;FUN_0003af8a;FUN_0003b54e;FUN_0003e03e;FUN_0003e304;FUN_000405ae;Stack_Integrity_Check;flash_erase;rom_071EA;rom_25024;rom_25038;rom_2504C;rom_2505C;there	
+00028d58	enter_BLE_normal_app_mode	572		FUN_00028b00;FUN_00028c4e;FUN_00028c66;FUN_0002a5e4;FUN_0002a78c;FUN_0002aa44;FUN_0002ac0e;FUN_0002b4c8;FUN_000311de;FUN_00031334;FUN_000317c2;FUN_00032620;FUN_0003262c;FUN_00032658;FUN_00035cd2;FUN_00039428;FUN_0003ae40;FUN_0003afa2;FUN_0003b512;FUN_0003b528;FUN_0003beb4;FUN_0003bfc2;FUN_0003c8b6;FUN_0003cf7c;FUN_0003d8da;FUN_0003e516;KEY_piaring_cnt;Linking;OLED_Clear;OLED_Init;USNDP_status_2;dbg_printf;fn24main;force_pair_en;get_usb_insert_status;profile_mem_init;rom_24F8A;rom_2504C;rom_2505C;rwip_driver_init;sensor_init;set_Update_OLED	OLED_Init 0
+ | Mouse reset_reason************************ %x 
+ | Key_CurrentStatus = %x
+ | system power on RF_MODE = %x
+ | enter_dut_fcc_mode 
+ | f_usb_ena================= %x,%x,%x,%x,%x,
+ | RF_MODE 24G================= %x,%x,%x,%x,%x,
+ | system_mode0  RF_MODE %x, %x, %x
+ | enter_BLE_normal_app_mode RF_MODE================%x
+
+00029164	FUN_00029164	12	rwip_driver_init		
+00029170	Stack_Integrity_Check	84	FUN_00028c66	dbg_printf	Stack_Integrity_Check STACK_BASE_UNUSED fail!
+ | Stack_Integrity_Check STACK_BASE_SVC fail!
+ | Stack_Integrity_Check STACK_BASE_FIQ fail!
+ | Stack_Integrity_Check STACK_BASE_IRQ fail!
+
+00029392	FUN_00029392	46	FUN_00029530;limit	rom_24F9C	AQIRYS Zephyr 2 | AQIRYS Zephyr
+000293c0	limit	164	adv_data	FUN_00029392;dbg_printf;rom_24F9C	limit
+ | no limit
+
+00029464	FUN_00029464	44	gpio	rom_06EF4;rom_06F26	
+00029490	FUN_00029490	38	app_ble_address_update;app_env;app_mutli_link_change;disconnect;force_ble_sleep	rom_06EF4;rom_06F26	
+000294b6	adv_data	66	FUN_0002d53c	dbg_printf_2;limit;rom_06EF4;rom_06F26	adv_data--------
+000294f8	FUN_000294f8	56		rom_06EF4;rom_06F26;rom_24F9C	
+00029530	FUN_00029530	78	rwip_driver_init	FUN_00029392;FUN_0002bef8;FUN_0002c044;FUN_0002c378;FUN_0002ca10;app_ancsc_init;app_sec_init;rom_06EF4;rom_06F26;rom_07108;rom_07180;rom_24FEC	
+0002957e	appm_add_svc	44	FUN_0002d53c	dbg_printf	appm_add_svc | %s more_svc:%d
+
+000295aa	FUN_000295aa	36	Disconnected;FUN_0002b8a2;FUN_0002d53c;app_env;app_mutli_link_change;disconnect;f_usb_isConnected;force_ble_sleep	rom_06EF4;rom_06F26	
+000295ce	appm_create_advertising	198	FUN_0002d53c;adv_state	FUN_0003e552;dbg_printf;dbg_printf_2;rom_06EF4;rom_06F26;rom_24F9C	disc_mode  =%x,
+ | appm_create_advertising direct
+ | peeraddr2: | appm_create_advertising nonderect 
+
+00029694	appm_delete_advertising	36	FUN_0002d53c;app_ble_address_update;app_env	dbg_printf;rom_06EF4;rom_06F26	appm_delete_advertising 
+
+000296b8	adv_state	42		FUN_000317c2;appm_create_advertising;dbg_printf;rom_25078	adv_state:%x
+
+00029704	appm_update_param	96	ImgHdr;update	dbg_printf;rom_06EF4;rom_06F26	appm_update_param | %s 
+ | intv_min:%d ,%d
+ | con_latency:%d 
+ | time_out:%d 
+
+00029764	FUN_00029764	18		rom_24F9C	
+000298e8	app_ble_addr_tabl_init	160	force_pair_en	FUN_0003e552;FUN_0003e5f0;dbg_printf;dbg_printf_2;rom_24F9C	app_ble_addr_tabl_init | %s 
+ | wr ble--1 addr : | wr ble--2 addr : | NVDS_TAG_BLE_ADDRESS0: | NVDS_TAG_BLE_ADDRESS1:
+00029988	FUN_00029988	68	app_ble_address_update;app_ble_to_ble_mode	FUN_0003e552;dbg_printf;dbg_printf_2;rom_24F9C	 An error has occurred during access to the NVDS_TAG_BLE_ADDRESS1 
+ | ble addr: |  An error has occurred during access to the NVDS_TAG_BLE_ADDRESS0 
+
+000299cc	save	56		FUN_0003e5f0;dbg_printf_2;rom_24F9C	save co_default_bdaddr :
+00029a04	FUN_00029a04	62	app_ble_to_ble_mode	FUN_0002cbc8;FUN_0003e552;KEY_piaring_cnt;dbg_printf	not NVDS_TAG_PEER%d_IRK
+ | ====================================================
+
+00029a42	FUN_00029a42	26	app_ble_address_update;app_env	rom_24F9C	
+00029a5c	app_env	84	app_ble_to_ble_mode	FUN_00029490;FUN_000295aa;FUN_00029a42;appm_delete_advertising;dbg_printf;rom_071EA	appm disconn..................
+ | app_env.adv_state = %x 
+
+00029ab0	FUN_00029ab0	28	app_24_to_ble_force_pair_reset;app_24_to_ble_reset;app_ble_address_update;app_ble_to_ble_mode	FUN_0003e5f0	
+00029acc	app_ble_address_update	84	FUN_0002b8a2	FUN_00029490;FUN_00029988;FUN_00029a42;FUN_00029ab0;appm_delete_advertising;dbg_printf;dbg_printf_2;rom_11550	app_ble_address_update | app_sec_env.key_index = %x 
+ | update ble addr:
+00029b20	sys_flag	264	app_ble_to_ble_mode;force_pair_en	FUN_0003e552;dbg_printf	%s 
+ | appm_get_peer_type | sys_flag = %x
+ | peer addr type0 = %x
+ | bond0  =  %x
+ | peer addr type1 is PUBLIC_ADDR=%x
+ | bond1  =  %x
+
+00029c28	app_ble_to_ble_mode	68	switch_rf_mode_loop	FUN_00029988;FUN_00029a04;FUN_00029ab0;KEY_piaring_cnt;app_env;dbg_printf;sys_flag	app_ble_to_ble_mode
+00029c6c	app_user_ke_timer_stop	106	Disconnected;app_mutli_link_change;disconnect;f_usb_isConnected;switch_rf_mode_loop	dbg_printf;rom_073D4	%s 
+ | app_user_ke_timer_stop
+00029ed8	FUN_00029ed8	26	app_24_to_ble_force_pair_reset;force_pair_en	FUN_0003e5f0	
+00029ef2	FUN_00029ef2	38	app_24_to_ble_force_pair_reset;app_24_to_ble_reset	FUN_0003e5f0	
+00029f18	app_24_to_ble_force_pair_reset	42	FUN_0002b8a2;switch_rf_mode_loop	FUN_00029ab0;FUN_00029ed8;FUN_00029ef2;FUN_0003b130;FUN_0003b1de;dbg_printf	app_24_to_ble_force_pair_reset | %s 
+
+00029f42	app_24_to_ble_reset	84	switch_rf_mode_loop	FUN_00029ab0;FUN_00029ef2;FUN_0003b130;KEY_piaring_cnt;dbg_printf	%s 
+ | app_24_to_ble_reset | key press before cpu reset = %d,%d
+
+00029f96	switch_rf_mode_loop	226	Disconnected;app_mutli_link_change	FUN_0002cbda;FUN_00032886;FUN_0003e5f0;OLED_Clear;app_24_to_ble_force_pair_reset;app_24_to_ble_reset;app_ble_to_ble_mode;app_user_ke_timer_stop;dbg_printf;fWorkModeInit	switch_rf_mode_loop | %s : RF_MODE**********Simu_RF_MODE[%x to %x]
+ | force_pair_en 4========%x
+ | bonded0===========%x, bonded1========%x
+ |  An error has occurred during access to the NVDS_TAG_RF_MODE 
+
+0002a078	force	50	force_pair_en	FUN_0003e552;dbg_printf	force pair mode : %d 
+
+0002a0aa	FUN_0002a0aa	22		FUN_0003e5f0	
+0002a0c0	FUN_0002a0c0	44		FUN_0003e552	
+0002a0ec	app_start_led	90	APP_PARAM_UPDATE_REQ_IN;APP_PARAM_UPDATE_REQ_IND;BLE_PAIR	FUN_00032886;dbg_printf;rom_07342;rom_25078	app_start_led | %s RF_MODE[%d]
+
+0002a152	BLE_PAIR	484	FUN_00028c66	FUN_0002cbda;FUN_0003b538;FUN_0003c8b6;FUN_0003cf7c;OLED_Clear;app_start_led;dbg_printf;rom_07342;rom_073D4	app adv timer run.... %d
+ | BLE_PAIR OLED_Init 1
+ | start reconnect advertising = %d 
+ | start nondir advertising = %d 
+ | BLE_PAIR BLE_RECONNECTED OLED_Init 2
+
+0002a4e2	app_bond_status_initial	152	force_pair_en	FUN_0003e552;FUN_0003e5f0;dbg_printf	app_bond_status_initial | %s 
+ | write error  NVDS_TAG_PERIPH_BONDED0= %x
+ | app_bond_status_initial  bonded0=%x, bonded1========%x
+
+0002a57a	APP_PARAM_UPDATE_REQ_IND	106	ble_update_param_failed_cnt;hogpd_ntf_cfg_ind_handler	app_start_led;dbg_printf;rom_07342	app_ble_pair_successed | %s ble_pairing_successed_cfm=[%d]
+ | APP_PARAM_UPDATE_REQ_IND-2 start update param....
+ | pair successed ,start led on....
+
+0002a5e4	FUN_0002a5e4	20	enter_BLE_normal_app_mode		
+0002a5f8	FUN_0002a5f8	28	there		
+0002a614	there	96	FUN_00028c66	FUN_0002a5f8;FUN_0003b130;dbg_printf	ble lost pkt sum:%d 
+ | there is a serious lost pkt occur,need execute cpu reset!!!!!!!!
+
+0002a674	FUN_0002a674	42	FUN_0002f31c	dbg_printf	ble lost pkt accumulate free
+
+0002a69e	FUN_0002a69e	112	tx_failed_cnt	dbg_printf	try high rate............%d ,%d
+
+0002a70e	ble_alert_led_start	98		dbg_printf;rom_07342	%s 
+ | ble_alert_led_start
+0002a770	ble_alert_led_stop	28	Disconnected;FUN_000328c2;app_mutli_link_change;disconnect;f_usb_isConnected	dbg_printf;rom_073D4	ble_alert_led_stop
+
+0002a78c	FUN_0002a78c	26	enter_BLE_normal_app_mode	reset	
+0002a9d0	FUN_0002a9d0	116			
+0002aa44	FUN_0002aa44	24	FUN_0002aa5c;SLEEP;enter_BLE_normal_app_mode		
+0002aa5c	FUN_0002aa5c	276	FUN_00028c66;system_mode	FUN_0002aa44;FUN_000319c0;FUN_00031b3e;OLED_Init	
+0002ab70	FUN_0002ab70	56	FUN_0002ac0e		
+0002abba	FUN_0002abba	14	FUN_0002ac0e		
+0002abd4	FUN_0002abd4	58	FUN_0002ac0e;FUN_0002b128;get_scan_Rvalue	FUN_00031784	
+0002ac0e	FUN_0002ac0e	210	TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;enter_BLE_normal_app_mode;system_mode	FUN_0002ab70;FUN_0002abba;FUN_0002abd4;OLED_Init	
+0002ace0	set_Update_OLED	514	SLEEP;enter_BLE_normal_app_mode;f_usb_isConnected;system_mode	FUN_000328c2;FUN_0003b568;FUN_0003b5b6;FUN_0003b5f8;dbg_printf;force_24g_sleep;force_ble_sleep	set_Update_OLED--f_bat_low 1
+ | set_Update_OLED--f_bat_low 2
+ | f_bat_ll_low _ process ..
+
+0002af72	FUN_0002af72	192			
+0002b128	FUN_0002b128	62	FUN_0002bd48;SLEEP;exist;f_reconnect_24G	FUN_0002abd4	
+0002b166	FUN_0002b166	40	FUN_0002bd48		
+0002b18e	FUN_0002b18e	70	FUN_0003cf24;f_usb_isConnected	rom_071EA	
+0002b1d4	set_Update_OLED_3	58		OLED_Init;dbg_printf;rom_07342	set_Update_OLED | %s 
+
+0002b20e	set_force_sleep	64	force_24g_sleep;force_ble_sleep	FUN_00032886;FUN_0003587a;FUN_0003bf0a;FUN_0003d508;FUN_0003d546;dbg_printf	set_force_sleep | %s 
+
+0002b24e	force_24g_sleep	68	SLEEP;set_Update_OLED	FUN_0003b528;dbg_printf;set_force_sleep	%s 
+ | force_24g_sleep
+0002b292	force_ble_sleep	162	force_ble_sleep_2;set_Update_OLED	FUN_00029490;FUN_000295aa;FUN_00033cfc;FUN_00033dc2;FUN_00039a84;FUN_0003b528;dbg_printf;rom_071EA;rom_07342;rom_073D4;sensor_pwdn;set_force_sleep	force_ble_sleep | %s 
+ | app_env.adv_state...= %d
+ | disconnect start 
+ | appm  need stop adv...
+
+0002b334	WDT_REG0X0	78		dbg_printf	WDT_REG0X0 = %x
+ | reg30=%x |  /reg31=%x |  /reg33=%x |  /reg35=%x
+ | reg03=%x |  /reg04=%x |  /reg10=%x
+
+0002b382	FUN_0002b382	42	FUN_0002b4c8;exist;gpio		
+0002b3ac	FUN_0002b3ac	22	FUN_0002bdc4;app_mutli_link_change;gpio;tx_failed_cnt	rom_24FEC	
+0002b3c2	gpio	208		FUN_00029464;FUN_0002b382;FUN_0002b3ac;FUN_000317c2;FUN_00033cfe;FUN_0003c6a8;OLED_Init;dbg_printf;get_usb_insert_status;rom_06F58;rom_071EA;rom_07434	gpio int1
+ | adv start =%d
+
+0002b492	KEY_piaring_cnt	54	FUN_00029a04;FUN_0002b4c8;FUN_0002d53c;FUN_0003e5f0;app_24_to_ble_reset;app_ble_to_ble_mode;cal_data;enter_BLE_normal_app_mode;nvds_Polling_read;nvds_Polling_write;profile_mem_init;rwip_driver_init;value_kcal_result	dbg_printf	KEY_piaring_cnt :[ %x  to  %x ] %x
+
+0002b4c8	FUN_0002b4c8	22	enter_BLE_normal_app_mode	FUN_0002b382;FUN_000311de;FUN_00039bc2;KEY_piaring_cnt	
+0002b4de	FUN_0002b4de	16	app_mutli_link_change	FUN_00031406;rom_24FEC	
+0002b4ee	app_mutli_link_change	516	system_mode	FUN_00029490;FUN_000295aa;FUN_0002b3ac;FUN_0002b4de;FUN_000312aa;FUN_00032892;FUN_00032e82;FUN_00032f16;FUN_0003bf0a;Set_SIMU_mode_LightUp_Led;app_user_ke_timer_stop;ble_alert_led_stop;dbg_printf;rom_071EA;switch_rf_mode_loop	long_press..[Rmode %d -> Smode %d] 
+ | app_mutli_link_change | %s,RF_MODE:%x
+ | key free LongPress
+ | force_pair_en 5========%x
+ | short_press..[Rmode %d -> Smode %d] 
+ | Disconnected by mouse...
+ | appm  need stop adv...
+ | short press time=%d
+ | time_Simu_mode = %d,%d 
+ | *****sw_num = %d 
+
+0002b8a2	FUN_0002b8a2	148	FUN_0003186e;system_mode	FUN_000295aa;FUN_0003cf7c;FUN_0003e5f0;app_24_to_ble_force_pair_reset;app_ble_address_update;dbg_printf;rom_071EA	Entry pair mode---RFMODE :[ %x  to  %x ]
+
+0002b936	tx_failed_cnt	402	FUN_0002f31c	FUN_0002a69e;FUN_0002b3ac;FUN_00031244;FUN_000312aa;dbg_printf;rom_24F9C	tx_failed_cnt =%d,%d,Utc_Poll=%d,%d
+
+0002bcac	FUN_0002bcac	156	FUN_0002be1c;FUN_000360aa;SLEEP;exist		
+0002bd48	FUN_0002bd48	26		FUN_0002b128;FUN_0002b166	
+0002bd62	FUN_0002bd62	98	FUN_0002f31c	rom_071EA;rom_24FEC;update	
+0002bdc4	FUN_0002bdc4	18		FUN_0002b3ac	
+0002bdd6	This	34		FUN_0003b130;dbg_printf	This is the function key wakeup,start cpu reset...
+
+0002be06	FUN_0002be06	22		dbg_printf	
+0002be1c	FUN_0002be1c	44	FUN_0002f31c	FUN_0002bcac;dbg_printf	key wakeup timeout, need key wakeconfig
+
+0002bef8	FUN_0002bef8	12	FUN_00029530		
+0002bf04	FUN_0002bf04	44		rom_06EF4;rom_06F26	
+0002bf30	FUN_0002bf30	44		FUN_0003ee6e;rom_06EF4;rom_06F26	
+0002bf5c	FUN_0002bf5c	44		FUN_0003ee6e;rom_06EF4;rom_06F26	
+0002bf88	FUN_0002bf88	34		FUN_0003ee6e;rom_06EF4;rom_06F26	
+0002c044	FUN_0002c044	2	FUN_00029530		
+0002c046	FUN_0002c046	44		rom_06EF4;rom_06F26	
+0002c0dc	FUN_0002c0dc	12		rom_24FEC	
+0002c124	FUN_0002c124	52	FUN_00031454;FUN_00031500;FUN_00031524	FUN_0003ee6e;rom_06EF4;rom_06F26;rom_24F9C	
+0002c158	FUN_0002c158	54		FUN_0003ee6e;rom_06EF4;rom_06F26;rom_24F9C	
+0002c18e	fee4	14		dbg_printf	fee4->param->ntf_cfg = %x
+
+0002c378	FUN_0002c378	44	FUN_00029530	FUN_0003e552;rom_24FEC	
+0002c41a	app_hid_enable_prf	60	ble_update_param_failed_cnt	FUN_0003ee6e;dbg_printf;rom_06EF4;rom_06F26	app_hid_enable_prf | %s conidx =d%
+
+0002c456	update	400	FUN_0002bd62	FUN_0003ee6e;appm_update_param;dbg_printf;rom_06EF4;rom_06F26;rom_06F80;rom_24F9C	update para  APP_HID_WAIT_REP---------------
+ | hid :ke_msg_free
+ | kb len= %d
+ | media len= %d
+ | user len= %d
+ | power len= %d
+ | idle len= %d
+
+0002c5e8	hogpd_ctnl_pt_ind_handler	80		FUN_0003ee6e;dbg_printf;rom_06EF4;rom_06F26	hogpd_ctnl_pt_ind_handler | %s,(%d) 
+
+0002c638	hogpd_ntf_cfg_ind_handler	92		APP_PARAM_UPDATE_REQ_IND;dbg_printf	hogpd_ntf_cfg_ind_handler | %s,(%d) 
+
+0002ca10	FUN_0002ca10	8	FUN_00029530		
+0002ca18	app_oad_add_oads	62		dbg_printf;rom_06EF4;rom_06F26	app_oad_add_oads
+ | app_oad_add_oads d = %x,s = %x
+
+0002ca56	FUN_0002ca56	42		FUN_0003ee6e;rom_06EF4;rom_06F26	
+0002cad2	FUN_0002cad2	42		FUN_0003ee6e;dbg_printf;rom_06EF4;rom_06F26	
+0002cafe	FUN_0002cafe	44		FUN_0003ee6e;dbg_printf;rom_06EF4;rom_06F26	
+0002cbc8	FUN_0002cbc8	18	FUN_00029a04;app_sec_init		
+0002cbda	FUN_0002cbda	18	BLE_PAIR;FUN_0002d53c;app_sec_init;switch_rf_mode_loop		
+0002cbec	app_sec_init	148	FUN_00029530	FUN_0002cbc8;FUN_0002cbda;FUN_0003e552;dbg_printf	app_sec_init().   bonded0=%x, bonded1========%x
+ | not NVDS_TAG_IRK = %x
+ | get NVDS_TAG_IRK ok= %x
+
+0002cc82	app_sec_send_security_req	66		dbg_printf;rom_06EF4;rom_06F26;rom_073D4	app_sec_send_security_req
+0002cda6	FUN_0002cda6	28		dbg_printf;rom_06F26	0x%x 
+0002d2ce	APP_PARAM_UPDATE_REQ_IN	146		app_start_led;dbg_printf;rom_06F26;rom_07342;rom_073D4	0x%x  | encrypt_req_ind121
+ | APP_PARAM_UPDATE_REQ_IN-1  need update param after encryp 
+
+0002d4a0	FUN_0002d4a0	68			
+0002d4e4	gapm_activity_created_ind_handler	26		dbg_printf	gapm_activity_created_ind_handler | %s app_env.adv_actv_idx = %x   
+
+0002d4fe	gapm_activity_stopped_ind_handler	30		dbg_printf	gapm_activity_stopped_ind_handler | %s app_env.adv_state = %x   
+
+0002d53c	FUN_0002d53c	530		FUN_000295aa;FUN_0002cbda;FUN_0003e552;FUN_0003e5f0;KEY_piaring_cnt;adv_data;appm_add_svc;appm_create_advertising;appm_delete_advertising;dbg_printf;rom_06EF4;rom_06F26;rom_07180;rom_07342;rom_24F9C;rom_24FEC;rom_25078	
+0002da7e	FUN_0002da7e	128		dbg_printf;rom_06EF4;rom_06F26;rom_24F9C	
+0002dd92	ble_update_param_failed_cnt	94		APP_PARAM_UPDATE_REQ_IND;app_hid_enable_prf;dbg_printf;rom_07342	APP_PARAM_UPDATE_REQ_IND-3  ble_update_param_failed_cnt++ =%x
+ | ble_app_hogpd_report_ready not ready...
+ | ble_update_param_failed_cnt >=3  %x
+ | GAPC_UPDATE_PARAMS fail !  %d
+
+0002e398	loc_irk	78		dbg_printf;dbg_printf_2;rom_24F9C	gapm_gen_rand_nb_ind_handler | %s app_env.rand_cnt = %x   
+ | loc_irk[0]: | loc_irk[8]:
+0002e4cc	APP_PARAM_UPDATE_REQ_IND_3	38		dbg_printf;rom_07342	APP_PARAM_UPDATE_REQ_IND--8  update param.... = %d
+
+0002e958	APP_PARAM_UPDATE_REQ_IND_2	24		dbg_printf;rom_07342	APP_PARAM_UPDATE_REQ_IND--9 hid not ready,   app_update_conn_param_.............%d,%d 
+
+0002eaac	Success_led_2second_2	212		CHRG;FUN_0003262c;FUN_00032658;FUN_00032942;FUN_0003beb4;ReLink;dbg_printf;delta_none;rom_07342;rom_073D4	Success_led_2second 1=  %x,
+ | set_Update_OLED--Success_led_2second 
+
+0002ebf8	force_ble_sleep_2	150		FUN_0003186e;FUN_00032620;FUN_00032e82;FUN_00032f16;FUN_00035800;FUN_00039a84;FUN_0003bf0a;FUN_0003d508;FUN_0003d546;dbg_printf;force_ble_sleep;rom_07342	force_ble_sleep....3  Time_Entry_Sdeep =0
+
+0002f31c	FUN_0002f31c	84	FUN_00028c66	FUN_0002a674;FUN_0002bd62;FUN_0002be1c;FUN_00033dc2;FUN_0003c52e;FUN_0003c574;FUN_0003c6ce;sensor_init;time_sensor_invalid;tx_failed_cnt	
+0002f37e	rtc_timer_start	68		dbg_printf	rtc_timer_start | %s 
+
+0002f3f4	app_ancsc_init	18	FUN_00029530	dbg_printf	app_ancsc_init | %s 
+
+0002f406	app_ancs_add_ancsc	50		dbg_printf;rom_06EF4;rom_06F26	app_ancs_add_ancsc | %s 
+
+0002f438	FUN_0002f438	40		FUN_0003ee6e;rom_06EF4;rom_06F26	
+0002f460	app_ancsc_msg_dflt_handler	16		dbg_printf	app_ancsc_msg_dflt_handler | %s 
+
+0002f4da	FUN_0002f4da	36		dbg_printf;rom_25078	
+0002f58a	app_ancsc_delete_call	74		FUN_0003ee6e;dbg_printf;rom_06EF4;rom_06F26	app_ancsc_delete_call
+0002f5d4	FUN_0002f5d4	72		FUN_0003ee6e;dbg_printf;rom_06EF4;rom_06F26	
+0002f61c	FUN_0002f61c	46		dbg_printf	
+0002f92a	FUN_0002f92a	186		FUN_00036c8e;FUN_00036caa;FUN_00036d3a;dbg_printf_2;rom_24F9C;rom_24FEC	
+0002f9e4	FUN_0002f9e4	4			
+0002fa6c	FUN_0002fa6c	34		FUN_00031784;FUN_000369d8	
+0002fa8e	RPT_STEP	168		FUN_00036c8e;FUN_00036caa;FUN_00036e88;OLED_Init;Set_Report_Data;dbg_printf_2;rom_24F9C	RPT_STEP-9L: | RPT_STEP-9S:
+0002fb36	ch_frequency	232		FUN_00031784;FUN_000369a0;FUN_000369ac;FUN_000369b8;FUN_00036c8e;FUN_00036caa;FUN_00036d3a;dbg_printf	SEND_ACK57 ok  RF24_STEP=%d,%d,%d
+ | ch_frequency 10=%x
+ | retr_time 57 ACK %x
+
+0002fc1e	FUN_0002fc1e	52		FUN_00036c8e;FUN_00036caa;FUN_00036d3a;dbg_printf_2	
+0002fc52	LightUp_Mode_Led	368		CHRG;FUN_000312aa;FUN_0003143c;FUN_00031784;FUN_000317c2;FUN_00032892;FUN_000369d8;FUN_00036c8e;FUN_00036cd2;FUN_00036e88;OLED_Init;Success_led_2second;dbg_printf;dbg_printf_2;set_bonded_led_flash;write_2	RF24_piar id_code: | LightUp_Mode_Led============== %x,%x,%x,%x,%x,
+ | NO DONGLE %x,%x,%x,
+
+0002fef0	FUN_0002fef0	40		FUN_000369b8;FUN_00036cbe;FUN_00036cee;set_pairing_led_flash	
+0002ff18	FUN_0002ff18	380		FUN_00031784;FUN_000369a0;FUN_000369ac;FUN_00036c8e;FUN_00036caa;FUN_00036d0e;FUN_00036e88;OLED_Init;dbg_printf_2;rom_24FEC;time_sensor_invalid	
+00030094	FUN_00030094	74	system_mode	FUN_000369a0;FUN_000369d8;rom_25078	
+0003023c	FLASH_wr_Global	248	FUN_00028c66;_saveC_GM_ProfileMax	FUN_000392b8;FUN_0003932e;FUN_000396da;FUN_00039708;FUN_0003976e;dbg_printf;dbg_printf_2;rom_24F9C;rom_24FEC	FLASH_wr_Global: | address&0x3ff = %x
+
+00030334	FLASH_RD_Global	314	profile_mem_init	FUN_000396da;dbg_printf_2;rom_24FEC	FLASH_RD_Global: | Global_DATA:
+0003046e	write_2	46	LightUp_Mode_Led	dbg_printf_2;flash_write_some_data	write id_code:
+0003049c	read	112	profile_mem_init	FUN_000396da;dbg_printf_2;rom_24F9C	read id_code:
+0003050c	FUN_0003050c	32	Default_Profile;FLASH_RD_Profile;FLASH_WR_Profile		
+0003052c	FLASH_RD_Profile	344	FLASH_WR_Profile;FUN_000333f0;Set_Report_Data;_saveC_GM_ProfileMax;profile_mem_init	FUN_0003050c;FUN_000396da;dbg_printf;dbg_printf_2;rom_24F9C	FLASH_RD_Profile: | Polling = %x,Flashmem_buff[_offset_Polling] = %x,Flashmem_buff[_offset_Polling +1] = %x
+ | SensorSet: | LightSet: | ButtonSet:
+00030740	FLASH_WR_Profile	298	FUN_00028c66	FLASH_RD_Profile;FUN_0003050c;FUN_000392b8;FUN_0003932e;FUN_000396da;FUN_00039708;FUN_0003976e;FUN_0003ce00;dbg_printf;dbg_printf_2;rom_24F9C;rom_24FEC	FLASH_WR_Profile: | address&0x3ff = %x
+
+0003086a	flash_erase	330	FUN_00028c66	FUN_000392b8;FUN_0003932e;FUN_000396da;FUN_00039708;FUN_0003976e;dbg_printf;dbg_printf_2;rom_24F9C	FLASH_WR_Macro  macro_id =%x,page =%x,offset =%x
+ | flash_erase: FLASHADDR_BACKUP
+ | backup: | flash_erase: FLASHADDR_MACRO
+ | restore: | Flashmem_buff: | flash_wp_ALL: 
+
+000309b4	FLASH_RD_Macro	68	_saveC_GM_ProfileMax	FUN_000396da;dbg_printf;dbg_printf_2;rom_24F9C	FLASH_RD_Macro  macro_id = %x,Flash_Macro_Addr = %x
+ | read macro:
+000309f8	Default_Profile	462	FUN_00028c66	FUN_0003050c;FUN_00031406;FUN_000392b8;FUN_0003932e;FUN_000396da;FUN_00039708;FUN_0003976e;FUN_0003c2c6;FUN_0003cf7c;OLED_Clear;dbg_printf;dbg_printf_2;rom_24F9C;rom_24FEC;set_dpi	address&0x3ff = %x
+ | Default_Profile: | Polling0: | Sensor: | Light: | ButtonSet:
+00030d32	_saveC_GM_ProfileMax	400	system_mode	FLASH_RD_Macro;FLASH_RD_Profile;FLASH_wr_Global;FUN_0003c2c6;dbg_printf;dbg_printf_2;rom_25078;set_dpi	_read9_GM_macro  report_id =%x,macro_index=%x
+ | _saveC_GM_ProfileMax: | Current_Profile=%x, %x, MaxProfile=%x, %x
+ | RD Profile: | WR Profile:
+00030f34	FUN_00030f34	22			
+00030f4a	nvds_Polling_read	58		FUN_0003c2c6;FUN_0003e552;KEY_piaring_cnt;dbg_printf	nvds_Polling_read | %s read_data= %x, Polling=%x
+
+00030f96	nvds_Polling_write	48		FUN_0003c2c6;FUN_0003e5f0;KEY_piaring_cnt;dbg_printf	nvds_Polling_write | %s Profile= %x, rgb_disp_type=%x
+
+00030fc6	profile_mem_init	42	enter_BLE_normal_app_mode	FLASH_RD_Global;FLASH_RD_Profile;KEY_piaring_cnt;dbg_printf;read	profile_mem_init | %s 
+
+00031114	FUN_00031114	94	FUN_000311de;FUN_00031210	FUN_00039a84	
+00031172	FUN_00031172	66	FUN_000311de;FUN_00031210	FUN_00032886;FUN_00039a84	
+000311b4	FUN_000311b4	42	sensor_init;sensor_pwdn	FUN_00039a84;FUN_00039af0;FUN_0003a900	
+000311de	FUN_000311de	50	FUN_0002b4c8;enter_BLE_normal_app_mode	FUN_00031114;FUN_00031172;FUN_00039a84	
+00031210	FUN_00031210	32		FUN_00031114;FUN_00031172;FUN_00039a84	
+00031230	FUN_00031230	20	FUN_00031334;FUN_00031406;exist		
+00031244	FUN_00031244	102	FUN_000358b6;FUN_0003870a;tx_failed_cnt		
+000312aa	FUN_000312aa	52	Disconnected;FUN_00031334;FUN_00031406;FUN_000358b6;FUN_00035abc;FUN_00035b08;FUN_0003870a;LightUp_Mode_Led;app_mutli_link_change;disconnect;exist;f_usb_isConnected;tx_failed_cnt		
+000312de	FUN_000312de	86	FUN_00031334;FUN_00031406;exist;f_usb_isConnected	rom_24FEC	
+00031334	FUN_00031334	210	enter_BLE_normal_app_mode	FUN_00031230;FUN_000312aa;FUN_000312de;rom_24FEC	
+00031406	FUN_00031406	54	Default_Profile;FUN_0002b4de	FUN_00031230;FUN_000312aa;FUN_000312de;rom_24FEC	
+0003143c	FUN_0003143c	24	FUN_000358b6;LightUp_Mode_Led;fWorkModeInit	rom_24FEC	
+00031454	FUN_00031454	62		FUN_0002c124	
+00031492	FUN_00031492	64	Led_OLED		
+000314d2	FUN_000314d2	46	Led_OLED;SLEEP		
+00031500	FUN_00031500	36	Led_OLED	FUN_0002c124	
+00031524	FUN_00031524	68		FUN_0002c124	
+00031784	FUN_00031784	32	FUN_0002abd4;FUN_0002fa6c;FUN_0002ff18;FUN_00033d00;FUN_00033d2c;FUN_00034352;FUN_0003443a;FUN_000360aa;FUN_00036d0e;FUN_00036d3a;FUN_000375fe;FUN_00038936;FUN_0003b130;FUN_0003b5f8;Get_MODE_Switch_status;LightUp_Mode_Led;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;USNDP_status;app_usb_upgrade_start;ch_frequency;exist;fWorkModeInit;f_reconnect_24G;f_usb_isConnected;get_usb_insert_status;referance_voltage		
+000317c2	FUN_000317c2	40	FUN_00034414;FUN_000345d2;FUN_00035cd2;FUN_00039dfe;FUN_0003c818;LightUp_Mode_Led;SLEEP;USNDP_status_2;addPMU_Reg0x5_2;adv_state;cal_data;enter_BLE_normal_app_mode;exist;f_usb_isConnected;get_scan_Rvalue;gpio;kmod_calibration_2M;usb_suspend_wakeup;value_kcal_result	FUN_0003b54e	
+00031808	FUN_00031808	102		FUN_0003c2c6;FUN_0003cf24	
+0003186e	FUN_0003186e	262	force_ble_sleep_2;system_mode	Disconnected;FUN_0002b8a2;dbg_printf	RB +MB  f_k_pair------------  f_hld=%x f_k_pair=%d
+ | RB +MB  f_k_pair------------  RF_MODE=%x
+
+00031974	FUN_00031974	12	FUN_000319c0		
+00031980	FUN_00031980	64	FUN_000332be		
+000319c0	FUN_000319c0	194	FUN_0002aa5c;FUN_0003236a	FUN_00031974;FUN_000332be;rom_25078	
+00031b3e	FUN_00031b3e	112	FUN_0002aa5c;FUN_0003236a	FUN_00031f7c;rom_25078	
+00031f7c	FUN_00031f7c	24	FUN_00031b3e		
+0003236a	FUN_0003236a	94	system_mode	FUN_000319c0;FUN_00031b3e;FUN_000332be	
+000323c8	FUN_000323c8	38	FUN_000323ee		
+000323ee	FUN_000323ee	66	system_mode	FUN_000323c8	
+00032430	FUN_00032430	116	system_mode		
+000324a4	FUN_000324a4	118			
+00032614	FUN_00032614	12	Set_SIMU_mode_LightUp_Led		
+00032620	FUN_00032620	12	FUN_000326ea;FUN_00032942;FUN_0003297e;SLEEP;enter_BLE_normal_app_mode;force_ble_sleep_2;set_Update_OLED_2		
+0003262c	FUN_0003262c	44	Success_led_2second;Success_led_2second_2;enter_BLE_normal_app_mode;f_usb_isConnected;set_USB_led_flash;set_bonded_led_flash;set_pairing_led_flash		
+00032658	FUN_00032658	46	FUN_00032942;Set_SIMU_mode_LightUp_Led;Success_led_2second;Success_led_2second_2;enter_BLE_normal_app_mode;f_usb_isConnected;set_USB_led_flash;set_Update_OLED_2;set_bonded_led_flash;set_pairing_led_flash		
+00032686	FUN_00032686	42	FUN_00028c4e;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;rgb_24g_test_cal		
+000326b0	FUN_000326b0	58		dbg_printf	%s, Simu_RF_MODE=%x,Mode_Indicator_BIT=%x
+
+000326ea	FUN_000326ea	48		FUN_00032620	
+0003271a	Set_SIMU_mode_LightUp_Led	76	Disconnected;app_mutli_link_change	FUN_00032614;FUN_00032658;dbg_printf	usb to 24 mode 
+ | Set_SIMU_mode_LightUp_Led | %s, Simu_RF_MODE=%x,Mode_Indicator_BIT=%x
+
+00032766	set_USB_led_flash	100		FUN_0003262c;FUN_00032658;FUN_00032e82;FUN_00032f16;FUN_0003c8b6;FUN_0003cf7c;OLED_Clear;dbg_printf	set_USB_led_flash | %s ,%x
+ | %s, Ind_Led_STEP=%d
+
+000327ca	set_pairing_led_flash	86	FUN_0002fef0	FUN_0003262c;FUN_00032658;FUN_00032e82;FUN_00032f16;FUN_0003c8b6;FUN_0003cf7c;OLED_Clear;dbg_printf	set_pairing_led_flash | %s, Ind_Led_STEP=%d
+
+00032820	set_bonded_led_flash	102	LightUp_Mode_Led;SLEEP;fWorkModeInit;f_reconnect_24G	FUN_0003262c;FUN_00032658;FUN_00032e82;FUN_00032f16;FUN_0003c8b6;FUN_0003cf7c;OLED_Clear;dbg_printf	set_bonded_led_flash | %s, %x 
+ | %s, Ind_Led_STEP=%d
+
+00032886	FUN_00032886	12	FUN_00028c66;FUN_00031172;FUN_00032892;FUN_00035c9c;app_start_led;set_force_sleep;switch_rf_mode_loop		
+00032892	FUN_00032892	48	FUN_000328c2;FUN_00035abc;FUN_00035b08;LightUp_Mode_Led;SLEEP;Success_led_2second;app_mutli_link_change;f_usb_isConnected	FUN_00032886	
+000328c2	FUN_000328c2	46	set_Update_OLED	FUN_00032892;ble_alert_led_stop;dbg_printf	alert led stopping
+
+000328f0	Success_led_2second	82	LightUp_Mode_Led;USNDP_status_2;f_reconnect_24G;f_usb_isConnected	FUN_0003262c;FUN_00032658;FUN_00032892;FUN_0003c8b6;FUN_0003cf7c;OLED_Clear;OLED_Init;dbg_printf;delta_none	Success_led_2second---Led_Mode
+ | set_Update_OLED--Success_led_2second 
+
+00032942	FUN_00032942	58	Success_led_2second_2	FUN_00032620;FUN_00032658;FUN_0003ce52;Pairing;ReLinking	
+0003297e	FUN_0003297e	30	SLEEP;exist	FUN_00032620;FUN_00032e82;FUN_00032f16	
+0003299c	set_Update_OLED_2	366	system_mode	FUN_00032620;FUN_00032658;FUN_0003ce52;FUN_0003cf7c;FUN_0003d508;FUN_0003d546;Pairing;ReLinking;dbg_printf	Dpi_Indicat_process= %x
+ | set_Update_OLED--Set_Loop_process 
+ | set_Update_OLED--Flash_Linking_process 
+ | set_Update_OLED--Flash_Ind_Fast_process0 
+ | set_Update_OLED--Flash_Ind_Fast_process1 
+
+00032c34	Led_OLED	254	system_mode	FUN_00031492;FUN_000314d2;FUN_00031500;dbg_printf	Led_OLED ==5 !
+ | Led_OLED ==changing !
+
+00032e82	FUN_00032e82	2	FUN_0003297e;SLEEP;app_mutli_link_change;force_ble_sleep_2;set_USB_led_flash;set_bonded_led_flash;set_pairing_led_flash		
+00032eae	FUN_00032eae	102			
+00032f16	FUN_00032f16	12	FUN_0003297e;SLEEP;app_mutli_link_change;force_ble_sleep_2;set_USB_led_flash;set_bonded_led_flash;set_pairing_led_flash	rom_24FEC	
+00032f40	FUN_00032f40	120			
+00032fe6	FUN_00032fe6	40		rom_24F24	
+0003300e	FUN_0003300e	180	system_mode	rom_071EA;rom_25078	
+000332be	FUN_000332be	156	FUN_000319c0;FUN_0003236a	FUN_00031980;rom_24FEC	
+000333f0	FUN_000333f0	116		FLASH_RD_Profile;OLED_Init;dbg_printf_2;rom_24F9C;rom_24FEC;rom_25078	
+0003353c	Set_Report_Data	192	FUN_00033a7e;RPT_STEP	FLASH_RD_Profile;FUN_00033d2a;OLED_Init;dbg_printf;dbg_printf_2;rom_24FEC;rom_25078	Set_Report_Data | N0N0 report_id =%x
+ | macro report_id =%x,macro_index=%x
+ | Profile report_id =%x,Update_Profile=%x,%x
+
+00033a7e	FUN_00033a7e	172	system_mode	Set_Report_Data;app_usb_upgrade_start;rom_25078	
+00033cfc	FUN_00033cfc	2	SLEEP;exist;force_ble_sleep		
+00033cfe	FUN_00033cfe	2	SLEEP;gpio		
+00033d00	FUN_00033d00	42	FUN_000342b4;FUN_00034352;FUN_00034408;FUN_00034414;FUN_00034490;FUN_000344b0;FUN_000344d8;FUN_000344f0;FUN_00034508;FUN_00034538;FUN_000345a4	FUN_00031784;FUN_0003aa1a	
+00033d2a	FUN_00033d2a	1	Set_Report_Data		
+00033d2c	FUN_00033d2c	64	FUN_000342b4;FUN_00034352;FUN_00034426;f_usb_isConnected	FUN_00031784;FUN_0003aa1a;FUN_0003aa42	
+00033db8	FUN_00033db8	8		FUN_00034426	
+00033dc2	FUN_00033dc2	8	FUN_0002f31c;SLEEP;f_reconnect_24G;force_ble_sleep	FUN_0003443a	
+00033dca	sensor_pwdn	36	FUN_000360aa;SLEEP;exist;force_ble_sleep	FUN_000311b4;FUN_00034414;FUN_00039a84;dbg_printf	sensor_pwdn | %s 
+
+00033dee	sensor_init	28	FUN_0002f31c;enter_BLE_normal_app_mode;f_usb_isConnected;time_sensor_invalid	FUN_000311b4;FUN_000345d2;dbg_printf	%s 
+ | sensor_init
+00033e0a	set_dpi	26	Default_Profile;_saveC_GM_ProfileMax;f_usb_isConnected;time_sensor_invalid	FUN_00034538;dbg_printf	%s 
+ | set_dpi
+00033e24	FUN_00033e24	16		FUN_000345a4	
+00033e34	time_sensor_invalid	264	FUN_0002f31c;FUN_0002ff18;FUN_000358b6;FUN_0003870a	FUN_00034426;FUN_0003443a;OLED_Init;dbg_printf;sensor_init;set_dpi	time_sensor_invalid=0
+
+00033f3c	delta_none	52	FUN_0003cf7c;FUN_0003d2b0;Success_led_2second;Success_led_2second_2	FUN_0003443a;dbg_printf	delta_none =%x
+
+00034044	single_wave	184	system_mode	FUN_000361a8;FUN_000369a0;FUN_000369ac;FUN_000369d8;FUN_00036eee;dbg_printf;rom_25078	single_wave 123============== %x,%x,%x,%x,%x,
+
+000342b4	FUN_000342b4	158	FUN_000345d2	FUN_00033d00;FUN_00033d2c	
+00034352	FUN_00034352	182	FUN_000345d2	FUN_00031784;FUN_00033d00;FUN_00033d2c	
+00034408	FUN_00034408	12	FUN_000345d2	FUN_00033d00	
+00034414	FUN_00034414	18	sensor_pwdn	FUN_000317c2;FUN_00033d00	
+00034426	FUN_00034426	20	FUN_00033db8;time_sensor_invalid	FUN_00033d2c	
+0003443a	FUN_0003443a	86	FUN_00033dc2;delta_none;time_sensor_invalid	FUN_00031784;FUN_0003aa1a;FUN_0003aa42	
+00034490	FUN_00034490	32		FUN_00033d00	
+000344b0	FUN_000344b0	40	FUN_00034538	FUN_00033d00	
+000344d8	FUN_000344d8	24	FUN_00034538	FUN_00033d00	
+000344f0	FUN_000344f0	24	FUN_00034538	FUN_00033d00	
+00034508	FUN_00034508	48	FUN_00034538	FUN_00033d00	
+00034538	FUN_00034538	108	FUN_000345d2;set_dpi	FUN_00033d00;FUN_000344b0;FUN_000344d8;FUN_000344f0;FUN_00034508	
+000345a4	FUN_000345a4	46	FUN_00033e24	FUN_00033d00	
+000345d2	FUN_000345d2	58	f_usb_isConnected;sensor_init	FUN_000317c2;FUN_000342b4;FUN_00034352;FUN_00034408;FUN_00034538	
+0003463c	Disconnected	80	FUN_0003186e	FUN_000295aa;FUN_000312aa;Set_SIMU_mode_LightUp_Led;app_user_ke_timer_stop;ble_alert_led_stop;dbg_printf;rom_071EA;switch_rf_mode_loop	Disconnected by mouse...
+
+0003468c	OLED_Init	134	Detect_FULL_IN;FUN_0002aa5c;FUN_0002ac0e;FUN_0002ff18;FUN_000333f0;HID_RQT_Get_Protocol;LightUp_Mode_Led;RPT_STEP;SLEEP;Set_Report_Data;Success_led_2second;enter_BLE_normal_app_mode;exist;f_reconnect_24G;f_usb_isConnected;gpio;set_Update_OLED_3;time_sensor_invalid	FUN_00039a84;FUN_0003beb4;FUN_0003c8b6;FUN_0003cf7c;OLED_Clear;dbg_printf	OLED_Init 3
+
+00034712	SLEEP	1250		FUN_0002aa44;FUN_0002b128;FUN_0002bcac;FUN_000314d2;FUN_000317c2;FUN_00032620;FUN_00032892;FUN_0003297e;FUN_00032e82;FUN_00032f16;FUN_00033cfc;FUN_00033cfe;FUN_00033dc2;FUN_000369a0;FUN_000369ac;FUN_00036c8e;FUN_00036caa;FUN_00036d0e;FUN_00039a84;FUN_0003af8a;FUN_0003b130;FUN_0003b3f2;FUN_0003b528;FUN_0003b538;FUN_0003b54e;FUN_0003beb4;FUN_0003bf0a;FUN_0003c286;FUN_0003c2c6;FUN_0003d2b0;FUN_0003d508;FUN_0003d546;OLED_Init;USNDP_status;dbg_printf;force_24g_sleep;get_usb_insert_status;sensor_pwdn;set_Update_OLED;set_bonded_led_flash	(Time_Entry_Sdeep ==0)  %x,%x
+ | entry force 24g sleep 1 
+ | in sleep_status =%d,%d
+ | enter 24g idle_status 
+ | cpu_reset()  MODE_Switch
+ | USNDP_status------usb insert   %x
+ | sleep_status 24G===========%d,%d
+ | enter sleep_status
+ | wake form sleep_status
+ | wakeup Key_Mot_Activ  USB===================%d,%d
+ | SLEEP wakeup KEY_PAIR
+ | SLEEP wakeup RECONN
+ | SLEEP wakeup id_code
+
+00034d68	f_reconnect_24G	228	system_mode	FUN_0002b128;FUN_00031784;FUN_00033dc2;FUN_000369a0;FUN_000369ac;FUN_00036c8e;FUN_00036caa;FUN_00036d3a;OLED_Init;ReLink;Success_led_2second;dbg_printf;rom_24FEC;set_bonded_led_flash	24G reconnecting =%x 
+ | f_reconnect_24G = OK 
+ | f_reconnect_24G  overtime 
+ | Time_24G_Piaring = 0 
+
+00034e4c	FUN_00034e4c	2	system_mode		
+00034e4e	mode_sw	156	system_mode	FUN_0003b130;FUN_0003e552;dbg_printf	 mode_sw to RF_24G_MODE
+ | mode_sw to RF_BLE_MODE1
+
+00034eea	Detect_FULL_IN	166	system_mode	Charging;FUN_0003cf7c;OLED_Init;dbg_printf	Detect_FULL_IN ==FULL !
+ | Detect_FULL_IN ==CHANRGing !
+
+00034f90	f_usb_isConnected	1122	system_mode	CHRG;FUN_000295aa;FUN_0002b18e;FUN_000312aa;FUN_000312de;FUN_00031784;FUN_000317c2;FUN_0003262c;FUN_00032658;FUN_00032892;FUN_00033d2c;FUN_000345d2;FUN_000371c2;FUN_000377fe;FUN_0003afa2;FUN_0003b130;FUN_0003ce00;FUN_0003cf7c;FUN_0003d2b0;FUN_0003d8da;OLED_Clear;OLED_Init;Success_led_2second;USNDP_status;app_user_ke_timer_stop;ble_alert_led_stop;dbg_printf;rom_071EA;rom_24FEC;sensor_init;set_Update_OLED;set_dpi	INSERT USNDP_status------charging   %x
+ | INSERT USNDP_status------usb insert   %x
+ | usb_chk ----IN-------------- %x,%x,%x,%x
+ | Disconnected by mouse...
+ | usb_chk ----PULL OUT-------------- %x,%x,%x,%x
+ | f_usb_isConnected=1  %x,%x,%x,%x
+ | f_usb_isConnected fail  %x,%x,%x,%x
+
+00035800	FUN_00035800	122	FUN_0003bf40;force_ble_sleep_2		
+0003587a	FUN_0003587a	60	set_force_sleep		
+000358b6	FUN_000358b6	424	system_mode	FUN_00031244;FUN_000312aa;FUN_0003143c;rom_24F9C;rom_24FEC;time_sensor_invalid	
+00035a5e	disconnect	94		FUN_00029490;FUN_000295aa;FUN_000312aa;app_user_ke_timer_stop;ble_alert_led_stop;dbg_printf;rom_071EA	app_env.adv_state...= %d
+ | disconnect start 
+ | appm  need stop adv...
+
+00035abc	FUN_00035abc	76		FUN_000312aa;FUN_00032892	
+00035b08	FUN_00035b08	74		FUN_000312aa;FUN_00032892;FUN_0003723e	
+00035c9c	FUN_00035c9c	54	USNDP_status_2;fn24main	FUN_00032886;FUN_0003c174;FUN_0003c1c6;FUN_0003c2c6	
+00035cd2	FUN_00035cd2	44	enter_BLE_normal_app_mode	FUN_000317c2;dbg_printf	in 24 
+
+00035cfe	fWorkModeInit	192	fn24main;switch_rf_mode_loop	FUN_0003143c;FUN_00031784;FUN_000369a0;FUN_000369d8;FUN_00036c8e;FUN_00036cd2;FUN_00036eee;dbg_printf;dbg_printf_2;set_bonded_led_flash	RF24_STEP id: | fWorkModeInit  RF24_STEP=%x, f_reconnect_24G=%x, Key_CurrentStatus=%x
+
+00035dbe	fn24main	106	enter_BLE_normal_app_mode	FUN_00035c9c;FUN_000360aa;FUN_00036b36;FUN_00036be4;FUN_00039c84;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;dbg_printf;fWorkModeInit;system_mode	fn24main  RF_MODE USB %x, %x, %x
+
+00035eb8	system_mode	282	fn24main	Detect_FULL_IN;FUN_0002aa5c;FUN_0002ac0e;FUN_0002b8a2;FUN_00030094;FUN_0003186e;FUN_0003236a;FUN_000323ee;FUN_00032430;FUN_0003300e;FUN_00033a7e;FUN_00034e4c;FUN_000358b6;FUN_000369a0;FUN_000369d8;FUN_00036eee;FUN_0003870a;FUN_0003b54e;FUN_0003cdb6;Led_OLED;_saveC_GM_ProfileMax;app_mutli_link_change;dbg_printf;exist;f_reconnect_24G;f_usb_isConnected;mode_sw;rom_24FEC;set_Update_OLED;set_Update_OLED_2;single_wave;test;usb_suspend	system_mode usb24 RF_MODE %x, %x
+
+00036024	FUN_00036024	32	FUN_000360aa	FUN_000369d8;FUN_0003c21e;FUN_0003c286	
+00036044	FUN_00036044	102	FUN_000360aa		
+000360aa	FUN_000360aa	226	fn24main	FUN_0002bcac;FUN_00031784;FUN_00036024;FUN_00036044;FUN_000361a8;FUN_000369a0;FUN_000369ac;FUN_000369d8;FUN_00036b36;FUN_00036be4;FUN_0003ae82;FUN_0003b528;FUN_0003c286;sensor_pwdn	
+000361a8	FUN_000361a8	50	FUN_000360aa;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;single_wave		
+000361da	FUN_000361da	22	TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2		
+000361f0	get_scan_Rvalue	68		FUN_0002abd4;FUN_000317c2;dbg_printf	get_scan_Rvalue 2============== %x,%x,%x,%x,%x,
+
+00036234	rgb_24g_test_cal	42	TEST_SINGLE_WAVE_2	FUN_00032686;dbg_printf;rom_24F24;rom_25078	rgb_24g_test_cal:=%x
+
+00036274	TEST_SINGLE_WAVE	836	fn24main	FUN_0002ac0e;FUN_00031784;FUN_00032686;FUN_000361a8;FUN_000361da;FUN_000369a0;FUN_000369ac;FUN_000369b8;FUN_000369d8;FUN_00036b36;FUN_00036be4;FUN_00036dd4;FUN_00036eee;FUN_00039cfc;FUN_0003b528;dbg_printf	%s 
+ | -Kapplication_test_mode | TEST_SINGLE_WAVE ch==%d, mode=%x, mode=cal_data%x
+ | TEST_RF_DATA...
+ | TEST_CD...
+ | flag_revice...
+ | Key_CurrentStatus:=%x
+ | RB press...
+ | LB press...SW mode
+ | TEST_SINGLE_WAVE:=%x
+ | TEST_RF_DATA:=%x
+ | TEST_CD
+ | MB press...SW channel
+ | switch ch==%d, mode=%x
+ | TEST_SINGLE_WAVE ch==%d, mode=%x
+
+00036754	TEST_SINGLE_WAVE_2	422	fn24main	FUN_00028b00;FUN_0002ac0e;FUN_00031784;FUN_00032686;FUN_000361a8;FUN_000361da;FUN_000369a0;FUN_000369ac;FUN_000369d8;FUN_00036b36;FUN_00036be4;FUN_00036eee;FUN_00039cfc;FUN_00039d26;FUN_0003b528;dbg_printf;rgb_24g_test_cal;rwip_driver_init	%s 
+ | application_cal_data_mode | -Kapplication_test_mode | TEST_SINGLE_WAVE ch==%d, mode=%x, mode=cal_data%x
+ | Key_CurrentStatus:=%x
+ | DPILOOP SURE: --:=%x
+ | B4: CAL_DATA++:=%x
+ | B5: CAL_DATA--:=%x
+ | TEST_SINGLE_WAVE ch==%d, mode=%x
+
+000369a0	FUN_000369a0	12	FUN_0002ff18;FUN_00030094;FUN_000360aa;FUN_000369b8;FUN_000369d8;FUN_00036e0c;SLEEP;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;ch_frequency;fWorkModeInit;f_reconnect_24G;single_wave;system_mode		
+000369ac	FUN_000369ac	12	FUN_0002ff18;FUN_000360aa;FUN_00036b36;FUN_00036e0c;SLEEP;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;ch_frequency;f_reconnect_24G;single_wave		
+000369b8	FUN_000369b8	32	FUN_0002fef0;TEST_SINGLE_WAVE;ch_frequency	FUN_000369a0	
+000369d8	FUN_000369d8	34	FUN_0002fa6c;FUN_00030094;FUN_00036024;FUN_000360aa;LightUp_Mode_Led;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;fWorkModeInit;single_wave;system_mode	FUN_000369a0	
+000369fa	FUN_000369fa	24	FUN_00036a12;FUN_00036b36;FUN_00036cd2;FUN_00036cee		
+00036a12	FUN_00036a12	66		FUN_000369fa;rom_25078	
+00036aae	FUN_00036aae	34	FUN_00036e88;FUN_00036eb8		
+00036ad0	FUN_00036ad0	34	FUN_00036d0e;FUN_00036d3a;FUN_00036e0c		
+00036af2	FUN_00036af2	34	FUN_00036dd4		
+00036b14	FUN_00036b14	34			
+00036b36	FUN_00036b36	174	FUN_000360aa;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;fn24main	FUN_000369ac;FUN_000369fa	
+00036be4	FUN_00036be4	146	FUN_000360aa;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;fn24main		
+00036c8e	FUN_00036c8e	52	FUN_0002f92a;FUN_0002fc1e;FUN_0002ff18;LightUp_Mode_Led;RPT_STEP;SLEEP;ch_frequency;fWorkModeInit;f_reconnect_24G		
+00036caa	FUN_00036caa	20	FUN_0002f92a;FUN_0002fc1e;FUN_0002ff18;RPT_STEP;SLEEP;ch_frequency;f_reconnect_24G		
+00036cbe	FUN_00036cbe	20	FUN_0002fef0		
+00036cd2	FUN_00036cd2	28	LightUp_Mode_Led;fWorkModeInit	FUN_000369fa	
+00036cee	FUN_00036cee	32	FUN_0002fef0	FUN_000369fa	
+00036d0e	FUN_00036d0e	44	FUN_0002ff18;SLEEP	FUN_00031784;FUN_00036ad0	
+00036d3a	FUN_00036d3a	78	FUN_0002f92a;FUN_0002fc1e;ch_frequency;f_reconnect_24G	FUN_00031784;FUN_00036ad0	
+00036dd4	FUN_00036dd4	56	TEST_SINGLE_WAVE	FUN_00036af2	
+00036e0c	FUN_00036e0c	124		FUN_000369a0;FUN_000369ac;FUN_00036ad0	
+00036e88	FUN_00036e88	48	FUN_0002ff18;LightUp_Mode_Led;RPT_STEP	FUN_00036aae	
+00036eb8	FUN_00036eb8	54		FUN_00036aae	
+00036eee	FUN_00036eee	44	TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;fWorkModeInit;single_wave;system_mode		
+00036f34	FUN_00036f34	34		FUN_0003b73e	
+00036f56	FUN_00036f56	46		FUN_0003b73e	
+00036f84	dbg_printf_2	2	Default_Profile;FLASH_RD_Global;FLASH_RD_Macro;FLASH_RD_Profile;FLASH_WR_Profile;FLASH_wr_Global;FUN_00029988;FUN_0002f92a;FUN_0002fc1e;FUN_0002ff18;FUN_000333f0;HID_RQT_Get_Protocol;LightUp_Mode_Led;RPT_STEP;Set_Report_Data;_USB_macro2;_saveC_GM_ProfileMax;adv_data;app_ble_addr_tabl_init;app_ble_address_update;appm_create_advertising;fWorkModeInit;flash_erase;flash_write_some_data;force_pair_en;loc_irk;read;save;write_2		
+00036f88	FUN_00036f88	26	FUN_000371c2;FUN_00038072;FUN_00038144;_USB_macro2		
+00036fa2	FUN_00036fa2	10	FUN_000371c2		
+00036fb8	FUN_00036fb8	12	FUN_000375fe		
+00036fc4	FUN_00036fc4	10	FUN_000371c2		
+00036fce	FUN_00036fce	12	FUN_000375fe		
+00036fe6	FUN_00036fe6	6	rxcsr2		
+00036fec	FUN_00036fec	12	FUN_000374e2;_USB_macro2		
+00036ff8	FUN_00036ff8	12	FUN_00037004		
+00037004	FUN_00037004	116	FUN_00037508;_USB_macro2	FUN_00036ff8;rom_24F9C	
+00037078	FUN_00037078	78	FUN_00037104;FUN_00037186	rom_24F9C	
+000370c6	FUN_000370c6	10	FUN_00037ab6;FUN_00037b0a;FUN_00038072;HID_RQT_Get_Protocol		
+000370d0	FUN_000370d0	14	FUN_00037104;HID_RQT_Get_Protocol;_USB_macro2;f_usb_remote_wakeup		
+000370ec	FUN_000370ec	14	HID_RQT_Get_Protocol		
+00037104	FUN_00037104	130	FUN_00037b0a;HID_RQT_Get_Protocol;_USB_macro2	FUN_00037078;FUN_000370d0;FUN_0004245e;FUN_00042472	
+00037186	FUN_00037186	28	FUN_0003870a;exist	FUN_00037078	
+000371ac	FUN_000371ac	22	FUN_000371c2	FUN_00037a94;rom_24FEC	
+000371c2	FUN_000371c2	124	USNDP_status_2;f_usb_isConnected	FUN_00036f88;FUN_00036fa2;FUN_00036fc4;FUN_000371ac	
+0003723e	FUN_0003723e	32	FUN_00035b08;FUN_00038f4e		
+0003725e	FUN_0003725e	12	exist		
+0003726a	_USB_macro2	560	FUN_00037534	FUN_00036f88;FUN_00036fec;FUN_00037004;FUN_000370d0;FUN_00037104;FUN_00038072;FUN_0004245e;dbg_printf_2;rom_24F9C;rom_24FEC	set report rd: | usb set report: | _USB_macro0: | _USB_macro1: | _USB_macro2: | _USB_macro:
+000374e2	FUN_000374e2	38	FUN_00037534	FUN_00036fec;FUN_00037830;FUN_00037844	
+00037508	FUN_00037508	44	FUN_00037534	FUN_00037004;FUN_0003781e;FUN_00037858	
+00037534	FUN_00037534	202	FUN_000375fe	FUN_000374e2;FUN_00037508;_USB_macro2;dbg_printf	BIT(0) f_usb_suspend =1------------
+ | BIT(1) f_usb_suspend =0------------
+ | BIT(2)bus reset ------------f_usb_isConnected ==%d
+
+000375fe	FUN_000375fe	54	FUN_0003c008	FUN_00031784;FUN_00036fb8;FUN_00036fce;FUN_00037534	
+00037774	FUN_00037774	38	rxcsr2		
+0003779a	FUN_0003779a	42			
+000377d6	FUN_000377d6	40			
+000377fe	FUN_000377fe	16	USNDP_status_2;f_usb_isConnected		
+0003781e	FUN_0003781e	18	FUN_00037508		
+00037830	FUN_00037830	20	FUN_000374e2		
+00037844	FUN_00037844	20	FUN_000374e2		
+00037858	FUN_00037858	20	FUN_00037508		
+00037878	FUN_00037878	66	rxcsr2	FUN_00042a20;FUN_00042a74;dbg_printf	ep%d RX Buf=0x%.8x
+ | Can't malloc RX Buf
+
+000378ba	FUN_000378ba	64	rxcsr2	FUN_00042a20;FUN_00042a74;dbg_printf	ep%d TX Buf=0x%.8x
+ | Can't malloc TX Buf
+
+000378fa	rxcsr2	360	pcfg	FUN_00036fe6;FUN_00037774;FUN_00037878;FUN_000378ba;dbg_printf	endp=%.2x
+ | rxp=%.2x
+ | txp=%.2x
+ | maxp=%.2x
+ | csr0=%.2x
+ | csr02=%.2x
+ | rxcsr1=%.2x
+ | rxcsr2=%.2x
+ | rxie1=%.2x
+ | rxie2=%.2x
+ | txie1=%.2x
+ | txie2=%.2x
+
+00037a62	pcfg	38		FUN_00038350;FUN_0004245e;dbg_printf;rxcsr2	pcfg=0x%.8x
+
+00037a88	FUN_00037a88	12	FUN_00037a94		
+00037a94	FUN_00037a94	34	FUN_000371ac	FUN_00037a88;FUN_0003834c;FUN_0004245e;rom_24FEC	
+00037ab6	FUN_00037ab6	16		FUN_000370c6	
+00037ac6	FUN_00037ac6	52	FUN_00037b0a;HID_RQT_Get_Protocol	FUN_00042472	
+00037afa	FUN_00037afa	8	HID_RQT_Get_Protocol		
+00037b02	FUN_00037b02	8	FUN_00038072		
+00037b0a	FUN_00037b0a	92		FUN_000370c6;FUN_00037104;FUN_00037ac6	
+00037b66	f_usb_remote_wakeup	138		FUN_000370d0;dbg_printf	CLEAR_FEATURE rcp=%x
+ | f_usb_remote_wakeup =========0 clear %x,%x,%x,%x
+
+00038068	FUN_00038068	10	FUN_00038072		
+00038072	FUN_00038072	52	_USB_macro2	FUN_00036f88;FUN_000370c6;FUN_00037b02;FUN_00038068;HID_RQT_Get_Protocol	
+000380a6	usb_suspend	116	system_mode	FUN_0004245e;FUN_00042472;dbg_printf	usb_suspend =1-----usb_frame_stop_cnt =%d
+
+0003811a	usb_suspend_wakeup	42	exist	FUN_000317c2;FUN_00042472;dbg_printf	usb_suspend_wakeup
+
+00038144	FUN_00038144	40		FUN_00036f88	
+00038296	FUN_00038296	20	exist		
+000382ec	FUN_000382ec	34		dbg_printf	%.2x 
+0003834c	FUN_0003834c	4	FUN_00037a94		
+00038350	FUN_00038350	6	pcfg		
+00038384	FUN_00038384	54		FUN_0004245e	
+0003838c	FUN_0003838c	8			
+00038398	FUN_00038398	40	HID_RQT_Get_Protocol	FUN_00042472	
+000383c0	HID_RQT_Get_Protocol	482	FUN_00038072	FUN_000370c6;FUN_000370d0;FUN_000370ec;FUN_00037104;FUN_00037ac6;FUN_00037afa;FUN_00038398;OLED_Init;dbg_printf;dbg_printf_2;rom_24F9C	set idle! %x,%x
+ | Get_idle_length %x,%xin | HID_RQT_Get_Report: | HID_RQT_Set_Report: | HID_RQT_Set_Protocol: | HID_RQT_Get_Protocol:
+0003870a	FUN_0003870a	556	system_mode	FUN_00031244;FUN_000312aa;FUN_00037186;rom_24F9C;rom_24FEC;time_sensor_invalid	
+00038936	FUN_00038936	56	exist	FUN_00031784	
+0003896e	exist	488	system_mode	FUN_0002b128;FUN_0002b382;FUN_0002bcac;FUN_00031230;FUN_000312aa;FUN_000312de;FUN_00031784;FUN_000317c2;FUN_0003297e;FUN_00033cfc;FUN_00037186;FUN_0003725e;FUN_00038296;FUN_00038936;FUN_0003af8a;FUN_0003afa2;FUN_0003b130;FUN_0003b528;FUN_0003b538;FUN_0003beb4;FUN_0003bf0a;FUN_0003c286;FUN_0003c2c6;OLED_Init;dbg_printf;rom_24FEC;sensor_pwdn;usb_suspend_wakeup	USB sleep_wakeup  f_usb_suspend=%x, f_usb_idle=%x,%x
+ | enter sleep........%x,%x,%x,%x,%x
+ | exist sleep........%x,%x,%x,%x,%x
+
+00038cb6	test	26	system_mode	FUN_0003b130;dbg_printf	test-zzl usb soft pull out then insert in
+
+00038cd0	get_usb_insert_status	78	SLEEP;USNDP_status_2;enter_BLE_normal_app_mode;gpio	FUN_00031784;dbg_printf	get_usb_insert_status | %s,USB_In =%x
+
+00038d1e	USNDP_status	134	SLEEP;USNDP_status_2;f_usb_isConnected	FUN_00031784;FUN_00039a84;FUN_00039ad8;dbg_printf	USBDN=:%x
+ | USNDP_status=:%x,USB_OTG_CFG=:%x,%x
+
+00038da4	Get_MODE_Switch_status	82	force_pair_en	FUN_00031784;dbg_printf	Get_MODE_Switch_status | %s,Get_MODE_Switch=:%x
+
+00038df6	USNDP_status_2	344	enter_BLE_normal_app_mode	FUN_000317c2;FUN_00035c9c;FUN_000371c2;FUN_000377fe;FUN_0003afa2;FUN_0003b130;FUN_0003b54e;FUN_0003cf7c;Success_led_2second;USNDP_status;dbg_printf;get_usb_insert_status	USNDP_status------charging   %x
+ | USNDP_status------usb insert  %x
+ | usb mode..................
+ | usb_init  wait_usb_time=%x, %x
+ | wait_usb_time=%d, USB_OTG_CFG=%d,Get_USBDN=%x
+ | usb_mode_check  RF_MODE USB %x, %x, %x
+
+00038f4e	FUN_00038f4e	12		FUN_0003723e	
+00038f5a	app_usb_upgrade_start	42	FUN_00033a7e	FUN_00031784;FUN_000392b8;FUN_0003b130;dbg_printf;flash_write_some_data	app_usb_upgrade_start | %s 
+
+00039198	FUN_00039198	40	FUN_00039428;FUN_0003b34c;FUN_0003b3f2;FUN_0003b47e		
+000391c0	FUN_000391c0	34	FUN_000391fc;FUN_00039708;FUN_0003976e;flash_mid		
+000391e2	FUN_000391e2	26	FUN_000392b8;FUN_0003932e		
+000391fc	FUN_000391fc	188	FUN_000392b8;FUN_0003932e	FUN_000391c0	
+000392b8	FUN_000392b8	118	Default_Profile;FLASH_WR_Profile;FLASH_wr_Global;FUN_0003943c;FUN_00039526;app_usb_upgrade_start;flash_erase;flash_read;flash_write_some_data;r_temp1	FUN_000391e2;FUN_000391fc	
+0003932e	FUN_0003932e	118	Default_Profile;FLASH_WR_Profile;FLASH_wr_Global;FUN_0003943c;FUN_00039526;flash_erase;flash_mid;flash_read;flash_write_some_data	FUN_000391e2;FUN_000391fc	
+000393a4	flash_mid	24	FUN_00039428	FUN_000391c0;FUN_0003932e;dbg_printf	flash_mid=%x
+
+000393bc	FUN_000393bc	76	FUN_00039408		
+00039408	FUN_00039408	32	FUN_00039428	FUN_000393bc	
+00039428	FUN_00039428	18	enter_BLE_normal_app_mode	FUN_00039198;FUN_00039408;flash_mid	
+0003943c	FUN_0003943c	78	FUN_0003976e	FUN_000392b8;FUN_0003932e;rom_25024;rom_25038;rom_2504C;rom_2505C	
+0003948a	FUN_0003948a	156	FUN_00039526;FUN_000396da;force_pair_en	rom_25024;rom_25038;rom_2504C;rom_2505C	
+00039526	FUN_00039526	268	FUN_00039708	FUN_000392b8;FUN_0003932e;FUN_0003948a;rom_24FEC;rom_25024;rom_25038;rom_2504C;rom_2505C	
+00039696	FUN_00039696	68			
+000396da	FUN_000396da	46	Default_Profile;FLASH_RD_Global;FLASH_RD_Macro;FLASH_RD_Profile;FLASH_WR_Profile;FLASH_wr_Global;FUN_0003e4d2;ImgHdr;ImgHdr_2;flash_erase;flash_read;flash_write_some_data;r_temp1;read	FUN_0003948a	
+00039708	FUN_00039708	102	Default_Profile;FLASH_WR_Profile;FLASH_wr_Global;FUN_0003e4ea;FUN_000405ae;flash_erase;flash_read;flash_write_some_data;r_temp1	FUN_000391c0;FUN_00039526;dbg_printf	
+0003976e	FUN_0003976e	90	Default_Profile;FLASH_WR_Profile;FLASH_wr_Global;flash_erase;flash_read;flash_write_some_data;r_temp1	FUN_000391c0;FUN_0003943c	
+000397c8	flash_write_some_data	146	app_usb_upgrade_start;write_2	FUN_000392b8;FUN_0003932e;FUN_000396da;FUN_00039708;FUN_0003976e;dbg_printf;dbg_printf_2;rom_24F9C	flash_write_some_data | back flash_read: | flash_erase:  | memcpy: | flash_write: | flash_wp_ALL: 
+0003985a	flash_read	128		FUN_000392b8;FUN_0003932e;FUN_000396da;FUN_00039708;FUN_0003976e;dbg_printf;rom_24F9C	flash_wp_256k:  | flash_read:  | flash_erase:  | flash_write:  | flash_wp_ALL: 
+000398da	r_temp1	194		FUN_000392b8;FUN_000396da;FUN_00039708;FUN_0003976e;dbg_printf	flash_test
+  | r_temp1: 
+00039a84	FUN_00039a84	84	FUN_00031114;FUN_00031172;FUN_000311b4;FUN_000311de;FUN_00031210;FUN_00039b82;FUN_0003a900;FUN_0003abf2;FUN_0003b0b8;FUN_0003b568;FUN_0003b5b6;FUN_0003b6f6;FUN_0003b932;OLED_Init;SLEEP;USNDP_status;force_ble_sleep;force_ble_sleep_2;sensor_pwdn		
+00039ad8	FUN_00039ad8	24	USNDP_status		
+00039af0	FUN_00039af0	34	FUN_000311b4;FUN_00039bae		
+00039b36	FUN_00039b36	76			
+00039b82	FUN_00039b82	44		FUN_00039a84	
+00039bae	FUN_00039bae	20		FUN_00039af0	
+00039bc2	FUN_00039bc2	10	FUN_0002b4c8		
+00039bcc	FUN_00039bcc	22	FUN_0003c008		
+00039c02	FUN_00039c02	2	FUN_0003c008		
+00039c1e	FUN_00039c1e	38			
+00039c84	FUN_00039c84	60	fn24main		
+00039cfc	FUN_00039cfc	42	TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;cal_data	FUN_0003e552	
+00039d26	FUN_00039d26	22	TEST_SINGLE_WAVE_2	FUN_0003e5f0	
+00039d3c	FUN_00039d3c	24	cal_data		
+00039d54	addPMU_Reg0x5_2	170	cal_data	FUN_000317c2;dbg_printf	addPMU_Reg0x5 = 0x%x
+
+00039dfe	FUN_00039dfe	40	cal_data	FUN_000317c2	
+00039e26	value_kcal_result	444	cal_data	FUN_000317c2;KEY_piaring_cnt;dbg_printf;rom_24F24	value_kcal_result=%x
+
+00039fe2	cal_data	496	FUN_0003a244	FUN_00028c48;FUN_000317c2;FUN_00039cfc;FUN_00039d3c;FUN_00039dfe;KEY_piaring_cnt;addPMU_Reg0x5_2;dbg_printf;value_kcal_result	cal_data============================ %x
+
+0003a244	FUN_0003a244	218	rwip_driver_init	cal_data;rom_24F9C	
+0003a31e	kmod_calibration_2M	390		FUN_000317c2;dbg_printf;rom_24F24	kmod_calibration_2M | read xvr_reg0x12:0x%x
+ | cal value:0x%x
+ | value_kcal_resulte:0x%x
+
+0003a688	FUN_0003a688	68	RC32K		
+0003a6cc	addPMU_Reg0x5	132	RC32K_2	dbg_printf	addPMU_Reg0x5 = 0x%x
+
+0003a776	FUN_0003a776	46			
+0003a7a4	FUN_0003a7a4	316			
+0003a900	FUN_0003a900	114	FUN_000311b4	FUN_00039a84	
+0003a978	spi_waitbusying	24	FUN_0003a990;FUN_0003ab30;FUN_0003ab60	dbg_printf	spi_waitbusying
+
+0003a990	FUN_0003a990	138	FUN_0003aba4	spi_waitbusying	
+0003aa1a	FUN_0003aa1a	40	FUN_00033d00;FUN_00033d2c;FUN_0003443a		
+0003aa42	FUN_0003aa42	70	FUN_00033d2c;FUN_0003443a		
+0003aa88	FUN_0003aa88	38	FUN_0003ab30		
+0003aaae	FUN_0003aaae	38	FUN_0003ab60		
+0003aad4	FUN_0003aad4	92	FUN_0003c008		
+0003ab30	FUN_0003ab30	48		FUN_0003aa88;FUN_0003c0e4;spi_waitbusying	
+0003ab60	FUN_0003ab60	48		FUN_0003aaae;FUN_0003c114;spi_waitbusying	
+0003ab90	write	10		dbg_printf	write complete
+
+0003ab9a	read_2	10		dbg_printf	read complete
+
+0003aba4	FUN_0003aba4	78		FUN_0003a990;dbg_printf;rom_24FEC	
+0003abf2	FUN_0003abf2	132		FUN_00039a84;dbg_printf	
+0003ac82	FUN_0003ac82	34			
+0003aca4	FUN_0003aca4	94		dbg_printf;rom_24FEC	spi len=%x:
+0003ad9c	FUN_0003ad9c	68			
+0003ae40	FUN_0003ae40	54	enter_BLE_normal_app_mode		
+0003ae7c	FUN_0003ae7c	6	FUN_0003ba88		
+0003ae82	FUN_0003ae82	170	FUN_00028c66;FUN_000360aa		
+0003af2c	FUN_0003af2c	64	FUN_00028c66;FUN_0003c008	rom_25078	
+0003af8a	FUN_0003af8a	24	FUN_00028c66;SLEEP;exist		
+0003afa2	FUN_0003afa2	86	USNDP_status_2;enter_BLE_normal_app_mode;exist;f_usb_isConnected	rom_25078	
+0003b0b8	FUN_0003b0b8	102		FUN_00039a84	
+0003b130	FUN_0003b130	34	FUN_0003ba88;FUN_0003dc7e;SLEEP;This;USNDP_status_2;app_24_to_ble_force_pair_reset;app_24_to_ble_reset;app_usb_upgrade_start;exist;f_usb_isConnected;mode_sw;test;there	FUN_00031784	
+0003b152	reset	140	FUN_0002a78c	dbg_printf	reset 0 err
+ | wdt reset
+ | reset 1 err
+ | force all reset
+ | force digital reset
+ | reset 3 err
+ | deep sleep reset
+ | power on reset
+
+0003b1de	FUN_0003b1de	26	app_24_to_ble_force_pair_reset	dbg_printf	set reset reason=%x
+
+0003b214	FUN_0003b214	54	FUN_0003b34c;FUN_0003b3f2		
+0003b34c	FUN_0003b34c	166		FUN_00039198;FUN_0003b214	
+0003b3f2	FUN_0003b3f2	140	SLEEP	FUN_00039198;FUN_0003b214	
+0003b47e	FUN_0003b47e	106	FUN_0003c008	FUN_00039198	
+0003b512	FUN_0003b512	22	enter_BLE_normal_app_mode		
+0003b528	FUN_0003b528	16	FUN_000360aa;SLEEP;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;enter_BLE_normal_app_mode;exist;force_24g_sleep;force_ble_sleep		
+0003b538	FUN_0003b538	22	BLE_PAIR;FUN_0003bb38;FUN_000405ae;SLEEP;exist		
+0003b54e	FUN_0003b54e	12	FUN_00028c66;FUN_000317c2;FUN_0003c8b6;FUN_0003c996;FUN_0003cd24;OLED_Clear;SLEEP;USNDP_status_2;system_mode		
+0003b568	FUN_0003b568	78	referance_voltage;set_Update_OLED	FUN_00039a84	
+0003b5b6	FUN_0003b5b6	48	set_Update_OLED	FUN_00039a84	
+0003b5e6	FUN_0003b5e6	18	FUN_0003c008		
+0003b5f8	FUN_0003b5f8	88	referance_voltage;set_Update_OLED	FUN_00031784	
+0003b650	referance_voltage	102		FUN_00031784;FUN_0003b568;FUN_0003b5f8;dbg_printf;rom_24F24	referance_voltage=%d
+
+0003b6f6	FUN_0003b6f6	72		FUN_00039a84;rom_24F24	
+0003b73e	FUN_0003b73e	12	FUN_00036f34;FUN_00036f56;FUN_0003b74a		
+0003b74a	FUN_0003b74a	22	FUN_0003b882	FUN_0003b73e	
+0003b760	FUN_0003b760	30		rom_24FEC	
+0003b77e	dbg_printf	4	APP_PARAM_UPDATE_REQ_IN;APP_PARAM_UPDATE_REQ_IND;APP_PARAM_UPDATE_REQ_IND_2;APP_PARAM_UPDATE_REQ_IND_3;BLE_PAIR;Default_Profile;Detect_FULL_IN;Disconnected;FLASH_RD_Macro;FLASH_RD_Profile;FLASH_WR_Profile;FLASH_wr_Global;FUN_00029988;FUN_00029a04;FUN_0002a674;FUN_0002a69e;FUN_0002b8a2;FUN_0002be06;FUN_0002be1c;FUN_0002cad2;FUN_0002cafe;FUN_0002cda6;FUN_0002d53c;FUN_0002da7e;FUN_0002f4da;FUN_0002f5d4;FUN_0002f61c;FUN_0003186e;FUN_000326b0;FUN_000328c2;FUN_00035cd2;FUN_00037534;FUN_00037878;FUN_000378ba;FUN_000382ec;FUN_00039708;FUN_0003aba4;FUN_0003abf2;FUN_0003aca4;FUN_0003b1de;FUN_0003dc7e;FUN_0003ec6a;FUN_000405ae;Get_MODE_Switch_status;HID_RQT_Get_Protocol;ImgHdr;ImgHdr_2;KEY_piaring_cnt;Led_OLED;LightUp_Mode_Led;OLED_Clear;OLED_Init;RC32K;RC32K_2;SLEEP;Set_Report_Data;Set_SIMU_mode_LightUp_Led;Stack_Integrity_Check;Success_led_2second;Success_led_2second_2;TEST_SINGLE_WAVE;TEST_SINGLE_WAVE_2;This;USNDP_status;USNDP_status_2;WDT_REG0X0;_saveC_GM_ProfileMax;addPMU_Reg0x5;addPMU_Reg0x5_2;adv_state;app_24_to_ble_force_pair_reset;app_24_to_ble_reset;app_ancs_add_ancsc;app_ancsc_delete_call;app_ancsc_init;app_ancsc_msg_dflt_handler;app_ble_addr_tabl_init;app_ble_address_update;app_ble_to_ble_mode;app_bond_status_initial;app_env;app_hid_enable_prf;app_mutli_link_change;app_oad_add_oads;app_sec_init;app_sec_send_security_req;app_start_led;app_usb_upgrade_start;app_user_ke_timer_stop;appm_add_svc;appm_create_advertising;appm_delete_advertising;appm_update_param;ble_alert_led_start;ble_alert_led_stop;ble_update_param_failed_cnt;cal_data;ch_frequency;delta_none;disconnect;enter_BLE_normal_app_mode;exist;fWorkModeInit;f_reconnect_24G;f_usb_isConnected;f_usb_remote_wakeup;fee4;flash_erase;flash_mid;flash_read;flash_write_some_data;fn24main;force;force_24g_sleep;force_ble_sleep;force_ble_sleep_2;force_pair_en;gapm_activity_created_ind_handler;gapm_activity_stopped_ind_handler;gattc_att_info_req_ind_handler;gattc_att_info_req_ind_handler_2;gattc_cmp_evt_handler;get_scan_Rvalue;get_usb_insert_status;gpio;hogpd_ctnl_pt_ind_handler;hogpd_ntf_cfg_ind_handler;hogpd_proto_mode_cfm_handler;hogpd_report_upd_req_handler;kmod_calibration_2M;limit;loc_irk;mode_sw;nvds_Polling_read;nvds_Polling_write;oadImgIdentifyReq;oad_updating_user_section_begin;pcfg;prf_register_atthdl2gatt;profile_mem_init;r_temp1;read_2;referance_voltage;reset;rgb_24g_test_cal;rtc_timer_start;rwip_driver_init;rxcsr2;sensor_init;sensor_pwdn;set_USB_led_flash;set_Update_OLED;set_Update_OLED_2;set_Update_OLED_3;set_bonded_led_flash;set_dpi;set_force_sleep;set_pairing_led_flash;single_wave;spi_waitbusying;switch_rf_mode_loop;sys_flag;system_mode;test;there;time_sensor_invalid;tx_failed_cnt;uart2_isr;update;usb_suspend;usb_suspend_wakeup;value_kcal_result;write		
+0003b7ce	FUN_0003b7ce	6			
+0003b7d4	FUN_0003b7d4	32	uart2_isr	rom_25078	
+0003b836	uart2_isr	76	FUN_0003c008	FUN_0003b7d4;dbg_printf	uart2_isr
+0003b882	FUN_0003b882	58		FUN_0003b74a;rom_24F9C	
+0003b8e0	FUN_0003b8e0	30	FUN_0003ba0a;FUN_0003bb38;FUN_0003bd90	FUN_0003be98	
+0003b904	FUN_0003b904	46	FUN_0003b932;FUN_0003bdca;FUN_0003bde6	rom_24FEC	
+0003b932	FUN_0003b932	124	FUN_00028c4e	FUN_00028c48;FUN_00039a84;FUN_0003b904;rom_24F24	
+0003b9dc	FUN_0003b9dc	22			
+0003b9f2	FUN_0003b9f2	22			
+0003ba0a	FUN_0003ba0a	40		FUN_0003b8e0;FUN_000429fc	
+0003ba28	FUN_0003ba28	30		FUN_0003be98	
+0003ba46	FUN_0003ba46	40	FUN_0003bb38		
+0003ba6e	FUN_0003ba6e	26	FUN_0003bb38	rom_24F9C	
+0003ba88	FUN_0003ba88	78		FUN_0003ae7c;FUN_0003b130	
+0003bad6	FUN_0003bad6	32	FUN_0003bb38	rom_25078	
+0003bb38	FUN_0003bb38	498		FUN_00028c48;FUN_0003b538;FUN_0003b8e0;FUN_0003ba46;FUN_0003ba6e;FUN_0003bad6;FUN_00042450;rom_25002	
+0003bd90	FUN_0003bd90	58		FUN_0003b8e0;rom_24F9C	
+0003bdca	FUN_0003bdca	28	FUN_0003bde6	FUN_0003b904	
+0003bde6	FUN_0003bde6	178	FUN_00028c4e	FUN_0003b904;FUN_0003bdca;rom_24F9C	
+0003be98	FUN_0003be98	12	FUN_0003b8e0;FUN_0003ba28		
+0003beb4	FUN_0003beb4	86	OLED_Init;SLEEP;Success_led_2second_2;enter_BLE_normal_app_mode;exist		
+0003bf0a	FUN_0003bf0a	54	SLEEP;app_mutli_link_change;exist;force_ble_sleep_2;set_force_sleep		
+0003bf40	FUN_0003bf40	88	FUN_0003c008	FUN_00035800	
+0003bfc2	FUN_0003bfc2	70	enter_BLE_normal_app_mode		
+0003c008	FUN_0003c008	160	FUN_00028ac0	FUN_000375fe;FUN_00039bcc;FUN_00039c02;FUN_0003aad4;FUN_0003af2c;FUN_0003b47e;FUN_0003b5e6;FUN_0003bf40;FUN_0003c438;FUN_0003c48c;uart2_isr	
+0003c0a8	FUN_0003c0a8	50	FUN_00028aa0	FUN_0003c150;FUN_0003dc7e;FUN_0003e1ec	
+0003c0e4	FUN_0003c0e4	48	FUN_0003ab30		
+0003c114	FUN_0003c114	48	FUN_0003ab60		
+0003c150	FUN_0003c150	20	FUN_0003c0a8		
+0003c174	FUN_0003c174	82	FUN_00035c9c		
+0003c1c6	FUN_0003c1c6	88	FUN_00035c9c		
+0003c21e	FUN_0003c21e	104	FUN_00036024;FUN_0003c2c6	rom_24F24	
+0003c286	FUN_0003c286	64	FUN_00036024;FUN_000360aa;FUN_0003c2c6;SLEEP;exist		
+0003c2c6	FUN_0003c2c6	30	Default_Profile;FUN_00031808;FUN_00035c9c;SLEEP;_saveC_GM_ProfileMax;exist;nvds_Polling_read;nvds_Polling_write	FUN_0003c21e;FUN_0003c286	
+0003c2e6	FUN_0003c2e6	82		rom_24F24	
+0003c338	FUN_0003c338	100		rom_24F24	
+0003c39c	FUN_0003c39c	82		rom_24F24	
+0003c438	FUN_0003c438	84	FUN_0003c008		
+0003c48c	FUN_0003c48c	84	FUN_0003c008		
+0003c51a	FUN_0003c51a	20			
+0003c52e	FUN_0003c52e	6	FUN_0002f31c		
+0003c534	FUN_0003c534	64		FUN_0003c75a	
+0003c574	FUN_0003c574	6	FUN_0002f31c		
+0003c57a	FUN_0003c57a	264		FUN_0003c738;rom_24F24	
+0003c6a8	FUN_0003c6a8	12	gpio		
+0003c6ce	FUN_0003c6ce	106	FUN_0002f31c	rom_1804C;rom_24F24	
+0003c738	FUN_0003c738	34	FUN_0003c57a;FUN_0003c75a		
+0003c75a	FUN_0003c75a	164	FUN_0003c534	FUN_0003c738;rom_24F24	
+0003c818	FUN_0003c818	42	FUN_0003c8b6	FUN_000317c2	
+0003c842	FUN_0003c842	16	FUN_0003c896;FUN_0003c90c;FUN_0003c92c;FUN_0003c9be;FUN_0003d24a;FUN_0003d382;FUN_0003d3f4		
+0003c852	FUN_0003c852	52	FUN_0003c896;FUN_0003c90c;FUN_0003c92c;FUN_0003c9be;FUN_0003d24a;FUN_0003d382;FUN_0003d3f4		
+0003c886	FUN_0003c886	16	FUN_0003c896;FUN_0003c90c;FUN_0003c92c;FUN_0003c9be;FUN_0003d24a;FUN_0003d382;FUN_0003d3f4		
+0003c896	FUN_0003c896	32	FUN_0003c8b6;FUN_0003c8dc;FUN_0003c92c;FUN_0003c996;FUN_0003d382;FUN_0003d3f4;FUN_0003d51e;FUN_0003d530;FUN_0003d546;OLED_Clear	FUN_0003c842;FUN_0003c852;FUN_0003c886	
+0003c8b6	FUN_0003c8b6	38	BLE_PAIR;OLED_Init;Success_led_2second;enter_BLE_normal_app_mode;set_USB_led_flash;set_bonded_led_flash;set_pairing_led_flash	FUN_0003b54e;FUN_0003c818;FUN_0003c896	
+0003c8dc	FUN_0003c8dc	34		FUN_0003c896;rom_25078	
+0003c90c	FUN_0003c90c	32	FUN_0003d3f4;FUN_0003d51e;FUN_0003d55c	FUN_0003c842;FUN_0003c852;FUN_0003c886	
+0003c92c	FUN_0003c92c	106		FUN_0003c842;FUN_0003c852;FUN_0003c886;FUN_0003c896	
+0003c996	FUN_0003c996	40	FUN_0003c9be;FUN_0003d24a;FUN_0003d55c	FUN_0003b54e;FUN_0003c896	
+0003c9be	FUN_0003c9be	52	FUN_0003c9f2;FUN_0003cb9a;FUN_0003ce5c;FUN_0003d63a;FUN_0003d7ee;FUN_0003d8da;FUN_0003d96e;FUN_0003da42;FUN_0003db3a	FUN_0003c842;FUN_0003c852;FUN_0003c886;FUN_0003c996	
+0003c9f2	FUN_0003c9f2	422	FUN_0003cd24	FUN_0003c9be	
+0003cb9a	FUN_0003cb9a	370	FUN_0003cd24	FUN_0003c9be	
+0003cd24	FUN_0003cd24	146	FUN_0003cdb6;FUN_0003ce00;FUN_0003ce5c;FUN_0003cf24;FUN_0003d57c;FUN_0003d5dc;FUN_0003db3a;Linking;Pairing	FUN_0003b54e;FUN_0003c9f2;FUN_0003cb9a	
+0003cdb6	FUN_0003cdb6	74	FUN_0003cf7c;FUN_0003d2b0;system_mode	FUN_0003cd24	
+0003ce00	FUN_0003ce00	82	FLASH_WR_Profile;FUN_0003cf7c;FUN_0003d2b0;f_usb_isConnected	FUN_0003cd24;FUN_000429d4	%d dpi    | %d dpi   | %d dpi  | %d dpi
+0003ce52	FUN_0003ce52	10	FUN_00032942;FUN_0003cf7c;FUN_0003d2b0;set_Update_OLED_2		
+0003ce5c	FUN_0003ce5c	200	FUN_0003cf7c;FUN_0003d2b0	FUN_0003c9be;FUN_0003cd24;FUN_000429d4	  %d%% |  %d%%
+0003cf24	FUN_0003cf24	88	FUN_00031808;FUN_0003cf7c	FUN_0002b18e;FUN_0003cd24	125 Hz  | 133 Hz  | 1000 Hz | 500 Hz  | 250 Hz 
+0003cf7c	FUN_0003cf7c	60	BLE_PAIR;Default_Profile;Detect_FULL_IN;FUN_0002b8a2;FUN_0003d2b0;OLED_Init;Success_led_2second;USNDP_status_2;enter_BLE_normal_app_mode;f_usb_isConnected;set_USB_led_flash;set_Update_OLED_2;set_bonded_led_flash;set_pairing_led_flash	FUN_0003cdb6;FUN_0003ce00;FUN_0003ce52;FUN_0003ce5c;FUN_0003cf24;delta_none	
+0003cfb8	CHRG	46	FUN_0003d2b0;LightUp_Mode_Led;Success_led_2second_2;f_usb_isConnected		Link OK!  | CHRG      | Pair OK!  | Conn OK! 
+0003cfe6	ReLink	38	FUN_0003d2b0;Success_led_2second_2;f_reconnect_24G		ReLink OK | CHRG   
+0003d00c	ReLinking	38	FUN_00032942;FUN_0003d2b0;set_Update_OLED_2		ReLinking | CHRG     
+0003d032	Pairing	48	FUN_00032942;FUN_0003d2b0;set_Update_OLED_2	FUN_0003cd24	CHRG      | Pairing   | Linking  
+0003d062	Charging	32	Detect_FULL_IN;FUN_0003d2b0		BAT FULL | Charging
+0003d082	FUN_0003d082	42	FUN_0003d2b0		BAT OVER! | BAT LOW! 
+0003d24a	FUN_0003d24a	52	OLED_Clear	FUN_0003c842;FUN_0003c852;FUN_0003c886;FUN_0003c996	
+0003d27e	OLED_Clear	50	BLE_PAIR;Default_Profile;FUN_0003d2b0;FUN_0003d508;OLED_Init;Success_led_2second;enter_BLE_normal_app_mode;f_usb_isConnected;set_USB_led_flash;set_bonded_led_flash;set_pairing_led_flash;switch_rf_mode_loop	FUN_0003b54e;FUN_0003c896;FUN_0003d24a;dbg_printf	OLED_Clear---------------
+
+0003d2b0	FUN_0003d2b0	210	SLEEP;f_usb_isConnected	CHRG;Charging;FUN_0003cdb6;FUN_0003ce00;FUN_0003ce52;FUN_0003ce5c;FUN_0003cf7c;FUN_0003d082;OLED_Clear;Pairing;ReLink;ReLinking;delta_none	
+0003d382	FUN_0003d382	114		FUN_0003c842;FUN_0003c852;FUN_0003c886;FUN_0003c896	
+0003d3f4	FUN_0003d3f4	276		FUN_0003c842;FUN_0003c852;FUN_0003c886;FUN_0003c896;FUN_0003c90c	
+0003d508	FUN_0003d508	22	SLEEP;force_ble_sleep_2;set_Update_OLED_2;set_force_sleep	OLED_Clear	
+0003d51e	FUN_0003d51e	18		FUN_0003c896;FUN_0003c90c	
+0003d530	FUN_0003d530	22		FUN_0003c896	
+0003d546	FUN_0003d546	22	SLEEP;force_ble_sleep_2;set_Update_OLED_2;set_force_sleep	FUN_0003c896	
+0003d55c	FUN_0003d55c	32		FUN_0003c90c;FUN_0003c996	
+0003d57c	FUN_0003d57c	66		FUN_0003cd24	
+0003d5be	Linking	30	enter_BLE_normal_app_mode	FUN_0003cd24	Linking  
+0003d5dc	FUN_0003d5dc	94		FUN_0003cd24;FUN_000429d4	%d    | DPI        
+0003d63a	FUN_0003d63a	268		FUN_0003c9be;rom_24F9C;rom_24FEC	
+0003d7ee	FUN_0003d7ee	236		FUN_0003c9be;rom_24F9C;rom_24FEC	
+0003d8da	FUN_0003d8da	148	enter_BLE_normal_app_mode;f_usb_isConnected	FUN_0003c9be;rom_24F9C;rom_24FEC	
+0003d96e	FUN_0003d96e	212		FUN_0003c9be;rom_24F9C;rom_24FEC	
+0003da42	FUN_0003da42	214		FUN_0003c9be;rom_24F9C;rom_24FEC	
+0003db3a	FUN_0003db3a	82		FUN_0003c9be;FUN_0003cd24;rom_25078	
+0003dc3c	FUN_0003dc3c	66	FUN_0003dfd2;rwip_driver_init	rom_074A0;rom_07806;rom_0C1CA;rom_1169A;rom_1804C;rom_24F8A	
+0003dc7e	FUN_0003dc7e	50	FUN_0003c0a8	FUN_0003b130;dbg_printf	%s irq_stat(%x) 
+ | err:%x 
+
+0003dcb0	FUN_0003dcb0	18	FUN_0003e304		
+0003dcf8	FUN_0003dcf8	8	FUN_0003e304		
+0003dd00	FUN_0003dd00	28	FUN_0003e0bc;FUN_0003e1ec	rom_15C40	
+0003dd1c	FUN_0003dd1c	30	FUN_0003e0bc;FUN_0003e1ec	rom_06B28	
+0003dd3a	FUN_0003dd3a	28	FUN_0003e0bc;FUN_0003e1ec	rom_16216	
+0003dd56	FUN_0003dd56	28		rom_06B5A;rom_16D94;rom_24F9C	
+0003dd72	FUN_0003dd72	28	FUN_0003e1ec	rom_06B28;rom_1809E	
+0003dd8e	FUN_0003dd8e	350	FUN_0003dfd2;rwip_driver_init	FUN_0003e432;rom_06B14;rom_18074	
+0003deee	rwip_driver_init	228	TEST_SINGLE_WAVE_2;enter_BLE_normal_app_mode	FUN_00028c48;FUN_00029164;FUN_00029530;FUN_0003a244;FUN_0003dc3c;FUN_0003dd8e;KEY_piaring_cnt;dbg_printf;rom_0626C;rom_0692C;rom_06A88;rom_06BF8;rom_1477C;rom_15C36;rom_15F90;rom_16508;rom_16930;rom_16BCE;rom_16CAC;rom_24F08	h4tl_init-1 ok
+ | hci_init ok
+ | rwble_hl_init ok
+ | rwble_init ok
+ | aes_init ok
+ | rwip_driver_init ok
+ | appm_init ok
+
+0003dfd2	FUN_0003dfd2	108		FUN_0003dc3c;FUN_0003dd8e;rom_0626C;rom_06AB4;rom_1477C;rom_15C36;rom_15F90;rom_16508;rom_16930;rom_16BCE;rom_16CAC;rom_24F08;rom_25024;rom_25038;rom_2504C;rom_2505C	
+0003e03e	FUN_0003e03e	16	FUN_00028c4e;FUN_00028c66	rom_06BCE	
+0003e04e	FUN_0003e04e	110	FUN_0003e1ec	rom_069C4;rom_18074;rom_24F24	
+0003e0bc	FUN_0003e0bc	94	FUN_0003e1ec	FUN_0003dd00;FUN_0003dd1c;FUN_0003dd3a;rom_1804C;rom_1809E	
+0003e1ec	FUN_0003e1ec	124	FUN_0003c0a8	FUN_0003dd00;FUN_0003dd1c;FUN_0003dd3a;FUN_0003dd72;FUN_0003e04e;FUN_0003e0bc;rom_1695E;rom_18038;rom_1809E	
+0003e268	FUN_0003e268	44	FUN_0003e304	rom_1804C	
+0003e294	RC32K	24	FUN_0003e304	FUN_0003a688;dbg_printf	RC32K-Cali.Start
+
+0003e2ac	RC32K_2	88	FUN_0003e304	addPMU_Reg0x5;dbg_printf;rom_1804C	RC32K-Cali.Compl
+ | RC32K-Cali.End
+
+0003e304	FUN_0003e304	300	FUN_00028c66	FUN_0003dcb0;FUN_0003dcf8;FUN_0003e268;RC32K;RC32K_2;rom_069DC;rom_06AF0;rom_1804C;rom_18074	
+0003e432	FUN_0003e432	16	FUN_0003dd8e	rom_24F24	
+0003e498	FUN_0003e498	58	FUN_0003e5f0;FUN_0003e6e2;FUN_0003e732		
+0003e4d2	FUN_0003e4d2	24	FUN_0003e516	FUN_000396da	
+0003e4ea	FUN_0003e4ea	24		FUN_00039708	
+0003e516	FUN_0003e516	60	enter_BLE_normal_app_mode	FUN_0003e4d2;FUN_0003e716;rom_25002	
+0003e552	FUN_0003e552	62	FUN_00029988;FUN_00029a04;FUN_0002a0c0;FUN_0002c378;FUN_0002d53c;FUN_00039cfc;app_ble_addr_tabl_init;app_bond_status_initial;app_sec_init;appm_create_advertising;force;force_pair_en;mode_sw;nvds_Polling_read;sys_flag	FUN_0003e6e2	
+0003e590	FUN_0003e590	52		FUN_0003e6e2	
+0003e5c4	FUN_0003e5c4	44		FUN_0003e6e2	
+0003e5f0	FUN_0003e5f0	242	FUN_00029ab0;FUN_00029ed8;FUN_00029ef2;FUN_0002a0aa;FUN_0002b8a2;FUN_0002d53c;FUN_00039d26;app_ble_addr_tabl_init;app_bond_status_initial;force_pair_en;nvds_Polling_write;save;switch_rf_mode_loop	FUN_0003e498;FUN_0003e732;KEY_piaring_cnt;rom_25002	
+0003e6e2	FUN_0003e6e2	52	FUN_0003e552;FUN_0003e590;FUN_0003e5c4	FUN_0003e498	
+0003e716	FUN_0003e716	28	FUN_0003e516;FUN_0003e732		
+0003e732	FUN_0003e732	96	FUN_0003e5f0	FUN_0003e498;FUN_0003e716;rom_24F9C	
+0003e7b4	FUN_0003e7b4	30			
+0003e7d2	FUN_0003e7d2	46		FUN_0003ee1a;rom_06EF4;rom_06F26	
+0003e800	prf_register_atthdl2gatt	84	FUN_00041f62	FUN_0003ee1a;dbg_printf;rom_06EF4;rom_06F26	prf_register_atthdl2gatt,svc->shdl=%x,%x
+ | ~~~~~~~~~dest=%x,~~~~~~~~~src=%x,%x
+
+0003e854	FUN_0003e854	52		FUN_0003ee1a;rom_06EF4;rom_06F26	
+0003e888	FUN_0003e888	58		FUN_0003ee1a;rom_06EF4;rom_06F26	
+0003e8c2	FUN_0003e8c2	64		FUN_0003ee1a;rom_06EF4;rom_06F26;rom_24F9C	
+0003e902	FUN_0003e902	86	FUN_0003e958	FUN_0003ee1a;rom_06EF4;rom_06F26;rom_24F9C	
+0003e958	FUN_0003e958	30	FUN_000420ee;FUN_00042132	FUN_0003e902	
+0003e976	FUN_0003e976	66			
+0003e9b8	FUN_0003e9b8	64			
+0003e9f8	FUN_0003e9f8	304		rom_1EFCC	
+0003eb28	FUN_0003eb28	86		FUN_0003ee1a;FUN_0003ee2a;rom_06EF4;rom_06F26;rom_24F9C	
+0003ec18	FUN_0003ec18	82	FUN_0003ec6a	FUN_0003efee;FUN_0003f464;FUN_0003fb64;FUN_0004012e;FUN_00040be8;FUN_00041574;FUN_00041f5e	
+0003ec6a	FUN_0003ec6a	116		FUN_0003ec18;dbg_printf;rom_07108;rom_07212	!!!!!!init_type=%x
+
+0003edee	FUN_0003edee	44	FUN_0003f25e;FUN_0003f3b0;FUN_0003f46a;FUN_0003f86c;FUN_0003faaa;FUN_0003fb6a;FUN_0003fbda;FUN_0003fd6e;FUN_0003ff92;FUN_000400c6;FUN_00040134;FUN_00040400;FUN_00040768;FUN_00040f74;FUN_0004169a;FUN_00041798;FUN_00041922;FUN_00041e78;FUN_00042132;FUN_00042430;hogpd_proto_mode_cfm_handler;oadImgIdentifyReq		
+0003ee1a	FUN_0003ee1a	16	FUN_0003e7d2;FUN_0003e854;FUN_0003e888;FUN_0003e8c2;FUN_0003e902;FUN_0003eb28;FUN_0003f3cc;FUN_0003f418;FUN_0003fb24;FUN_0003fbda;FUN_000400e2;FUN_00040768;FUN_0004169a;FUN_00041798;FUN_00041f62;oadImgIdentifyReq;prf_register_atthdl2gatt		
+0003ee2a	FUN_0003ee2a	16	FUN_0003eb28;FUN_00041798;FUN_00041f62		
+0003ee3a	FUN_0003ee3a	52			
+0003ee6e	FUN_0003ee6e	52	FUN_0002bf30;FUN_0002bf5c;FUN_0002bf88;FUN_0002c124;FUN_0002c158;FUN_0002ca56;FUN_0002cad2;FUN_0002cafe;FUN_0002f438;FUN_0002f5d4;app_ancsc_delete_call;app_hid_enable_prf;hogpd_ctnl_pt_ind_handler;update		
+0003ef20	FUN_0003ef20	40	FUN_0003ef48		
+0003ef48	FUN_0003ef48	126		FUN_0003ef20;FUN_0003f25e;rom_06D2C;rom_07180;rom_179A0;rom_1F06A	
+0003efc6	FUN_0003efc6	36		rom_06DF6;rom_17A12	
+0003efee	FUN_0003efee	6	FUN_0003ec18		
+0003eff4	FUN_0003eff4	54			
+0003f02a	FUN_0003f02a	60			
+0003f066	FUN_0003f066	42			
+0003f25e	FUN_0003f25e	26	FUN_0003ef48	FUN_0003edee	
+0003f370	FUN_0003f370	28		rom_06DF6	
+0003f3b0	FUN_0003f3b0	28	FUN_0003f3cc;FUN_0003f418	FUN_0003edee	
+0003f3cc	FUN_0003f3cc	76		FUN_0003ee1a;FUN_0003f3b0;rom_06EF4;rom_06F26;rom_24F9C	
+0003f418	FUN_0003f418	76		FUN_0003ee1a;FUN_0003f3b0;rom_06EF4;rom_06F26;rom_24F9C	
+0003f464	FUN_0003f464	6	FUN_0003ec18		
+0003f46a	FUN_0003f46a	32	gattc_att_info_req_ind_handler_2	FUN_0003edee	
+0003f53a	gattc_att_info_req_ind_handler_2	106		FUN_0003f46a;dbg_printf;rom_06EF4;rom_06F26	gattc_att_info_req_ind_handler | %s,conidx:%d
+
+0003f86c	FUN_0003f86c	32		FUN_0003edee	
+0003f9a0	FUN_0003f9a0	286		FUN_0003ff92;rom_06DF6;rom_07180;rom_1F06A;rom_1F61C;rom_24F9C	
+0003fa7a	FUN_0003fa7a	28		rom_06DF6	
+0003faaa	FUN_0003faaa	122	FUN_0003fb24	FUN_0003edee	
+0003fb24	FUN_0003fb24	64	FUN_0003fbda	FUN_0003ee1a;FUN_0003faaa;rom_06EF4;rom_06F26	
+0003fb64	FUN_0003fb64	6	FUN_0003ec18		
+0003fb6a	FUN_0003fb6a	112	FUN_0003fdd4	FUN_0003edee	
+0003fbda	FUN_0003fbda	238	FUN_0003fd6e	FUN_0003edee;FUN_0003ee1a;FUN_0003fb24;rom_06DF6;rom_06EF4;rom_06F26;rom_07180	
+0003fd3a	FUN_0003fd3a	18		rom_06F26	
+0003fd6e	FUN_0003fd6e	102		FUN_0003edee;FUN_0003fbda;rom_06EF4;rom_06F26;rom_07180;rom_071EA	
+0003fdd4	FUN_0003fdd4	78		FUN_0003fb6a;rom_06EF4;rom_06F26	
+0003ff92	FUN_0003ff92	26	FUN_0003f9a0	FUN_0003edee	
+0004008a	FUN_0004008a	28		rom_06DF6	
+000400c6	FUN_000400c6	28	FUN_000400e2	FUN_0003edee	
+000400e2	FUN_000400e2	76		FUN_0003ee1a;FUN_000400c6;rom_06EF4;rom_06F26;rom_24F9C	
+0004012e	FUN_0004012e	6	FUN_0003ec18		
+00040134	FUN_00040134	30	gattc_att_info_req_ind_handler	FUN_0003edee	
+000401aa	gattc_att_info_req_ind_handler	98		FUN_00040134;dbg_printf;rom_06EF4;rom_06F26	gattc_att_info_req_ind_handler | %s,conidx:%d
+
+00040400	FUN_00040400	32		FUN_0003edee	
+00040528	FUN_00040528	28		rom_06DF6	
+00040568	FUN_00040568	32	ImgHdr_2	rom_24F9C	
+00040588	oad_updating_user_section_begin	38	ImgHdr_2	dbg_printf	oad_updating_user_section_begin
+000405ae	FUN_000405ae	274	FUN_00028c66	FUN_00039708;FUN_0003b538;dbg_printf;rom_24F24	BBBBwait for reset!!!
+
+000406c0	FUN_000406c0	18	ImgHdr_2		
+000406d2	oadImgIdentifyReq	150	ImgHdr	FUN_0003edee;FUN_0003ee1a;dbg_printf;rom_06EF4;rom_06F26	oadImgIdentifyReq | noti  = 0x%x
+ | KE_MSG_ALLOC_DYN GATTC_SEND_EVT_CMD  == NULL 
+
+00040768	FUN_00040768	76	ImgHdr;ImgHdr_2	FUN_0003edee;FUN_0003ee1a;rom_06EF4;rom_06F26	
+000407b4	ImgHdr	424		FUN_000396da;FUN_00040768;appm_update_param;dbg_printf;oadImgIdentifyReq	oadImgIdentifyWrite | rxHdr.ver = %x 
+ | rxHdr.len = %x 
+ | rxHdr.uid = %x 
+ | rxHdr.rom_ver = %x 
+ | BBBBwait for reset!!!
+ | app part upgrade
+ | ImgHdr.rom_ver = %x 
+ | ImgHdr.uid = %x 
+ | ImgHdr.ver = %x 
+ | oadBlkTot = %x 
+ | SSSSapp and stack upgrade
+
+00040a7c	ImgHdr_2	364		FUN_000396da;FUN_00040568;FUN_000406c0;FUN_00040768;dbg_printf;oad_updating_user_section_begin	oadImgBlockWrite: UNKNOWN UID
+ | uid = %x
+ | blkNum = %x ,oadBlkNum %x,oadBlkTot %x,ver %x 
+ | ImgHdr.ver = %x, ver = %x
+ | last block 
+ | update down!
+
+00040be8	FUN_00040be8	4	FUN_0003ec18		
+00040d28	FUN_00040d28	12		rom_06F26	
+00040f64	gattc_cmp_evt_handler	16		dbg_printf	gattc_cmp_evt_handler
+00040f74	FUN_00040f74	30		FUN_0003edee	
+00041034	FUN_00041034	244	FUN_00041160;FUN_0004169a;FUN_00041922;hogpd_proto_mode_cfm_handler		
+00041160	FUN_00041160	992		FUN_00041034;FUN_00041e78;rom_06D2C;rom_06DF6;rom_07180;rom_1F06A;rom_1F3D4;rom_1F3F6;rom_24F9C	
+00041540	FUN_00041540	16		rom_06DF6	
+00041552	FUN_00041552	34			
+00041574	FUN_00041574	6	FUN_0003ec18		
+0004157a	FUN_0004157a	276			
+0004169a	FUN_0004169a	254	hogpd_report_upd_req_handler	FUN_0003edee;FUN_0003ee1a;FUN_00041034;rom_06EF4;rom_06F26;rom_24F9C	
+00041798	FUN_00041798	164		FUN_0003edee;FUN_0003ee1a;FUN_0003ee2a;rom_06EF4;rom_06F26	
+0004186c	FUN_0004186c	32		rom_06EF4;rom_06F26	
+000418ae	hogpd_report_upd_req_handler	116		FUN_0004169a;dbg_printf;rom_06EF4;rom_06F26;rom_07180;rom_071EA;rom_1855C	hogpd_report_upd_req_handler | %s error status: %d
+
+00041922	FUN_00041922	224		FUN_0003edee;FUN_00041034;rom_06EF4;rom_06F26;rom_07180;rom_071EA;rom_24F9C;rom_25078	
+00041a10	hogpd_proto_mode_cfm_handler	176		FUN_0003edee;FUN_00041034;dbg_printf;rom_06EF4;rom_06F26;rom_07180;rom_071EA	hogpd_proto_mode_cfm_handler
+00041e78	FUN_00041e78	28	FUN_00041160	FUN_0003edee	
+00041efc	FUN_00041efc	42		rom_06DF6	
+00041f5e	FUN_00041f5e	4	FUN_0003ec18		
+00041f62	FUN_00041f62	78		FUN_0003ee1a;FUN_0003ee2a;prf_register_atthdl2gatt;rom_06EF4;rom_06F26;rom_24F9C	
+000420ee	FUN_000420ee	64		FUN_0003e958;rom_06EF4;rom_06F26;rom_07180	
+00042132	FUN_00042132	130		FUN_0003e958;FUN_0003edee;rom_06EF4;rom_06F26;rom_07180;rom_071EA	
+00042430	FUN_00042430	28		FUN_0003edee	
+00042450	FUN_00042450	14	FUN_0003bb38		
+0004245e	FUN_0004245e	20	FUN_00037104;FUN_00037a94;FUN_00038384;_USB_macro2;pcfg;usb_suspend		
+00042472	FUN_00042472	18	FUN_00037104;FUN_00037ac6;FUN_00038398;usb_suspend;usb_suspend_wakeup		
+00042484	FUN_00042484	202	FUN_00042b18	FUN_000425ea	
+00042554	FUN_00042554	24		FUN_000425ea	
+00042570	FUN_00042570	96	FUN_00042b18;FUN_00042c70	FUN_0004296c;FUN_0004298c	
+000425d0	FUN_000425d0	26	FUN_000425ea;FUN_00042690;FUN_000427f4		
+000425ea	FUN_000425ea	164	FUN_00042484;FUN_00042554;FUN_00042690	FUN_000425d0;FUN_0004296c;FUN_0004298c;rom_2501C	
+00042690	FUN_00042690	326	FUN_00042b18	FUN_000425d0;FUN_000425ea;FUN_0004296c;FUN_000429ae	
+000427f4	FUN_000427f4	234	FUN_00042b18	FUN_000425d0	
+000428e4	FUN_000428e4	54	FUN_00042b18	FUN_0004296c;FUN_0004298c	
+00042924	FUN_00042924	38	FUN_00042b18		
+0004294c	FUN_0004294c	18		thunk_FUN_00042af0	
+0004296c	FUN_0004296c	32	FUN_00042570;FUN_000425ea;FUN_00042690;FUN_000428e4		
+0004298c	FUN_0004298c	34	FUN_00042570;FUN_000425ea;FUN_000428e4		
+000429ae	FUN_000429ae	38	FUN_00042690		
+000429d4	FUN_000429d4	36	FUN_0003ce00;FUN_0003ce5c;FUN_0003d5dc	FUN_00042c70;FUN_000433b0	
+000429fc	FUN_000429fc	28	FUN_0003ba0a	FUN_00042c70;FUN_000433b0	
+00042a20	FUN_00042a20	80	FUN_00037878;FUN_000378ba		
+00042a74	FUN_00042a74	92	FUN_00037878;FUN_000378ba		
+00042ae0	thunk_FUN_00042af0	4	FUN_0004294c		
+00042af0	FUN_00042af0	24			
+00042b18	FUN_00042b18	316	FUN_00042c70	FUN_00042484;FUN_00042570;FUN_00042690;FUN_000427f4;FUN_000428e4;FUN_00042924	
+00042c70	FUN_00042c70	1720	FUN_000429d4;FUN_000429fc	FUN_00042570;FUN_00042b18;FUN_00043364;FUN_00043384;rom_24F24	0123456789abcdef | 0123456789ABCDEF
+00043364	FUN_00043364	32	FUN_00042c70		
+00043384	FUN_00043384	44	FUN_00042c70		
+000433b0	FUN_000433b0	10	FUN_000429d4;FUN_000429fc		
+0004407a	FUN_0004407a	4			
