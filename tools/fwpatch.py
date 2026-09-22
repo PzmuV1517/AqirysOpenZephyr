@@ -15,16 +15,19 @@ Edits available
 The hook emits this Thumb-1 trampoline, which preserves every AAPCS
 argument register and clobbers only IP, which is call-clobbered anyway:
 
-    01b4        push {r0}
-    0248        ldr  r0, [pc, #8]
-    8446        mov  ip, r0
-    01bc        pop  {r0}
-    6047        bx   ip
-    c046        nop                (alignment)
-    <word>      target | 1         (Thumb bit set)
+    +0   01b4        push {r0}
+    +2   0248        ldr  r0, [pc, #8]
+    +4   8446        mov  ip, r0
+    +6   01bc        pop  {r0}
+    +8   6047        bx   ip
+    +10  c046        nop                (alignment)
+    +12  <word>      target | 1         (Thumb bit set)
 
-14 bytes. Whatever it overwrites is gone, so hook a function entry, not the
+16 bytes. Whatever it overwrites is gone, so hook a function entry, not the
 middle of one, and keep a copy of the original bytes if you need to chain.
+A function shorter than 16 bytes cannot be hooked without damaging whatever
+follows it; hook() checks this against analysis/functions.tsv when that file
+is present.
 """
 import argparse, pathlib, struct, sys
 
@@ -68,6 +71,26 @@ class Image:
             self.data.append(0xFF)
         return addr
 
+    _fnmap = None
+
+    @classmethod
+    def _functions(cls):
+        """{entry address: (name, size)} from analysis/functions.tsv, if present."""
+        if cls._fnmap is None:
+            cls._fnmap = {}
+            f = pathlib.Path(__file__).resolve().parent.parent / "analysis" / "functions.tsv"
+            if f.exists():
+                import csv
+                with open(f) as fh:
+                    for r in csv.DictReader(fh, delimiter="\t"):
+                        try:
+                            cls._fnmap[int(r["addr"], 16)] = (r["name"], int(r["size"]))
+                        except (ValueError, TypeError, KeyError):
+                            pass
+        return cls._fnmap
+
+    TRAMPOLINE_LEN = 16
+
     def hook(self, addr: int, target: int) -> None:
         # Byte sequence verified against arm-none-eabi-as (-mthumb -mcpu=arm9e);
         # do not hand-edit. The ldr offset is #8, not #4: Thumb LDR(literal)
@@ -79,6 +102,24 @@ class Image:
                               "6047"   # bx   ip
                               "c046")  # nop           (alignment)
         tramp += struct.pack("<I", target | 1)
+        assert len(tramp) == self.TRAMPOLINE_LEN
+
+        fns = self._functions()
+        if fns:
+            if addr in fns:
+                name, size = fns[addr]
+                if size < self.TRAMPOLINE_LEN:
+                    raise SystemExit(
+                        f"REFUSING: {name} at 0x{addr:X} is {size} bytes, shorter than the "
+                        f"{self.TRAMPOLINE_LEN}-byte trampoline. Hooking it would overwrite "
+                        f"whatever follows.")
+            else:
+                owner = next(((n, a, sz) for a, (n, sz) in fns.items()
+                              if a < addr < a + sz), None)
+                if owner:
+                    raise SystemExit(
+                        f"REFUSING: 0x{addr:X} is inside {owner[0]} (0x{owner[1]:X}, "
+                        f"{owner[2]} bytes), not a function entry. Hook entries only.")
         self.set_bytes(addr, tramp)
 
     # --- output ----------------------------------------------------------
