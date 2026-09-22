@@ -243,7 +243,8 @@ public class PrettyFw extends GhidraScript {
 
             meta.println(f.getEntryPoint() + "\t" + f.getName() + "\t" + f.getBody().getNumAddresses()
                          + "\t" + String.join(";", callers) + "\t" + String.join(";", callees)
-                         + "\t" + String.join(" | ", strs).replace("\t", " "));
+                         + "\t" + String.join(" | ", strs)
+                               .replace("\t", " ").replace("\n", "\\n").replace("\r", "\\r"));
             if (++done % 250 == 0) println("PrettyFw:   " + done + "/" + fns.size());
         }
         c.close(); meta.close(); di.dispose();
