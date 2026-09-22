@@ -89,8 +89,21 @@
  * rewrites one section must recompute that section's checksum, or the change
  * simply disappears with no error.
  *
- * The checksum routine is flash_sub_3050c(buf, len); its algorithm has not been
- * identified yet, and that is the one thing still blocking profile writes.
+ * The checksum is flash_sub_3050c(buf, len) @0x3050C - a plain 16-bit sum of
+ * bytes, nothing more:
+ *
+ *     uint16_t sum = 0;
+ *     for (i = 0; i < len; i++) sum += buf[i];
+ *
+ * Stored BIG-endian. One quirk worth knowing: the loop counter is masked to 8
+ * bits (i = i + 1 & 0xFF), so the routine cannot checksum more than 255 bytes -
+ * it would never terminate. The three sections are 47, 8 and 54 bytes, so this
+ * never bites in practice, but do not reuse the routine for anything larger.
+ *
+ * Read from the decompiled body, which is unambiguous. It has NOT been checked
+ * against a stored value, because the image contains default section DATA but
+ * no default checksums - FLASH_RD_Profile recomputes them after copying the
+ * defaults in. The first profile read off a device confirms it in one step.
  */
 #define ZHID_PROF_OFF_MODE        0x00u
 #define ZHID_PROF_OFF_MODE_INV    0x01u
@@ -146,11 +159,24 @@
  *     +0x2D            index of the active stage
  *
  * So there are 8 DPI stages, stored little-endian split across two arrays.
- * What is NOT established is the stored-value-to-DPI scale: the firmware only
- * subtracts 2 before writing, and the sensor-side units have not been checked
- * against a real reading. Reading a profile back from a device and comparing
- * with the DPI shown on its OLED settles it in one step.
+ * The stored-value-to-DPI scale is:
+ *
+ *     DPI = (stored + 1) * 50
+ *
+ * Decoded from the default profile held in the image at 0x43FB6, whose eight
+ * stages come out as 100, 800, 1200, 1600, 3200, 5600, 26000, 50 with an active
+ * stage index of 2 (so 1200 DPI out of the box). Those are ordinary preset
+ * values, and stage 6 lands on exactly 26000 - the PAW3395's maximum - which is
+ * the corroboration: a wrong scale does not put a stage on the sensor ceiling
+ * and the rest on round numbers.
+ *
+ * Note the firmware writes (stored - 2) to the resolution registers, so the
+ * sensor-side encoding is offset from the stored one. The stored encoding above
+ * is what a config tool needs; the -2 is internal to set_dpi.
  */
+#define ZHID_DPI_FROM_STORED(v)  (((v) + 1) * 50)
+#define ZHID_DPI_TO_STORED(dpi)  (((dpi) / 50) - 1)
+#define ZHID_DPI_MAX             26000u
 #define ZHID_DPI_STAGES          8u
 #define ZHID_SENSOR_OFF_DPI_LO   0x1Cu
 #define ZHID_SENSOR_OFF_DPI_HI   0x24u
