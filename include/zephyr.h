@@ -140,7 +140,13 @@ typedef struct {
  *
  *   short form  01 E0 FC <len8>            <cmd> <payload>
  *   long form   01 E0 FC FF F4 <len16 LE>  <cmd> <payload>
- *   response    04 0E ...                  (HCI Command Complete)
+ *   response    04 0E FF 01 E0 FC F4 <len16 LE> <cmd> <status> <echoed params>
+ *
+ * Note the status byte between <cmd> and the echoed parameters. An erase reply
+ * therefore carries its opcode at byte 11 and the address at 12..15, a write
+ * reply the address at 11..14. Confirmed by driving the vendor Update.exe
+ * against a logging hidapi shim: it rejects a reply with the address anywhere
+ * else and restarts the whole update.
  *
  * <len> counts the command byte plus its payload.
  */
