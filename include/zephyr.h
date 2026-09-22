@@ -168,6 +168,31 @@ typedef struct {
 #define BK_REBOOT_MAGIC        0xA5u
 #define BK_HID_REPORT_LEN      64u    /* payload bytes per report, id excluded */
 
+/* ------------------------------------------------------------------ *
+ * The complete update sequence, decoded from a captured vendor run
+ * ------------------------------------------------------------------ *
+ * 45 commands, logged while the vendor Update.exe flashed the stock
+ * 132860-byte image against a fake device (see analysis/vendor_trace.log):
+ *
+ *   1  feature report 0x10 0x08              enter bootloader
+ *   8  erase   0x2B000 0x2C000 0x2D000 0x2E000 0x2F000 as 4K,
+ *              0x30000 0x40000 as 64K, 0x50000 as 4K
+ *  33  write   0x2B00A..0x4B00A, step 0x1000, 4096 bytes each
+ *   1  crc     0x0002B00A..0x0004C009
+ *   3  reboot  payload 0xA5
+ *
+ * Two things this settles that the disassembly alone did not:
+ *
+ *   - writes are always whole 4096-byte pages, 0xFF padded, so the written
+ *     extent runs past the image. 33 pages end at 0x4C009 for an image whose
+ *     last byte is 0x4B705. An erase range sized to the image length leaves
+ *     the tail of the final page un-erased;
+ *   - the CRC covers that whole written extent starting at ZEPHYR_FLASH_APP,
+ *     so it spans header + body + padding, not the body the header's own
+ *     crc0/crc1 describes. The two checksums cover different byte ranges.
+ */
+#define BK_WRITE_PAGE          0x1000u
+
 
 /* ------------------------------------------------------------------ *
  * BLE OAD acceptance rules

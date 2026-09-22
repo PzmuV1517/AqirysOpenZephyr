@@ -163,9 +163,21 @@ def device_crc(dev, start, end, gap):
     return struct.unpack_from("<I", r, 7)[0]
 
 
+def written_extent(length):
+    """Bytes actually written: writes are whole 4K pages, 0xFF padded."""
+    return -(-length // 0x1000) * 0x1000
+
+
 def erase_plan(start, length):
-    """4K sectors, using 64K blocks where one lies wholly inside the range."""
-    lo, hi = start & ~0xFFF, (start + length + 0xFFF) & ~0xFFF
+    """4K sectors, using 64K blocks where one lies wholly inside the range.
+
+    The range must cover the WRITTEN extent, not the image length: the last
+    write is a full 4096-byte page, so it can run past the image end. Confirmed
+    on the captured trace - the vendor writes 33 pages ending at 0x4C009 for a
+    132860-byte image whose last byte is at 0x4B705.
+    """
+    lo = start & ~0xFFF
+    hi = (start + written_extent(length) + 0xFFF) & ~0xFFF
     plan, a = [], lo
     while a < hi:
         if a % 0x10000 == 0 and a + 0x10000 <= hi:
@@ -197,19 +209,33 @@ def preflight(container: bytes) -> None:
 
 
 def do_verify(dev, container, gap):
-    start, end = FLASH_APP, FLASH_APP + len(container) - 1
-    print(f"reading device CRC over 0x{start:X}..0x{end:X} ...")
+    """Compare the bootloader's CRC against what the flash should now hold.
+
+    The range is the written extent starting at FLASH_APP, so it spans header +
+    body + 0xFF padding to the page boundary - not the body alone. Taken from
+    the captured vendor trace: 0x0002B00A..0x0004C009 for a 132860-byte image,
+    which is start + 33*4096 - 1.
+    """
+    ext = written_extent(len(container))
+    start, end = FLASH_APP, FLASH_APP + ext - 1
+    blob = container.ljust(ext, b"\xff")
+    print(f"reading device CRC over 0x{start:X}..0x{end:X} ({ext} bytes) ...")
     got = device_crc(dev, start, end, gap)
-    want = fwtool.image_crc32(container[fwtool.HDR_LEN:])
-    hdr_stored = struct.unpack_from("<I", container, 0)[0]
-    print(f"  device            0x{got:08X}")
-    print(f"  JAMCRC of body    0x{want:08X}")
-    print(f"  header crc0/crc1  0x{hdr_stored:08X}")
+    want = fwtool.image_crc32(blob)
+    print(f"  device                        0x{got:08X}")
+    print(f"  JAMCRC of header+body+padding 0x{want:08X}")
     if got == want:
         print("  MATCH - the flash holds this exact image")
         return True
-    print("  no match. The device's CRC may cover a different range or algorithm;")
-    print("  compare the three values above before trusting a flash.")
+    # the ROM's CRC32 flavour is not directly observable; say so rather than guess
+    alt = {
+        "CRC-32 (zlib)": zlib.crc32(blob) & 0xFFFFFFFF,
+        "JAMCRC of body only": fwtool.image_crc32(container[fwtool.HDR_LEN:]),
+    }
+    print("  no match. Other candidates over the same bytes:")
+    for k, v in alt.items():
+        print(f"    {k:28} 0x{v:08X}{'   <== device' if v == got else ''}")
+    print("  Do not trust the flash until one of these is established.")
     return False
 
 
@@ -219,6 +245,8 @@ def do_flash(dev, container, gap, assume_yes):
         if input("proceed to erase and write? type 'yes': ").strip() != "yes":
             sys.exit("aborted")
     plan = erase_plan(FLASH_APP, len(container))
+    print(f"write extent {written_extent(len(container))} bytes "
+          f"({-(-len(container) // 0x1000)} pages of 4K)")
     print(f"erasing {len(plan)} regions 0x{plan[0][0]:X}..0x{plan[-1][0] + plan[-1][2]:X}")
     for addr, op, _sz in plan:
         send(dev, cmd_long(CMD_ERASE, bytes([op]) + struct.pack("<I", addr)), gap)

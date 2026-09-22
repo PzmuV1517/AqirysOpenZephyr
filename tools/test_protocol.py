@@ -59,14 +59,32 @@ try:
 except RuntimeError:
     print("  PASS  a reply missing the status byte is rejected")
 
+print("\nfull vendor sequence, decoded from the captured trace")
+# 45 commands logged while the vendor tool flashed the stock 132860-byte image
+VENDOR_ERASE = [(0x20,0x2B000),(0x20,0x2C000),(0x20,0x2D000),(0x20,0x2E000),
+                (0x20,0x2F000),(0xD8,0x30000),(0xD8,0x40000),(0x20,0x50000)]
+VENDOR_WRITES = 33
+VENDOR_CRC = (0x0002B00A, 0x0004C009)
+check("erase ops", len(VENDOR_ERASE), 8)
+check("write ops = ceil(132860/4096)", VENDOR_WRITES, -(-132860 // 4096))
+check("writes span 0x2B00A..0x4B00A",
+      (0x2B00A, 0x2B00A + (VENDOR_WRITES - 1) * 0x1000), (0x2B00A, 0x4B00A))
+check("CRC range is start .. start + pages*4096 - 1",
+      VENDOR_CRC, (0x2B00A, 0x2B00A + VENDOR_WRITES * 0x1000 - 1))
+check("CRC command bytes",
+      zf.cmd_short(zf.CMD_CRC, struct.pack("<II", *VENDOR_CRC)),
+      bytes.fromhex("01e0fc0910") + bytes.fromhex("0ab0020009c00400"))
+check("written extent", zf.written_extent(132860), VENDOR_WRITES * 0x1000)
+
 print("\nerase plan")
 plan = zf.erase_plan(zf.FLASH_APP, 132860)
 lo, hi = plan[0][0], plan[-1][0] + plan[-1][2]
 check("starts on the sector holding the image", lo, 0x2B000)
-check("covers the image end", hi >= zf.FLASH_APP + 132860, True)
+check("covers the written extent, not just the image",
+      hi >= zf.FLASH_APP + zf.written_extent(132860), True)
 check("clear of the macro scratch sector", hi <= zf.FLASH_MACRO_BAK, True)
 print(f"        range 0x{lo:X}..0x{hi:X}, {len(plan)} ops, "
-      f"vendor erases to 0x50B3C ({0x50B3C - hi} bytes more)")
+      f"vendor erases to 0x51000")
 
 print("\nimage integrity")
 c = pathlib.Path(__file__).resolve().parent.parent / "firmware" / "zephyr2_container.bin"
