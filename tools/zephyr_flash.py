@@ -44,6 +44,8 @@ ERASE_4K, ERASE_64K = 0x20, 0xD8
 REBOOT_MAGIC = 0xA5
 CHUNK = 64
 
+_ECHO_OFF: dict[int, int] = {}   # cmd -> observed address-echo offset
+
 
 # ---------------------------------------------------------------- framing
 def cmd_short(cmd: int, payload: bytes) -> bytes:
@@ -89,15 +91,30 @@ def expect(resp: bytes, cmd: int, addr: int | None, what: str) -> None:
         # echoes <addr32>. Confirmed by running the vendor Update.exe against a
         # logging hidapi shim: it rejects the reply if the address sits anywhere
         # else. See tools/shim/.
-        off = 2 if cmd == CMD_ERASE else 1
-        if len(body) < off + 4:
-            raise RuntimeError(
-                f"{what}: reply has no room for an address echo at +{off} "
-                f"(body {body.hex()}). Expected <status><params>; a reply without "
-                f"the status byte looks like this.")
-        echo = struct.unpack_from("<I", body, off)[0]
-        if echo != addr:
-            raise RuntimeError(f"{what}: address echo 0x{echo:X} != 0x{addr:X}")
+        # Expected layout is <status><params>, so the address echo sits at +2
+        # for erase and +1 for write. That was confirmed negatively (the vendor
+        # tool rejects a reply with it anywhere else) but never positively, so
+        # rather than bet on it we search the first few offsets and latch onto
+        # whichever one the device actually uses. Self-calibrating on the first
+        # reply, strict from then on.
+        global _ECHO_OFF
+        want = struct.pack("<I", addr)
+        expected = 2 if cmd == CMD_ERASE else 1
+        known = _ECHO_OFF.get(cmd)
+        order = [known] if known is not None else [expected] + [o for o in range(5) if o != expected]
+        for off in order:
+            if off is None or len(body) < off + 4:
+                continue
+            if body[off:off + 4] == want:
+                if known is None:
+                    _ECHO_OFF[cmd] = off
+                    if off != expected:
+                        print(f"  note: cmd 0x{cmd:02X} echoes its address at +{off}, "
+                              f"not +{expected}; using +{off} from here on")
+                return
+        raise RuntimeError(
+            f"{what}: no echo of 0x{addr:X} anywhere in the reply body "
+            f"{body[:8].hex()} - refusing to continue")
 
 
 # ---------------------------------------------------------------- device
