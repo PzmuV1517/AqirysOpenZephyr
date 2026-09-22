@@ -73,6 +73,8 @@ def read_resp(dev, timeout_ms: int = 2000) -> bytes:
 
 
 def expect(resp: bytes, cmd: int, addr: int | None, what: str) -> None:
+    if len(resp) < 10:
+        raise RuntimeError(f"{what}: reply too short ({len(resp)} bytes): {resp.hex()}")
     if resp[:2] != b"\x04\x0e":
         raise RuntimeError(f"{what}: not an HCI Command Complete: {resp[:12].hex()}")
     if resp[2] == 0xFF:                       # long form
@@ -87,7 +89,13 @@ def expect(resp: bytes, cmd: int, addr: int | None, what: str) -> None:
         # echoes <addr32>. Confirmed by running the vendor Update.exe against a
         # logging hidapi shim: it rejects the reply if the address sits anywhere
         # else. See tools/shim/.
-        echo = struct.unpack_from("<I", body, 2 if cmd == CMD_ERASE else 1)[0]
+        off = 2 if cmd == CMD_ERASE else 1
+        if len(body) < off + 4:
+            raise RuntimeError(
+                f"{what}: reply has no room for an address echo at +{off} "
+                f"(body {body.hex()}). Expected <status><params>; a reply without "
+                f"the status byte looks like this.")
+        echo = struct.unpack_from("<I", body, off)[0]
         if echo != addr:
             raise RuntimeError(f"{what}: address echo 0x{echo:X} != 0x{addr:X}")
 
