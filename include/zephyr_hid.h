@@ -76,4 +76,49 @@
  * The byte offsets are NOT yet established - only that these sections exist
  * and that polling is reached through a named offset into the same record. */
 
+/* ------------------------------------------------------------------ *
+ * Sensor and DPI  (PixArt PAW3395DM, on SPI)
+ * ------------------------------------------------------------------ *
+ * Board photo confirms the sensor is a PAW3395DM-T6QU, and the firmware talks
+ * to it over SPI with named helpers: sensor_init @0x33DEE, sensor_pwdn
+ * @0x33DCA, set_dpi @0x33E0A, spi_waitbusying @0x3A978.
+ *
+ * The register write is in rf24_sub_34538 @0x34538:
+ *
+ *     v = (hi << 8) | lo;          from the config block, see offsets below
+ *     if (v > 1) v -= 2;           firmware biases the stored value by 2
+ *     write(0x48, v & 0xFF);       X resolution, low
+ *     write(0x49, v >> 8);         X resolution, high
+ *     write(0x4A, v & 0xFF);       Y resolution, low
+ *     write(0x4B, v >> 8);         Y resolution, high
+ *     write(0x47, 1);              apply
+ *
+ * X and Y are always written the same value, so this firmware has no
+ * independent per-axis DPI even though the sensor supports it.
+ *
+ * The stage table lives in the sensor config block:
+ *
+ *     +0x1C .. +0x23   8 low  bytes, one per DPI stage
+ *     +0x24 .. +0x2B   8 high bytes, one per DPI stage
+ *     +0x2D            index of the active stage
+ *
+ * So there are 8 DPI stages, stored little-endian split across two arrays.
+ * What is NOT established is the stored-value-to-DPI scale: the firmware only
+ * subtracts 2 before writing, and the sensor-side units have not been checked
+ * against a real reading. Reading a profile back from a device and comparing
+ * with the DPI shown on its OLED settles it in one step.
+ */
+#define ZHID_DPI_STAGES          8u
+#define ZHID_SENSOR_OFF_DPI_LO   0x1Cu
+#define ZHID_SENSOR_OFF_DPI_HI   0x24u
+#define ZHID_SENSOR_OFF_STAGE    0x2Du
+#define ZHID_SENSOR_DPI_BIAS     2u     /* written value = stored - 2 */
+
+/* PAW3395 registers the firmware touches */
+#define PAW3395_REG_SET_RES      0x47u
+#define PAW3395_REG_RES_X_LO     0x48u
+#define PAW3395_REG_RES_X_HI     0x49u
+#define PAW3395_REG_RES_Y_LO     0x4Au
+#define PAW3395_REG_RES_Y_HI     0x4Bu
+
 #endif /* ZEPHYR_HID_H */
