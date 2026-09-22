@@ -126,4 +126,38 @@ typedef struct {
 #define BK_REBOOT_MAGIC        0xA5u
 #define BK_HID_REPORT_LEN      64u    /* payload bytes per report, id excluded */
 
+
+/* ------------------------------------------------------------------ *
+ * BLE OAD acceptance rules
+ * ------------------------------------------------------------------ *
+ * Recovered from oadImgIdentifyWrite (ImgHdr_2 @ 0x000407B4). The device
+ * reads its currently installed 16-byte header from flash and compares it
+ * against the incoming one. uid selects the mode:
+ *
+ *   uid "BBBB"  application-only upgrade. Accepted when
+ *                 incoming.ver     != installed.ver      (differ, not newer)
+ *                 incoming.rom_ver == installed.rom_ver
+ *                 0 < (len >> 2)   <  0x2A01
+ *
+ *   uid "SSSS"  application + stack upgrade. Accepted when
+ *                 incoming.rom_ver != installed.rom_ver
+ *                 0 < (len >> 2)   <  0x3E01
+ *
+ *   anything else -> rejected, "oadImgBlockWrite: UNKNOWN UID"
+ *
+ * Two things worth knowing before building a modified image:
+ *   - the version test is inequality, not monotonic, so there is no rollback
+ *     protection: any version that differs from the installed one is taken;
+ *   - no CRC over the image body is consulted in this decision. crc0/crc1 in
+ *     the header are not checked here, and their algorithm is still unknown.
+ *
+ * This is the Bluetooth path only. The USB path goes through the mask-ROM
+ * bootloader, which writes raw flash and performs none of these checks.
+ */
+#define OAD_UID_APP_ONLY       "BBBB"
+#define OAD_UID_APP_AND_STACK  "SSSS"
+#define OAD_BLK_UNIT           16u      /* len>>2 counts 16-byte OAD blocks   */
+#define OAD_MAX_BLK_APP        0x2A00u  /* 172032 bytes of application        */
+#define OAD_MAX_BLK_APP_STACK  0x3E00u  /* 253952 bytes app + stack           */
+
 #endif /* ZEPHYR_H */
