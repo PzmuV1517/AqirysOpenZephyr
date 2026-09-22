@@ -15,9 +15,19 @@ Safer than the vendor tool in three ways:
   * `verify` performs that check on its own and writes nothing at all.
 
 Commands
-    info                 show the attached device and its version
-    verify  <container>  read back the flash CRC and compare. NO WRITES.
+    info                 enumerate and report. Genuinely read-only.
+    verify  <container>  read back the flash CRC and compare.
     flash   <container>  erase, write, verify, then reboot
+
+What each one writes
+    info    nothing at all.
+    verify  nothing to the application image, but reaching the bootloader means
+            asking the running firmware to reboot into it, and that handler
+            (app_usb_upgrade_start) stamps 16 bytes at flash 0x7D000 first. It
+            is exactly what the vendor tool does on every update, and it is
+            skipped entirely if the device is already in the bootloader - but
+            it is a flash write, so verify is not "read-only".
+    flash   erases and rewrites the application region.
 """
 import argparse, struct, sys, time, zlib, pathlib
 
@@ -127,15 +137,20 @@ def find(vid, pid, need_cfg_iface):
     return None
 
 
-def open_bootloader(timeout=15.0):
+def open_bootloader(timeout=15.0, assume_yes=False):
     """Return an open handle to the bootloader, asking the app to reboot if needed."""
     d = find(BOOT_VID, BOOT_PID, False)
     if not d:
         app = find(APP_VID, APP_PID, True)
         if not app:
             sys.exit("no Zephyr found (neither application nor bootloader)")
-        print(f"application present, bcdDevice 0x{app['release_number']:04X}"
-              f" -> requesting bootloader")
+        print(f"application present, bcdDevice 0x{app['release_number']:04X}")
+        print("\nTo reach the bootloader the running firmware has to be asked to reboot")
+        print("into it. That handler stamps 16 bytes at flash 0x7D000 before resetting -")
+        print("the same thing the vendor updater does every time. It does not touch the")
+        print("application image, but it is a flash write.")
+        if not assume_yes and input("proceed? type 'yes': ").strip() != "yes":
+            sys.exit("aborted - nothing was written")
         h = hid.device()
         h.open_path(app["path"])
         h.send_feature_report(bytes([REPORT_ENTER_BL, ENTER_BL_ARG] + [0] * 6))
@@ -281,11 +296,27 @@ def main():
     a = ap.parse_args()
 
     if a.command == "info":
-        for name, (v, p, cfg) in {"application": (APP_VID, APP_PID, True),
-                                  "bootloader": (BOOT_VID, BOOT_PID, False)}.items():
-            d = find(v, p, cfg)
-            print(f"{name:12}: " + (f"found, bcdDevice 0x{d['release_number']:04X}, "
-                                    f"{d.get('product_string')}" if d else "not present"))
+        print("read-only: this enumerates USB descriptors and writes nothing.\n")
+        any_found = False
+        for label, (v, p) in {"application": (APP_VID, APP_PID),
+                              "bootloader": (BOOT_VID, BOOT_PID)}.items():
+            ds = hid.enumerate(v, p)
+            print(f"{label} (VID 0x{v:04X} PID 0x{p:04X}): "
+                  f"{len(ds)} interface(s)" if ds else
+                  f"{label} (VID 0x{v:04X} PID 0x{p:04X}): not present")
+            any_found = any_found or bool(ds)
+            for d in ds:
+                up, us = d.get("usage_page"), d.get("usage")
+                tag = "  <-- config interface" if (up == CFG_USAGE_PAGE and us == CFG_USAGE) else ""
+                print(f"    usage_page 0x{up:04X} usage 0x{us:04X} "
+                      f"iface {d.get('interface_number')}{tag}")
+                print(f"      bcdDevice 0x{d['release_number']:04X}  "
+                      f"mfr={d.get('manufacturer_string')!r}  prod={d.get('product_string')!r}")
+                print(f"      path {d['path'].decode(errors='replace')}")
+        if not any_found:
+            print("\nNothing matched. If the mouse is plugged in and this still prints")
+            print("nothing, macOS may be withholding HID access - grant Terminal (or your")
+            print("IDE) Input Monitoring under System Settings > Privacy & Security.")
         return
 
     if not a.container:
@@ -294,10 +325,10 @@ def main():
 
     if a.command == "verify":
         preflight(container)
-        dev = open_bootloader()
+        dev = open_bootloader(assume_yes=a.yes)
         do_verify(dev, container, a.gap)
     else:
-        dev = open_bootloader()
+        dev = open_bootloader(assume_yes=a.yes)
         do_flash(dev, container, a.gap, a.yes)
 
 
