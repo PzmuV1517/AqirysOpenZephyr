@@ -32,6 +32,9 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import fwtool
 
 BASE = 0x287A0
+FLASH_APP = 0x2B00A
+FLASH_MACRO_BAK = 0x52000      # scratch sector FLASH_WR_Macro erases
+MAX_IMAGE_BYTES = FLASH_MACRO_BAK - FLASH_APP
 OAD_MAX_BLK_APP = 0x2A00
 
 
@@ -114,6 +117,16 @@ class Image:
         if installed_ver is not None and ver == installed_ver:
             warn.append(f"ver 0x{ver:04X} equals the installed version; "
                         "the device requires them to differ")
+        end = FLASH_APP + len(out)
+        if end > FLASH_MACRO_BAK:
+            raise SystemExit(
+                f"REFUSING: the image would occupy 0x{FLASH_APP:X}..0x{end:X} and run into "
+                f"the macro scratch sector at 0x{FLASH_MACRO_BAK:X}. FLASH_WR_Macro erases "
+                f"that sector whenever a macro is saved, which would corrupt the firmware "
+                f"on first use. Maximum container size is {MAX_IMAGE_BYTES} bytes.")
+        if end > FLASH_MACRO_BAK - 0x1000:
+            warn.append(f"image ends at 0x{end:X}, within 4K of the macro scratch sector "
+                        f"at 0x{FLASH_MACRO_BAK:X}")
         if len(self.data) != self.orig_len:
             warn.append(f"image grew {self.orig_len} -> {len(self.data)} bytes "
                         "(fine, but the flash write range changes)")

@@ -41,7 +41,25 @@
  * which is exactly ZEPHYR_APP_BASE - the two derivations agree.
  */
 #define ZEPHYR_FLASH_APP       0x0002B00Au  /* OAD header, then the image body  */
-#define ZEPHYR_FLASH_UPD_FLAG  0x0007D000u  /* 16-byte "enter bootloader" mark  */
+#define ZEPHYR_FLASH_MACRO_BAK 0x00052000u  /* scratch sector: FLASH_WR_Macro erases
+                                             * 0x52000..0x53000 and stages the
+                                             * 0x7D000 config there during a
+                                             * read-modify-write. A grown image
+                                             * MUST NOT reach this address.      */
+#define ZEPHYR_FLASH_CFG_B     0x0007C000u  /* configuration                    */
+#define ZEPHYR_FLASH_UPD_FLAG  0x0007D000u  /* config sector; first 16 bytes are
+                                             * the "enter bootloader" mark      */
+/* app_usb_upgrade_start writes exactly these 16 bytes to ZEPHYR_FLASH_UPD_FLAG
+ * and then resets; the mask ROM sees them and comes up as the bootloader
+ * (VID 0xA745) instead of running the application. This is the only known way
+ * into the bootloader, and it is issued BY the application - so an application
+ * that does not boot cannot ask for it. Writing this mark from the bootloader
+ * before committing a new image is therefore the recovery lever. */
+#define ZEPHYR_UPD_FLAG_BYTES  { 0x12,0x34,0xAA,0x00, 0x00,0x20,0x00,0x00, \
+                                 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00 }
+
+/* The largest container that cannot collide with the macro scratch sector. */
+#define ZEPHYR_MAX_IMAGE_BYTES (ZEPHYR_FLASH_MACRO_BAK - ZEPHYR_FLASH_APP)  /* 159734 */
 #define ZEPHYR_FLASH_MAC       0x0007E000u  /* BLE MAC address                  */
 #define ZEPHYR_FLASH_SUMADDR   0x0007E100u  /* checksum/config block            */
 
