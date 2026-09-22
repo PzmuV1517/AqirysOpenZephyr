@@ -1,0 +1,12 @@
+# Python bytecode from running the tools
+__pycache__/
+*.py[cod]
+
+# Ghidra headless scratch projects
+*.gpr
+*.rep/
+
+# Build output from tools/shim (needs mingw; rebuild rather than commit)
+tools/shim/*.dll
+tools/shim/*.o
+tools/shim/*.a
