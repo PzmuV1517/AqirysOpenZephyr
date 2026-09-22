@@ -12,7 +12,15 @@
 /* ------------------------------------------------------------------ *
  * Core
  * ------------------------------------------------------------------ *
- * Beken BLE SoC, ARMv5TE (ARM968-class), ARM + Thumb interworking.
+ * Beken BK3633QN48 (QFN48), ARMv5TE (ARM968-class), ARM + Thumb interworking,
+ * 16.000 MHz crystal, 512 KB internal flash - no external flash part on the
+ * board, so there is no clip-on recovery path.
+ *
+ * Confirmed two ways: the package marking, and the disassembly, which gave the
+ * ARMv5TE vector table and a flash map ending at 0x7F000 before the part was
+ * known.
+ *
+ * Sensor is a PixArt PAW3395DM-T6QU on SPI; see zephyr_hid.h.
  * The BLE stack is RivieraWaves and lives in mask ROM, not in this image -
  * 71 call targets resolve below ZEPHYR_APP_BASE. That is also why the image
  * header carries a ROM version field.
