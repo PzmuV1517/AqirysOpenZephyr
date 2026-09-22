@@ -56,9 +56,27 @@
 /* ------------------------------------------------------------------ *
  * Image header - 16 bytes, TI-OAD shaped, at ZEPHYR_FLASH_APP
  * ------------------------------------------------------------------ */
+/* crc0 and crc1 are not two checksums: together they are ONE little-endian
+ * 32-bit CRC over the container body (everything after this 16-byte header).
+ *
+ *   value = ~zlib.crc32(body)          i.e. CRC-32/JAMCRC
+ *           poly 0xEDB88320, init 0xFFFFFFFF, reflected in and out, xorout 0
+ *   crc0  = value & 0xFFFF             crc1 = value >> 16
+ *
+ * Verified on the shipping image: zlib.crc32(body) = 0x0B06814C, complement
+ * 0xF4F97EB3, and the header holds b3 7e f9 f4. The same computation over the
+ * whole container, or from offset 4 or 8, gives unrelated values, so the range
+ * is definitely "after the header".
+ *
+ * Note this is a different algorithm from the per-32-byte block CRC-16 above;
+ * the two coexist. No CRC-32 table or polynomial constant appears anywhere in
+ * the application image, so this one is computed by the mask ROM, which is
+ * consistent with the bootloader exposing a CRC-32 over a flash range as
+ * command 0x10.
+ */
 typedef struct {
-    uint16_t crc0;      /* algorithm not yet identified                        */
-    uint16_t crc1;      /* not the TI "shadow" convention - differs from crc0  */
+    uint16_t crc0;      /* low  half of the body CRC-32/JAMCRC                 */
+    uint16_t crc1;      /* high half of the body CRC-32/JAMCRC                 */
     uint16_t ver;       /* bit0 = image slot, bits 1..15 = user version        */
     uint16_t len;       /* whole container in 4-byte units (x4 = total bytes)  */
     uint8_t  uid[4];    /* "BBBB" on the shipping image                        */

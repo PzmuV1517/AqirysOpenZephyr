@@ -98,8 +98,9 @@ class Image:
         return data
 
     def container(self, ver: int) -> bytes:
-        return fwtool.pack(self._aligned(), ver, self.hdr["uid"],
-                           self.hdr["res"], self.hdr["crc0"], self.hdr["crc1"])
+        # crc0/crc1 are recomputed from the new body; copying the originals
+        # over would leave a modified image with a checksum for the old one.
+        return fwtool.pack(self._aligned(), ver, self.hdr["uid"], self.hdr["res"])
 
     def check(self, ver: int, installed_ver: int | None) -> list[str]:
         """Re-apply the device's own acceptance rules (see include/zephyr.h)."""

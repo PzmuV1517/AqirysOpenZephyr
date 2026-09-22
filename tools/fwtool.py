@@ -14,7 +14,7 @@ Container layout of the image embedded in Update.exe (RCDATA type "BIN", id 129)
 
 The de-CRC'd image is ARM (ARMv5TE, ARM+Thumb) linked at 0x000287A0.
 """
-import argparse, struct, sys, pathlib
+import argparse, struct, sys, pathlib, zlib
 
 BLOCK, CRC_LEN, HDR_LEN = 32, 2, 16
 POLY = 0x8005
@@ -66,9 +66,26 @@ def unpack(raw: bytes, strict: bool = True) -> bytes:
     return bytes(out)
 
 
+def image_crc32(body: bytes) -> int:
+    """The header's crc0/crc1 pair, as one 32-bit value.
+
+    CRC-32/JAMCRC over the container body, i.e. everything after the 16-byte
+    header: the standard CRC-32 with the final complement left off, which is
+    just ~zlib.crc32(). Stored little-endian at header offset 0, so crc0 is the
+    low half and crc1 the high half.
+
+    Verified against the shipping image: zlib.crc32(body) = 0x0B06814C, its
+    complement 0xF4F97EB3, and the header holds b3 7e f9 f4.
+    """
+    return (zlib.crc32(body) ^ 0xFFFFFFFF) & 0xFFFFFFFF
+
+
 def pack(image: bytes, ver: int, uid: bytes, res: bytes,
-         crc0: int, crc1: int) -> bytes:
-    """Re-insert per-block CRCs and prepend the header."""
+         crc0: int | None = None, crc1: int | None = None) -> bytes:
+    """Re-insert per-block CRCs and prepend the header.
+
+    crc0/crc1 are computed from the packed body unless explicitly supplied.
+    """
     body = bytearray()
     for i in range(0, len(image), BLOCK):
         chunk = image[i:i + BLOCK]
@@ -78,6 +95,9 @@ def pack(image: bytes, ver: int, uid: bytes, res: bytes,
     total = HDR_LEN + len(body)
     if total % 4:
         raise ValueError(f"packed size {total} is not a multiple of 4")
+    if crc0 is None or crc1 is None:
+        c = image_crc32(bytes(body))
+        crc0, crc1 = c & 0xFFFF, c >> 16
     hdr = struct.pack("<HHHH", crc0, crc1, ver, total // 4) + uid[:4] + res[:4]
     return hdr + bytes(body)
 
@@ -133,7 +153,10 @@ def main() -> None:
         nblk = (len(raw) - HDR_LEN) // (BLOCK + CRC_LEN)
         tail = (len(raw) - HDR_LEN) % (BLOCK + CRC_LEN)
         print(f"file size   : {len(raw)} (0x{len(raw):x})")
-        print(f"crc0 / crc1 : 0x{h['crc0']:04x} / 0x{h['crc1']:04x}")
+        want = image_crc32(raw[HDR_LEN:])
+        got = h["crc0"] | (h["crc1"] << 16)
+        print(f"crc0 / crc1 : 0x{h['crc0']:04x} / 0x{h['crc1']:04x}"
+              f"  -> 0x{got:08x} [{'OK' if got == want else f'BAD, expected 0x{want:08x}'}]")
         print(f"ver         : 0x{h['ver']:04x}  (imgType={'B' if h['ver'] & 1 else 'A'}, userVer={h['ver'] >> 1})")
         print(f"len         : {h['len_units']} x4 = {h['len_bytes']} bytes  "
               f"[{'OK' if h['len_bytes'] == len(raw) else 'MISMATCH'}]")
