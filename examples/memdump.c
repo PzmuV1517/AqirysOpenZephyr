@@ -114,7 +114,19 @@ uint8_t memdump_read(memdump_req_t *req)
  * IDs as "N0N0 report_id" before dropping them, which is the natural place to
  * intercept, but the response buffer it would write into is not identified.
  *
- * Until that is known this stays unhooked, and the patch is dead code. */
+ * The GET path is now mapped (see include/zephyr_hid.h): the class-request
+ * dispatcher at 0x000383C0 builds its reply in a SRAM buffer at 0x0040123D and
+ * hands it to usb_sub_37ac6. GET_REPORT is two-step - a SET stages the answer
+ * and raises the flag at 0x00400B0B, and the following GET returns it; with the
+ * flag clear a GET returns nothing at all.
+ *
+ * So stage 2 looks like: intercept the request, run memdump_read, copy the
+ * result into the reply buffer, raise the staged flag, let the firmware send
+ * it. Those addresses are recorded below but deliberately NOT used yet - this
+ * file stays unhooked until a dead-code flash has been proven on hardware. */
+
+#define RESP_BUF     0x0040123Du   /* reply buffer the dispatcher sends from */
+#define STAGED_FLAG  0x00400B0Bu   /* non-zero => a reply is ready to go     */
 uint8_t memdump_service(memdump_req_t *req)
 {
     return memdump_read(req);

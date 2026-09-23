@@ -190,4 +190,45 @@
 #define PAW3395_REG_RES_Y_LO     0x4Au
 #define PAW3395_REG_RES_Y_HI     0x4Bu
 
+/* ------------------------------------------------------------------ *
+ * HID class control requests - the GET path
+ * ------------------------------------------------------------------ *
+ * All four class requests are handled by one dispatcher at 0x000383C0. (The
+ * symbol is auto-named HID_RQT_Get_Protocol because the namer picked one of the
+ * strings it references; it is really the whole class-request handler.)
+ *
+ * It is passed the 8-byte setup packet:
+ *
+ *     [1] bRequest   0x01 GET_REPORT   0x09 SET_REPORT
+ *                    0x02 GET_IDLE     0x0A SET_IDLE
+ *     [2] report ID  (wValue low)
+ *     [3] type       (wValue high: 1 input, 2 output, 3 feature)
+ *     [4] interface  (wIndex low)
+ *     [6] wLength    (low byte)
+ *
+ * GET_REPORT works in two steps, which matters for anything driving it: a SET
+ * stages the answer and raises a flag, and the following GET hands it back. If
+ * the flag is clear the GET returns nothing at all - the handler simply exits.
+ * So a bare GET for an arbitrary report ID yields silence, not an error.
+ *
+ * Report 0xA0 is the exception, answered inline without staging: 8 bytes, [0] =
+ * 0xA0, [1] = a status bit taken from the staged flag, the rest zero.
+ *
+ * Once filled, the buffer is handed to usb_sub_37ac6(ctx, setup, buf, len) and
+ * the transfer is completed by usb_sub_37104.
+ */
+#define ZHID_REQ_GET_REPORT      0x01u
+#define ZHID_REQ_GET_IDLE        0x02u
+#define ZHID_REQ_SET_REPORT      0x09u
+#define ZHID_REQ_SET_IDLE        0x0Au
+#define ZHID_RPT_STATUS          0xA0u   /* answered inline, 8 bytes */
+
+/* SRAM addresses on the GET path, resolved from the dispatcher's literals. */
+#define ZHID_ADDR_DISPATCHER     0x000383C0u  /* class-request handler        */
+#define ZHID_ADDR_RESP_BUF       0x0040123Du  /* where the reply is built     */
+#define ZHID_ADDR_STAGED_FLAG    0x00400B0Bu  /* non-zero => a reply is ready */
+#define ZHID_ADDR_RESP_LEN       0x00400BA4u  /* wLength from the setup pkt   */
+#define ZHID_ADDR_RESP_IFACE     0x00400B93u
+#define ZHID_ADDR_SEND_FN        0x00037AC6u  /* usb_sub_37ac6(ctx,setup,buf,len) */
+
 #endif /* ZEPHYR_HID_H */
