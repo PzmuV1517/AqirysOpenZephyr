@@ -315,8 +315,10 @@ def main():
     a = ap.parse_args()
 
     if a.command == "info":
-        print("read-only: this enumerates USB descriptors and writes nothing.\n")
+        print("read-only: enumerates, and opens each interface to prove permission.")
+        print("Opening transfers no data and writes nothing.\n")
         any_found = False
+        opened, failed = [], []
         for label, (v, p) in {"application": (APP_VID, APP_PID),
                               "bootloader": (BOOT_VID, BOOT_PID)}.items():
             ds = hid.enumerate(v, p)
@@ -332,10 +334,39 @@ def main():
                 print(f"      bcdDevice 0x{d['release_number']:04X}  "
                       f"mfr={d.get('manufacturer_string')!r}  prod={d.get('product_string')!r}")
                 print(f"      path {d['path'].decode(errors='replace')}")
+                # Enumerating is unrestricted on macOS; OPENING is what needs
+                # Input Monitoring. Prove we can open now, while nothing has been
+                # written, rather than discovering it after the point of no return.
+                h = hid.device()
+                try:
+                    h.open_path(d["path"])
+                    print("      open: OK (permission is in place)")
+                    opened.append((up, us))
+                except Exception as e:
+                    print(f"      open: FAILED - {e}")
+                    failed.append((up, us))
+                finally:
+                    try:
+                        h.close()
+                    except Exception:
+                        pass
+        print()
         if not any_found:
-            print("\nNothing matched. If the mouse is plugged in and this still prints")
-            print("nothing, macOS may be withholding HID access - grant Terminal (or your")
-            print("IDE) Input Monitoring under System Settings > Privacy & Security.")
+            print("Nothing matched. If the mouse is plugged in and this still prints")
+            print("nothing, check the cable (the 2.4 GHz dongle cannot carry an update)")
+            print("and try a direct port rather than a hub.")
+        elif failed:
+            print("*** SOME INTERFACES WOULD NOT OPEN ***")
+            print("macOS restricts opening HID devices, not listing them, so this is")
+            print("the check that matters. Grant Input Monitoring to your terminal")
+            print("(System Settings > Privacy & Security > Input Monitoring), restart")
+            print("it, and re-run. Do NOT run verify until every interface opens -")
+            print("verify writes a flash mark and reboots into the bootloader before")
+            print("it would discover the same problem, and by then it cannot back out.")
+        elif any(up == CFG_USAGE_PAGE for up, _ in opened):
+            print("Config interface opened successfully. Usage page 0x0B is among the")
+            print("pages macOS guards, so if this one opens, the bootloader - which")
+            print("presents a plainer descriptor - is very unlikely to be refused.")
         return
 
     if not a.container:
