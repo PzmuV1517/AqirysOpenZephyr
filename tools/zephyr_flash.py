@@ -157,10 +157,44 @@ def open_bootloader(timeout=15.0, assume_yes=False):
         print("    part-way can corrupt macro storage. Use a direct port, not a hub.")
         if not assume_yes and input("proceed? type 'yes': ").strip() != "yes":
             sys.exit("aborted - nothing was written")
-        h = hid.device()
-        h.open_path(app["path"])
-        h.send_feature_report(bytes([REPORT_ENTER_BL, ENTER_BL_ARG] + [0] * 6))
-        h.close()
+        # The vendor tool sends this up to 11 times, 100 ms apart, and breaks
+        # only when the call stops returning -1. Sending once without checking
+        # the return - which is what this used to do - cannot tell a refused
+        # report apart from a device that ignored it.
+        report = bytes([REPORT_ENTER_BL, ENTER_BL_ARG] + [0] * 6)
+        sent_ok = False
+        for attempt in range(1, 12):
+            h = hid.device()
+            try:
+                h.open_path(app["path"])
+                n = h.send_feature_report(report)
+                print(f"  attempt {attempt:2}: send_feature_report -> {n}"
+                      + ("  (accepted)" if n is not None and n >= 0 else "  (refused)"))
+                if n is not None and n >= 0:
+                    sent_ok = True
+            except Exception as e:
+                print(f"  attempt {attempt:2}: {type(e).__name__}: {e}")
+            finally:
+                try:
+                    h.close()
+                except Exception:
+                    pass
+            time.sleep(0.1)
+            if find(BOOT_VID, BOOT_PID, False):
+                print("  bootloader appeared")
+                break
+            if sent_ok and attempt >= 3:
+                break
+
+        if not sent_ok:
+            sys.exit(
+                "\nThe device never accepted the enter-bootloader report.\n\n"
+                "Nothing was written and the mouse should still be working normally -\n"
+                "confirm with 'info' and by moving it.\n\n"
+                "This usually means macOS routed the feature report to the wrong\n"
+                "top-level collection. The config interface shares a device path with\n"
+                "three other collections on interface 2, and hidapi picks one of them.\n")
+
         deadline = time.time() + timeout
         while time.time() < deadline:
             time.sleep(0.3)
