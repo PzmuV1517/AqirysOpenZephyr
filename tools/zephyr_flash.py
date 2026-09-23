@@ -338,7 +338,9 @@ def do_flash(dev, container, gap, assume_yes):
         send(dev, cmd_long(CMD_WRITE_4K, struct.pack("<I", addr) + page), gap)
         time.sleep(0.02)
         expect(read_resp(dev, 8000), CMD_WRITE_4K, addr, f"write 0x{addr:X}")
-        print(f"\r  {off + len(page)}/{len(container)}", end="", flush=True)
+        print(f"\r  page {off // 0x1000 + 1}/{-(-len(container) // 0x1000)}"
+              f"  ({min(off + 0x1000, len(container))}/{len(container)} bytes)",
+              end="", flush=True)
     print()
     if not do_verify(dev, container, gap):
         sys.exit("VERIFY FAILED - NOT rebooting. The device is still in the bootloader; "

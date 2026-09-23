@@ -8,9 +8,10 @@ The vendor supplies a Windows-only `Update.exe`. This repo replaces it, and goes
 further: it documents the image format, the flashing protocol, the on-device
 configuration surface, and how to compile your own code into the firmware.
 
-> **Nothing here has been tested on hardware yet.** Everything is verified
-> statically or against the vendor tool's captured traffic. See
-> [Status](#status) before flashing anything.
+> **Verified on hardware.** The full update cycle — enter bootloader, erase,
+> write, CRC verify, reboot — has been run end to end on a real Zephyr 2, and
+> the device's own CRC confirms the flash holds exactly the expected bytes.
+> Read [Safety](#safety) before flashing anything.
 
 ---
 
@@ -176,12 +177,19 @@ existing instruction can behave differently. Run it on every patch.
 | | |
 |---|---|
 | Container format, both CRCs | proven, byte-exact round trip |
-| Update protocol | verified against captured vendor traffic |
-| Compile-and-inject | works offline; untested on silicon |
+| Update protocol | **run end to end on hardware** |
+| Flashing (erase/write/verify/reboot) | **works on hardware** |
+| Device CRC algorithm | **confirmed: CRC-32/JAMCRC over raw flash** |
+| Read-back verification | **works** — device CRC matches ours exactly |
 | Profile layout, DPI scale | decoded and cross-checked |
-| ROM boot validation | **unknown** |
-| Recovery from a bad flash | **unknown** |
-| Device CRC-32 flavour | **unconfirmed** |
+| Splash replacement | built, data-only; not yet flashed |
+| Compile-and-inject | works offline; no injected code run on silicon yet |
+| Recovery from a *bad* image | **still unknown** — only valid images flashed |
+
+Two device behaviours found on hardware: the CRC command takes whole 4096-byte
+page lengths only (a short range returns `0xFFFFFFFF`), and the bootloader
+answers **one** CRC per session then stops responding. The device has also been
+seen returning to the application by itself after a session.
 
 Not achievable: recompiling the firmware from `src/`. The ROM bodies are absent,
 types are inferred, and there's no linker script. Modification happens by patching
