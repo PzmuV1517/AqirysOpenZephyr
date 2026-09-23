@@ -219,8 +219,3 @@ copyrighted firmware, verbatim or derived from it. Copyright in software is
 automatic and doesn't depend on registration, so these can't be relicensed. They're
 kept here as working material. Anyone can regenerate them from their own copy of
 `Update.exe` using `tools/fwtool.py extract`.
-
-Reverse engineering for interoperability — which is what this is — is a
-well-established use. Publishing the tools and the documented protocol is fine;
-redistributing the vendor's firmware image is a different question, and one worth
-deciding deliberately before making this repo public.

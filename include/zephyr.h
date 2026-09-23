@@ -170,6 +170,23 @@ typedef struct {
 #define BK_CMD_ERASE           0x0Fu  /* <spi_opcode><addr32 LE>, long form    */
 #define BK_CMD_CHECK_CRC       0x10u  /* <start32 LE><end32 LE> -> crc32       */
 
+/* Confirmed on hardware. The returned value is CRC-32/JAMCRC over the RAW flash
+ * bytes - poly 0xEDB88320 reflected, init 0xFFFFFFFF, xorout 0, i.e. the same
+ * algorithm the image header uses for crc0/crc1. 4096 bytes from 0x2B00A came
+ * back 0xD89CCB6E, matching exactly.
+ *
+ * Two behaviours worth knowing before driving it:
+ *
+ *   - the length must be a whole number of 4096-byte pages. A 16-byte range
+ *     returned 0xFFFFFFFF, which is an error sentinel rather than a checksum;
+ *   - the bootloader answers ONE CRC per session and stops responding after.
+ *     Every later command in the same session fails to read. The vendor tool
+ *     only ever issues one, near the end of an update, so this is normal rather
+ *     than a fault. Re-enter the bootloader for another reading.
+ */
+#define BK_CRC_PAGE            0x1000u   /* CRC length granularity */
+#define BK_CRC_ERROR           0xFFFFFFFFu
+
 #define BK_ERASE_SECTOR_4K     0x20u  /* SPI-NOR sector erase opcode           */
 #define BK_ERASE_BLOCK_64K     0xD8u  /* SPI-NOR block erase opcode            */
 

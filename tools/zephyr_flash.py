@@ -277,33 +277,44 @@ def preflight(container: bytes) -> None:
 
 
 def do_verify(dev, container, gap):
-    """Compare the bootloader's CRC against what the flash should now hold.
+    """Compare the bootloader's CRC against what the flash should hold.
 
-    The range is the written extent starting at FLASH_APP, so it spans header +
-    body + 0xFF padding to the page boundary - not the body alone. Taken from
-    the captured vendor trace: 0x0002B00A..0x0004C009 for a 132860-byte image,
-    which is start + 33*4096 - 1.
+    The device computes CRC-32/JAMCRC - poly 0xEDB88320 reflected, init
+    0xFFFFFFFF, xorout 0 - over the RAW flash bytes. Confirmed on hardware:
+    4096 bytes from 0x2B00A returned 0xD89CCB6E, exactly matching
+    fwtool.image_crc32, which is the same routine that produces the header
+    crc0/crc1.
+
+    The range matters more than the algorithm. Asking for the full written
+    extent covers 33 pages, which runs 2308 bytes past the end of the image into
+    factory flash we have never seen - unknowable before we have written it
+    ourselves. So the default check uses the largest whole-page range that lies
+    entirely inside the image: 32 pages, 98.7% of it, knowable either way.
+
+    Note the device answers ONE CRC per bootloader session and then stops
+    responding, which is why this asks for a single range.
     """
-    ext = written_extent(len(container))
-    start, end = FLASH_APP, FLASH_APP + ext - 1
-    blob = container.ljust(ext, b"\xff")
-    print(f"reading device CRC over 0x{start:X}..0x{end:X} ({ext} bytes) ...")
+    n_full = (len(container) // 0x1000) * 0x1000
+    start, end = FLASH_APP, FLASH_APP + n_full - 1
+    want = fwtool.image_crc32(container[:n_full])
+
+    print(f"reading device CRC over 0x{start:X}..0x{end:X} "
+          f"({n_full} bytes, {n_full // 0x1000} whole pages) ...")
     got = device_crc(dev, start, end, gap)
-    want = fwtool.image_crc32(blob)
-    print(f"  device                        0x{got:08X}")
-    print(f"  JAMCRC of header+body+padding 0x{want:08X}")
+    print(f"  device  0x{got:08X}")
+    print(f"  ours    0x{want:08X}   (CRC-32/JAMCRC over the raw container)")
+
     if got == want:
-        print("  MATCH - the flash holds this exact image")
+        uncovered = len(container) - n_full
+        print(f"  MATCH - the first {n_full} bytes on the device are exactly this image.")
+        if uncovered:
+            print(f"  ({uncovered} trailing bytes are not covered: they fall in the final,")
+            print("   partial page, and a whole-page range would reach past the image.)")
         return True
-    # the ROM's CRC32 flavour is not directly observable; say so rather than guess
-    alt = {
-        "CRC-32 (zlib)": zlib.crc32(blob) & 0xFFFFFFFF,
-        "JAMCRC of body only": fwtool.image_crc32(container[fwtool.HDR_LEN:]),
-    }
-    print("  no match. Other candidates over the same bytes:")
-    for k, v in alt.items():
-        print(f"    {k:28} 0x{v:08X}{'   <== device' if v == got else ''}")
-    print("  Do not trust the flash until one of these is established.")
+
+    print("  NO MATCH - the flash does not hold this image over that range.")
+    print("  Before assuming a bad write, check the obvious: a device running")
+    print("  different firmware will not match, whatever the algorithm.")
     return False
 
 
@@ -332,6 +343,7 @@ def do_flash(dev, container, gap, assume_yes):
     if not do_verify(dev, container, gap):
         sys.exit("VERIFY FAILED - NOT rebooting. The device is still in the bootloader; "
                  "re-run flash to try again.")
+    print("verified against the flash before committing")
     print("rebooting")
     for _ in range(3):
         send(dev, cmd_short(CMD_REBOOT, bytes([REBOOT_MAGIC])), gap)
