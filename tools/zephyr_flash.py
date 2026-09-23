@@ -343,8 +343,14 @@ def main():
                     print("      open: OK (permission is in place)")
                     opened.append((up, us))
                 except Exception as e:
-                    print(f"      open: FAILED - {e}")
-                    failed.append((up, us))
+                    # macOS refuses to open keyboard collections outright, to stop
+                    # keylogging. That is expected and irrelevant here: flashing only
+                    # ever touches the config interface.
+                    kbd = (up == 0x01 and us == 0x06)
+                    note = "  (expected: macOS blocks keyboard collections)" if kbd else ""
+                    print(f"      open: FAILED - {e}{note}")
+                    if not kbd:
+                        failed.append((up, us))
                 finally:
                     try:
                         h.close()
@@ -355,18 +361,17 @@ def main():
             print("Nothing matched. If the mouse is plugged in and this still prints")
             print("nothing, check the cable (the 2.4 GHz dongle cannot carry an update)")
             print("and try a direct port rather than a hub.")
-        elif failed:
-            print("*** SOME INTERFACES WOULD NOT OPEN ***")
-            print("macOS restricts opening HID devices, not listing them, so this is")
-            print("the check that matters. Grant Input Monitoring to your terminal")
-            print("(System Settings > Privacy & Security > Input Monitoring), restart")
-            print("it, and re-run. Do NOT run verify until every interface opens -")
-            print("verify writes a flash mark and reboots into the bootloader before")
-            print("it would discover the same problem, and by then it cannot back out.")
-        elif any(up == CFG_USAGE_PAGE for up, _ in opened):
-            print("Config interface opened successfully. Usage page 0x0B is among the")
-            print("pages macOS guards, so if this one opens, the bootloader - which")
-            print("presents a plainer descriptor - is very unlikely to be refused.")
+        elif any(up == CFG_USAGE_PAGE and us == CFG_USAGE for up, us in opened):
+            print("READY. The config interface opened, and that is the only one")
+            print("flashing ever uses. Keyboard collections refusing to open is normal")
+            print("on macOS and does not affect anything here.")
+        elif failed or not opened:
+            print("*** THE CONFIG INTERFACE (usage page 0x0B) WOULD NOT OPEN ***")
+            print("That is the one flashing needs. Grant Input Monitoring to your")
+            print("terminal (System Settings > Privacy & Security > Input Monitoring),")
+            print("restart the terminal, and re-run. Do NOT run verify until it opens -")
+            print("verify writes a flash mark and reboots into the bootloader before it")
+            print("would hit the same problem, and by then it cannot back out.")
         return
 
     if not a.container:
