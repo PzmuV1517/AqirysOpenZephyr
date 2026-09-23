@@ -14,6 +14,20 @@ import fwtool
 
 BASE = 0x287A0
 
+# Regions that are known to hold DATA rather than instructions. A change here
+# alters what the firmware draws or reads, never what it executes, so it cannot
+# make existing code behave differently.
+DATA_REGIONS = [
+    (0x045F1D, 0x0460FD, "startup splash bitmap (4 pages x 120 B)"),
+]
+
+
+def region_of(addr):
+    for lo, hi, name in DATA_REGIONS:
+        if lo <= addr < hi:
+            return name
+    return None
+
 
 def main(a, b):
     ra, rb = pathlib.Path(a).read_bytes(), pathlib.Path(b).read_bytes()
@@ -34,13 +48,25 @@ def main(a, b):
         print("so no existing instruction can behave differently.")
     else:
         lo, hi = min(diffs), max(diffs)
-        print(f"*** {len(diffs)} byte(s) CHANGED inside the original image ***")
+        regions = {region_of(BASE + i) for i in diffs}
+        print(f"{len(diffs)} byte(s) changed inside the original image")
         print(f"    range 0x{BASE + lo:06X}..0x{BASE + hi:06X}")
-        for i in diffs[:12]:
-            print(f"      0x{BASE + i:06X}: {fa[i]:02x} -> {fb[i]:02x}")
-        if len(diffs) > 12:
-            print(f"      ... and {len(diffs) - 12} more")
-        print("\n    This patch modifies running firmware. It is NOT dead code.")
+
+        if None not in regions:
+            for r in sorted(x for x in regions if x):
+                print(f"    all within: {r}")
+            print("\n    DATA ONLY. Every changed byte is in a region known to hold data,")
+            print("    not instructions, so no existing code can behave differently. This")
+            print("    is a safe class of patch - the same instructions run, over different")
+            print("    bytes.")
+        else:
+            for i in diffs[:12]:
+                print(f"      0x{BASE + i:06X}: {fa[i]:02x} -> {fb[i]:02x}")
+            if len(diffs) > 12:
+                print(f"      ... and {len(diffs) - 12} more")
+            print("\n    *** These bytes are NOT in a known data region. ***")
+            print("    Treat this as modifying executable firmware: it is neither dead")
+            print("    code nor a data-only patch, and it needs review before flashing.")
 
     if len(fb) > len(fa):
         print(f"\nappended 0x{BASE + len(fa):06X}..0x{BASE + len(fb):06X} "
@@ -49,7 +75,9 @@ def main(a, b):
 
     print(f"\nheader crc0/crc1 0x{ha['crc0'] | (ha['crc1'] << 16):08X} "
           f"-> 0x{hb['crc0'] | (hb['crc1'] << 16):08X}  (expected to differ)")
-    return 0 if not diffs else 1
+    if not diffs:
+        return 0
+    return 0 if None not in {region_of(BASE + i) for i in diffs} else 1
 
 
 if __name__ == "__main__":
